@@ -1,0 +1,62 @@
+body {
+    font-family: Arial;
+}
+
+header {
+    background-color: rgb(233, 234, 229);
+}
+
+.logotipo{
+    display: inline-flex;
+
+}
+
+.botaoHeader {
+    display: inline-flex;
+}
+
+#login {
+    display: inline-flex;
+}
+
+#cadastre-se{
+    display: inline-flex;
+}
+
+.comidaTopo {
+    text-align: center;
+}
+
+.bloco2 {
+    text-align: center;
+}
+
+.titulos {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    display: inline-flex;
+    background-color: rgb(248, 188, 76);
+}
+
+h2 {
+    text-align: center;
+    display: inline-flex;    
+    background-color: rgb(248, 188, 76);
+}
+
+h3 {
+    display: inline-flex;
+    text-align: center;
+    background-color: rgb(248, 188, 76);
+}
+
+.textos {
+    display: inline-flex;
+}   
+
+.backgroundBaixo {
+    text-align: center;
+}
