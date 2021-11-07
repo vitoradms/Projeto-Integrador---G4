@@ -38,12 +38,12 @@ body #principal img {
   flex-direction: column;
   align-items: center;
   color: white;
+  font-family: Montserrat-Thin;
   border-left: 10px solid #E7C512;
   border-bottom: 10px solid #E7C512 ;
 }
 #ladoEsq h3 {
   line-height: 0.1;
-  font-family: Montserrat-Thin;
   font-style: italic;
   font-size: 20px;
   letter-spacing: -1.5%;
@@ -51,7 +51,6 @@ body #principal img {
 }
   
 #ladoEsq h5 {
-  font-family: Montserrat-Thin;
   letter-spacing: -1.5%;
   font-size: 13px;
 }
@@ -75,13 +74,18 @@ body #principal img {
   font-family: southEast;
   font-size: 30px;
 }
+#ladoDir p {
+  color: #807C7C;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
 
 button {
   border-radius: 10px;
   background-color:#2F384F ;
   color: white;
   size: 100px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 
