@@ -143,17 +143,56 @@
   }
 
   /* ingredientes */
-  .ingredientes {
-      background-image: url(../Receita/imagens/background_igredientes.png);
-      background-size: 100%;
-  }
+.ingredientes{
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(../Receita/imagens/background_igredientes.png);
+    height: 100vh;
+    width: auto;
+}
 
-  .ingredientes p {
-      display: flex;
-      justify-content: center;
-      font-family: 'Montserrat';
-      color: #000000;
-      background-color: #FFFFFF;
-      width: 30%;
+.ingredientes p {
+    padding: 60px;
+    margin: 8%;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 30%;
+}
 
-  }
+/* Modo de preparo */
+.prepare_mod {
+    display: flex;
+    justify-content: center;
+}
+
+.prepare {
+    width: 30%;
+    height: 100vh;
+    margin: 9% 10px 10px 10px;
+}
+
+.confira_tmb h2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 36px;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.confira ul{
+    display: inline;
+    display: flex;
+    background-color: #000000;
+    border: solid 1px #6D6D6D;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.confira ul li {
+    display: inline;
+}
+
