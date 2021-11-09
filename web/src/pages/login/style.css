@@ -1,3 +1,4 @@
+ /* RESET HTML */
 html, body, figure, img, div, input, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
   margin: 0;
   padding: 0;
@@ -5,6 +6,9 @@ html, body, figure, img, div, input, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
   list-style: none;
   text-decoration: none;
 }
+
+/* FONTES */
+
 @font-face {
   font-family: southEast;
   src: url(../../assets/fonts/southEast.otf);
@@ -13,6 +17,9 @@ html, body, figure, img, div, input, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
   font-family: Montserrat-Thin;
   src: url(../../assets/fonts/Montserrat-Thin.ttf);
 }
+
+/* BODY */
+
 body{
   background-image: url("../../assets/images/heather-barnes-FaIb6he_a7Q-unsplash.jpg");
   background-size: 100%;
@@ -28,6 +35,8 @@ body #principal {
 body #principal img {
   margin-left: 10px;
 }
+
+/* LADO ESQUERDO */
 
 #ladoEsq {
   width:350px;
@@ -57,6 +66,9 @@ body #principal img {
 #ladoEsq img {
  margin: 0 0 50px 0;
 }
+
+/* LADO DIREITO */
+
 #ladoDir {
   width:350px;
   height:400px;
@@ -79,6 +91,8 @@ body #principal img {
   font-size: 13px;
   margin-bottom: 5px;
 }
+
+/* BUTTON */
 
 button {
   border-radius: 10px;
