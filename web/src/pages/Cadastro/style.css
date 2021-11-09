@@ -8,11 +8,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Montserrat";
 }
 
             
 header {
-    font-family: "Montserrat";
+    
     color: white;
     text-align: center;
     margin: 75px;
@@ -42,7 +43,6 @@ body #principal {
     background-color: #8ba01f;
     width:450px;
     height:450px;
-    font-family: Montserrat;
     display: flex;
     justify-content: center;
     flex-direction: column;

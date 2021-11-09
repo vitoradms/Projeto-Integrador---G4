@@ -95,7 +95,7 @@ header {
     margin-top: -520px;
 }
 
-.h2 {
+.cabeçalho {
     display: flex;
     flex-direction: column;
     font-family: "Abadi";
