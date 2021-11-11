@@ -49,10 +49,16 @@ header{
   justify-content: space-between;
 }
 
+/* CONTAINER CARROSSEL  */
+.carousel-inner {
+  height: 60vh; 
+  position: relative; 
+}
+
+/* IMAGEM CARROSSEL  */
 .d-block{
-  height: 80vh;
-  width: 100%;
-  overflow: hidden;
+   position: absolute;
+   top: -600px;
 }
 
 
