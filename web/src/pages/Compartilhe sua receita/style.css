@@ -45,9 +45,9 @@
     height: 45vh;
     text-align: center;
     padding: 25px;
-    background: url(../Sua\ Receita/imagens/Banner.png) no-repeat;
+    background: url(imagens/banner.png) no-repeat;
     margin-top: 3%;
-   
+    
   
 }
 
@@ -127,7 +127,7 @@
    width: 30%;
    height: 55vh;
    margin-top: 5%;
-   background-image: url(../Sua\ Receita/imagens/destaque.png);
+   background-image: url(imagens/destaque.png);
    
 }
 

@@ -23,8 +23,9 @@ html, body, figure, img, div, input, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
 
 =======
 >>>>>>> b2de05e46823160bacd2c45cf2795e107f488c43
-body{
-  background-image: url("../../assets/images/heather-barnes-FaIb6he_a7Q-unsplash.jpg");
+
+body {
+  background-image: url("../../assets/images/heather-barnes-FaIb6he_a7Q-unsplash");
   background-size: cover;
   background-repeat: no-repeat;
 }
