@@ -101,3 +101,11 @@
       font-family: 'Montserrat';
       display: flex;
   }
+
+  /* cellphone */
+@media (max-width: 576px) {
+  .intro .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+}
