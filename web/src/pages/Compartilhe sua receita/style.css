@@ -58,6 +58,7 @@
     height: 400px;
     padding: 60px;
     background: url(../Compartilhe\ sua\ receita/imagens/banner.png) no-repeat center; 
+    background-size: cover;
 }
 
 .banner_text {
@@ -143,7 +144,7 @@
    -webkit-box-shadow: 53px 53px 0px -30px rgba(183, 102, 27, 1);
    -moz-box-shadow:    53px 53px 0px -30px rgba(183, 102, 27, 1);
    box-shadow:         53px 53px 0px -30px rgba(183, 102, 27, 1);
-   
+   background-size: cover;
 }
 
 /* ingridentes para preparo */
