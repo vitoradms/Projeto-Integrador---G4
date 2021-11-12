@@ -1,79 +1,89 @@
 <!DOCTYPE html>
 
     <head>
-
-        <link rel="stylesheet" href="../Sua Receita/style.css">
-        <link rel="stylesheet" href="reset.css">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
-            
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../../assets/reset.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     </head>
 
+<!-- MENU -->
     <body class="content">
-
         <nav class="menu">
-
             <ul>
-
                 <li><a href="#"> Página Inicial </a></li>
                 <li><a href="#"> Top Ingredientes </a></li>
                 <li><a href="#"> Matadores de larica </a></li>
                 <li><a href="#"> Receitas Rápidas </a></li>                    
-
             </ul>
 
             <ul>
                 <li><a href="#"> Cadastro </a></li>
                 <li><a href="#"> Login </a></li>
             </ul>
-
         </nav>
 
+<!-- BANNER -->
         <div class="banner">
-            <div class="bannerTitle">
+            <div class="banner_text">
                 <h2> Compartilhe sua receita improvisada! </h2>
-                <h3> Seguindo os seguintes passos </h3>
-            </div>
+                <h3> Em 5 passos! </h3>
+            </div>             
         </div>
 
-        <div class="digite_nome_receita"> 
+<!-- BOTÃO NOME DA RECEITA -->
+        <div class="nome_receita"> 
             <h2> Digite o nome da <mark> sua receita </mark> </h2> 
         </div>
 
-        <div class="nome_da_receita">             
-
-           <div class="barra_digitar">
-                <input type="text" name="input" value="" placeholder="Digite aqui" class="digite_aqui"/>
-            </div>
-
+        <div class="digite_nome_aqui">             
+                <form action="#" method="POST"> </form>
+                <input type="text" name="nome_da_receita" placeholder="Digite aqui" required>
         </div> 
 
+<!-- ADICIONAR FOTOS E VÍDEOS -->
         <div class="destaque">
             <div class="imagem_destaque">
-                
             </div>
-
+           
             <div class="texto_destaque">
-                <p> Adicone <mark>fotos ou vídeos</mark> do seu prato </p>
+                <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
             </div>
 
         </div>
 
+<!-- INGREDIENTES -->
         <div class="ingredientes">
             <div>
-                <h2> Ingredientes para o preparo </h2>
-                <p> Lorem ipsum dolor sit amet. Et sunt voluptatem sed deserunt fuga et autem unde in eius quasi et molestias architecto aut eligendi odio aut recusandae molestias. Aut rerum vitae et nihil ipsum aut corporis voluptas et dignissimos accusamus quo obcaecati obcaecati? </p>
+                <h2> Adicione os ingredientes </h2>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
             </div>
         </div>
 
+<!-- MODO DE PREPARO -->
         <div class="modo_de_preparo">
             <div>
                 <h2> Modo de Preparo </h2>
-                <p> Qui illo delectus qui quos necessitatibus est dicta explicabo nam magnam quasi est dolor illum ab quia ipsa et pariatur repellendus. Est fugit molestiae sed dicta voluptate id voluptatum dolor cum dignissimos animi sit debitis error in ducimus inventore non sunt libero? Qui enim quisquam sit reprehenderit dolorem et consequatur laborum ut porro aliquam. Hic sunt rerum ut quibusdam quia aut placeat expedita! </p>
+                
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="10" cols="150" placeholder="Corte a cebola em rodelas..."></textarea>
             </div>
         </div>
 
+<!-- BOTÕES DE INTERAÇÃO-->
         <div class="interacao">
             <ul>
                 <li><a href="#"> Compartilhar receita </a></li>
@@ -84,11 +94,9 @@
             </ul> 
                     
         </div>
-            
-
     </body>
 
     <footer>
 
     </footer>
-    </html>
+</html>
