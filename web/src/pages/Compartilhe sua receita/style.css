@@ -147,6 +147,19 @@
    background-size: cover;
 }
 
+.send_image {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.send_image input {
+    width: 280px;
+}
+
+
+
+
 /* ingridentes para preparo */
 .ingredientes h2 {
     margin-left: 2%;
