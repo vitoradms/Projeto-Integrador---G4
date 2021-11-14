@@ -4,9 +4,10 @@
 
     <link rel="stylesheet" href="../Receita/style.css">
     <link rel="stylesheet" href="../../assets/reset.css">
-    <link rel="stylesheet" href=" ">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/caba1438d9.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -14,26 +15,21 @@
 
     <section>
         <nav class="menu">
-
             <ul>
-
                 <li><a href="#"> Página Inicial </a></li>
                 <li><a href="#"> Top Ingredientes </a></li>
                 <li><a href="#"> Matadores de larica </a></li>
                 <li><a href="#"> Receitas Rápidas </a></li>                    
-
             </ul>
 
             <ul>
-
                 <li><a href="#"> Cadastro </a></li>
                 <li><a href="#"> Login </a></li>
-
             </ul>
-
         </nav>
     </section>
 
+<!-- INFO DA RECEITA -->
     <section>
         
             <div class="title">
@@ -47,41 +43,44 @@
             </div>
 
             <div class="prepare_info">
-                <h2> Tempo de Preparo </h2>
+                <h2><i class="far fa-clock"></i> Tempo de Preparo </h2>
                 <p> 90 minutos </p>
-                <h2> Rendimento </h2>
+                <h2><i class="fas fa-utensils"></i> Rendimento </h2>
                 <p> 5 porções </p>
+
+                <div class="interacao">
+                    <ul>
+                        <li><a href="#"> Compartilhar </a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"> Favoritar </a></li>
+                    </ul> 
+                    <ul>
+                        <li><a href="#"> Avaliar </a></li>
+                    </ul>
+                        
+                </div>
             </div>
         </div>
 
     </section>
 
+<!-- AVALIAÇÃO -->
     <section>
         <div class="clicaveis">
-            <div class="interacao">
-                <ul>
-                    <li><a href="#"> Compartilhar receita </a></li>
-                </ul>
-                
-                <ul>
-                    <li><a href="#"> Salvar receita</a></li>
-                </ul> 
-                    
-            </div>
-
             <div class="avaliacao">
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <span class="fa fa-star"></span>
-
             </div>
         </div> 
     </section>
 
+<!-- INGREDIENTES -->
     <section>
-        <div >
+        <div>
             <div class="title">
                 <h2> Ingredientes </h2>
             </div>
@@ -93,6 +92,7 @@
         </div>
     </section>
 
+<!-- MODO DE PREPARO -->
     <section> 
         <div class="title">
             <h2> Modo de preparo </h2>
@@ -116,9 +116,9 @@
     
             </div>
         </div>
+    </section>   
 
-    </section>      
-    
+<!-- CONFIRA TAMBÉM --> 
     <section>
         <div class="confira_tmb">
             <div>
@@ -126,22 +126,25 @@
             </div>
         <div class="confira">
             <ul>
-
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>                    
-
             </ul>      
 
-        </div>
-            
+        </div>      
         </div>
     </section>
 
+<!-- CAIXA DE COMENTÁRIO -->
     <section>
-        <div class="comentarios">
+        <div class="title" > 
+            <h2> Deixe seu comentário </h2>
+        </div>
 
+        <div class="comentar">
+            <textarea id="comentar" name="comentar" rows="10" cols="150" placeholder="Conte-nos o que achou da receita!"></textarea>
+            <input type="submit" name="comentar">
         </div>
     </section>
 </body>

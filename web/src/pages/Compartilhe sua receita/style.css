@@ -157,13 +157,8 @@
     width: 280px;
 }
 
-
-
-
 /* ingridentes para preparo */
 .ingredientes h2 {
-    margin-left: 2%;
-    margin-right: 2%;
     max-width: auto;
     background-color: #E7C512;
     font-family: 'Montserrat';
@@ -194,8 +189,6 @@
 }
 
 .modo_de_preparo h2 {
-    margin-left: 2%;
-    margin-right: 2%;
     max-width: auto;
     background-color: #E7C512;
     font-family: 'Montserrat';
