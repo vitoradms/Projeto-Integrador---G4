@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap');
+# {
+    box-sizing: border-box;
+}
+}
+
+.content {
+    background-image: url(../../assets/images/joanna-kosinska-Prfs32wh-o4-unsplash.jpg);
+    
+}
 
 /* Menu superior horizontal*/
 .menu ul {
@@ -23,147 +32,190 @@
     border-bottom:3px solid #E7C512;
     border-radius: 1px;
     text-transform: uppercase;
-    border: 5px solid #0000;
-    font-family: 'Montserrat',
+    border: 2px solid #0000;    
 }
 
 .menu ul li a:hover {
     background-color:#FFFFFF;
     color: #6D6D6D;
-    border-bottom:3px solid #E7C512;
+    border: 2px solid #E7C512;
 }
 
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    
 }
-
 
 /* Banner */
 .banner {
-    max-width: 100%;
-    height: 45vh;
-    text-align: center;
-    padding: 25px;
-    background: url(../Sua\ Receita/imagens/Banner.png) no-repeat;
-    margin-top: 3%;
-   
-  
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    padding: 60px;
+    background: url(../Compartilhe\ sua\ receita/imagens/banner.png) no-repeat center; 
+    background-size: cover;
+}
+
+.banner_text {
+    padding: 50px;
+    justify-content: center;
 }
 
 .banner h2 {
-    font-size: 40px;
+    font-size: 48px;
+    font-weight: bold;
     font-family: 'Montserrat'; 
-    text-transform: uppercase;
-    color: #FFFFFF;
     text-align: center;
-    
+    text-transform: uppercase;
+    color: #FFFFFF;  
+    margin-top: 60px;  
 }
 
-
 .banner h3 {
-    font-size: 30px;
+    font-size: 70px;
     font-family: 'Montserrat';
     color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 60px;
 }
 
 /* Nome da receita */
-
-.digite_nome_receita{
-    margin-top: 2%;
+.nome_receita{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
     font-family: 'Montserrat';
     font-weight: bold;
+    font-size: 40px;
     text-transform: uppercase;
     width: auto;
-    display: flex;
-    justify-content: center;
 }
 
-/* barra digitar nome receita */
-.nome_da_receita {
+/* Formulário nome da receita */
+.digite_nome_aqui {
     display: flex;
     justify-content: center;
-    
  }
 
-
-.barra_digitar {
-    margin-top: 1%;
-    margin-bottom: 5%;
-    width: auto;
-    border: 1px;
-    
-}
-
-.digite_aqui {
-    padding: 20px 85px 20px 50px;
-    width: auto;
+ .digite_nome_aqui input {
+    padding: 20px;
+    width: 35%;
     font-family: 'Montserrat';
-    text-transform: uppercase;
+    font-size: 24px;
     font-weight: bold;
-}
+    border: 1px solid #000000;
+    background-color: #C4C4C4;
+    text-align: center;
+ }
 
-
-
-/* Imagem destaque */
-
+/* Adicione Fotos ou vídeos */
 .destaque {
     display: flex;
     justify-content: center;
-
+    align-content: center;
+    max-height: 700px;
+    margin-top: 1%;
 }
 
 .texto_destaque {
     text-transform: uppercase;
     font-family: 'Montserrat';
-    font-size: 48px;
-    height: 65vh;
-    margin: 5%;
+    font-size: 40px;
+    margin-top: 100px;
+    height: 600px;
     width: 30%;
     font-weight: bold;
+    padding-top: 150px;
 }
 
 .imagem_destaque {
-   width: 30%;
-   height: 55vh;
-   margin-top: 5%;
-   background-image: url(../Sua\ Receita/imagens/destaque.png);
-   
+   width: 600px;
+   height: 500px;
+   margin: 100px;
+   background-image: url(../../assets/images/mateusz-feliksik-QRAF7Yuh4x4-unsplash.jpg);
+   -webkit-box-shadow: 53px 53px 0px -30px rgba(183, 102, 27, 1);
+   -moz-box-shadow:    53px 53px 0px -30px rgba(183, 102, 27, 1);
+   box-shadow:         53px 53px 0px -30px rgba(183, 102, 27, 1);
+   background-size: cover;
+}
+
+.send_image {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 50px 0px;
+}
+
+.send_image input {
+    width: 280px;
 }
 
 /* ingridentes para preparo */
-
 .ingredientes h2 {
+    max-width: auto;
     background-color: #E7C512;
     font-family: 'Montserrat';
+    font-size: 40px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 20px 0px 20px 50px;
 }
 
-.ingredientes p {
+.ingredientes input {
     font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0% 20px 2% ;
+    padding: 5px;
+    width: 95%;
+    border-bottom: solid #000000 1px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+}
+
+.ingredientes input:focus {
+    border-bottom: solid #000000 1px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
 }
 
 .modo_de_preparo h2 {
+    max-width: auto;
     background-color: #E7C512;
     font-family: 'Montserrat';
+    font-size: 40px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 10px;
+    padding: 20px 0px 20px 50px;
 }
 
-.modo_de_preparo p {
+.modo_de_preparo textarea {
     font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2%;
+    padding: 30px;
+    font-weight: bold;
 }
 
 /* botões de interação */
-
 .interacao{
     display: flex;
     justify-content: center;
-    margin-top: 2%;
-    
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    margin-bottom: 2%;
 }
 
 .interacao ul {
@@ -174,28 +226,25 @@
 }
 
 .interacao ul li {
-    display: inline;
-    border: solid #000000 1px;
-    max-height: 50vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: inline;    
 }
 
 .interacao ul li a:hover {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color:#FFFFFF;
+    color: #6D6D6D;
+    border: 2px solid #E7C512;
 }
 
 .interacao ul a {
     padding: 2px 10px;
     display: inline-block;
-      
-    /* visual do botão */
+
+    /* visual do link */
+    background-color:#E7C512;
+    color: #FFFFFF;
     text-decoration: none;
-    color: #000000;
-    font-family: 'Montserrat';
-    text-transform: uppercase; 
-    border-bottom:3px solid #0000;
-    
-    
+    border-bottom:3px solid #E7C512;
+    border-radius: 1px;
+    text-transform: uppercase;
+    border: 2px solid #0000; 
 }
