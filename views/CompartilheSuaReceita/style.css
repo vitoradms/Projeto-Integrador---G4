@@ -5,7 +5,7 @@
 }
 
 .content {
-    background-image: url(../../assets/images/joanna-kosinska-Prfs32wh-o4-unsplash.jpg);
+    background-image: url(../../public/images/joanna-kosinska-Prfs32wh-o4-unsplash.jpg);
     
 }
 
@@ -57,7 +57,7 @@
     justify-content: center;
     height: 400px;
     padding: 60px;
-    background: url(../Compartilhe\ sua\ receita/imagens/banner.png) no-repeat center; 
+    background: url(../../public/images/banner.png) no-repeat center; 
     background-size: cover;
 }
 
@@ -140,7 +140,7 @@
    width: 600px;
    height: 500px;
    margin: 100px;
-   background-image: url(../../assets/images/mateusz-feliksik-QRAF7Yuh4x4-unsplash.jpg);
+   background-image: url(../../public/images/mateusz-feliksik-QRAF7Yuh4x4-unsplash.jpg);
    -webkit-box-shadow: 53px 53px 0px -30px rgba(183, 102, 27, 1);
    -moz-box-shadow:    53px 53px 0px -30px rgba(183, 102, 27, 1);
    box-shadow:         53px 53px 0px -30px rgba(183, 102, 27, 1);
