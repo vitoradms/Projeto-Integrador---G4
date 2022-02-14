@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
+
+.content {
+    background-image: url(/images/background4.jpg);
+    background-size: cover;
+}
+
+
+
+/* informações da receita */
+
+.receita {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.title {
+    text-align: left;
+    max-width: auto;
+    background-color: #E7C512;
+    font-family: 'Montserrat';
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 0px 20px 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+    
+
+}
+
+.imagem_destaque {
+    background-image: url(/images/destaque2.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 6% 2% 2% 2%;
+    border: solid 1px #000000;
+    -webkit-box-shadow: 53px 53px 0px -30px rgb(0, 0, 0);
+    -moz-box-shadow:    53px 53px 0px -30px rgb(0, 0, 0);
+    box-shadow:         53px 53px 0px -30px rgb(0, 0, 0);
+    
+}
+
+.prepare_info {
+    text-align: left;
+    width: 30%;
+    height: 30vh;
+    margin-top: 170px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.prepare_info h2 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    margin-left: 50px;
+
+}
+
+.prepare_info p {
+    font-family: 'Montserrat';
+    padding: 5px; 
+    margin-left: 50px;     
+}
+
+
+/* botões de interação */
+.clicaveis {
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px 0px 50px 410px ;  
+}
+
+.interacao{
+    display: flex;
+    align-items: left;
+    font-size: 1.1rem
+    font-family: 'Abadi';
+
+}
+
+.interacao ul {
+    padding:0px;
+    margin:12px 30px;
+    background-color:#FFFFFF;
+    list-style:none;
+    
+}
+
+.interacao ul li {
+    display: inline;    
+}
+
+.interacao ul li a:hover {
+    background-color:#ffffff00;
+    color: #6D6D6D;
+    border: 1px solid #E7C512;
+}
+
+.interacao ul a {
+    padding: 12px 12px;
+    display: inline-block;
+    
+    /* visual do link */
+    background-color:#000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 1px;
+}
+
+/* avaliação */
+.avaliacao {
+    font-size: 30px;
+}
+
+.checked {
+    color: #E7C512;
+  }
+
+  /* ingredientes */
+.ingredientes{
+    display: flex;
+    justify-content: flex-start;
+    background-image: url(/images/destaque1.jpg);
+    background-size: cover;
+    height: 600px;
+    width: auto;  
+    margin: 35px;
+}
+
+.ingredientes p {
+    text-align: left;
+    padding: 60px;
+    margin: 8%;
+    font-family: 'Montserrat';
+    color: #000000;
+    background-color: #FFFFFF;
+    width: 30%;
+    border: solid #000000 1px;
+}
+
+/* Modo de preparo */
+.prepare_mod {
+    display: flex;
+    justify-content: center;
+}
+
+.prepare {
+    text-align: left;
+    width: 30%;
+    height: 60vh;
+    margin: 100px 10px 10px 10px;
+    padding: 20px;
+    border-left: solid 1px #000000;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+/* confira tmb */
+.confira_tmb h2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.confira ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.confira ul li{
+    background-image: url(/images/image4.jpg);
+    background-size: cover;
+    border: solid 1px #000000;
+    width: 250px;
+    height: 250px;
+    margin: 50px;
+}
+
+/* comentar */ 
+.comentar {
+    display: flex;
+    justify-content: center;
+}
+
+.comentar textarea{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.comentar input {
+    font-family: 'Abadi';
+    font-size: 1.1em;
+    padding: 12px 30px;
+    background-color:#000000;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 1px;
+    margin-top: 125px;
+   }
+   

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+    <head>
+        <link rel="stylesheet" href="/stylesheets/reset.css">
+        <link rel="stylesheet" href="/stylesheets/shareRecipe.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<!-- MENU -->
+<body class="content">
+    
+    <%- include("./partials/header")  %> 
+
+<!-- BANNER -->
+        <div class="banner">
+            <div class="banner_text">
+                <h2> Compartilhe sua receita improvisada! </h2>
+                <h3> Em apenas 5 passos! </h3>
+            </div>             
+        </div>
+
+<!-- BOTÃO NOME DA RECEITA -->
+        <div class="nome_receita"> 
+            <h2> Digite o nome da <mark> sua receita </mark> </h2> 
+        </div>
+
+        <div class="digite_nome_aqui">             
+                <form action="#" method="POST"> </form>
+                <input type="text" name="nome_da_receita" placeholder="Digite aqui" required>
+        </div> 
+
+<!-- ADICIONAR FOTOS E VÍDEOS -->
+        <div class="destaque">
+            <div class="imagem_destaque">
+            </div>
+           
+            <div class="texto_destaque">
+                <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
+                <form method="POST" action="#"> <span class="btn btn-success fileinput-button">
+                    <span>Selecionar arquivos</span>
+                <input type="file" name="file">
+            </div>
+
+        </div>
+
+<!-- INGREDIENTES -->
+        <div class="ingredientes">
+            <div>
+                <h2> Adicione os ingredientes </h2>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+                <form action="#" method="POST"> </form>
+                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
+
+            </div>
+        </div>
+
+<!-- MODO DE PREPARO -->
+        <div class="modo_de_preparo">
+            <div>
+                <h2> Modo de Preparo </h2>
+                <!-- CAIXA DE COMENTÁRIO -->
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="10" cols="135" placeholder="Corte a cebola em rodelas..."></textarea>
+            </div>
+        </div>
+
+<!-- BOTÕES DE INTERAÇÃO-->
+        <div class="interacao">
+            <ul>
+                <li><a href="#"> Compartilhar receita </a></li>
+            </ul>
+                
+            <ul>
+                <li><a href="#"> Salvar receita</a></li>
+            </ul> 
+                    
+        </div>
+    </body>
+
+    
+    <%- include("./partials/footer")  %> 
+    
+</html>

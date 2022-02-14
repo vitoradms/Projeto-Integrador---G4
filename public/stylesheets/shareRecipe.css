@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
+
+# {
+    box-sizing: border-box;
+}
+}
+
+}
+.content {
+    background-image: url(/images/background1.jpg);
+    
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    padding: 60px;
+    background: url(/images/banner6.png) no-repeat center; 
+    background-size: cover;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.banner_text {
+    justify-content: center;
+}
+
+.banner h2 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Roboto'; 
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    color: #FFFFFF;  
+    margin-top: 60px;  
+    background-color: #E7C512;
+    border-radius: 1px;
+}
+
+.banner h3 {
+    font-size: 70px;
+    font-family: 'Roboto';
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    
+    margin-top: 60px;
+}
+
+/* Nome da receita */
+.nome_receita{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+/* Formulário nome da receita */
+.digite_nome_aqui {
+    display: flex;
+    justify-content: center;
+ }
+
+ .digite_nome_aqui input{
+    padding: 20px;
+    width: 35%;
+    font-family: 'Montserrat';
+    text-transform: ;
+    font-size: 24px;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+ }
+
+ .digite_nome_aqui input:focus{
+    border: 1px #E7C512;
+ }
+
+/* Adicione Fotos ou vídeos */
+.destaque {
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    height: 400px;
+    margin-top: 120px;
+}
+
+.texto_destaque {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    height: 600px;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.imagem_destaque {
+   width: 300px;
+   height: 300px;
+   margin: 30px;
+   border: solid 1px #000000;
+   background-image: url(/images/destaque4.jpg);
+   -webkit-box-shadow: 53px 53px 0px -30px rgba(0, 0, 0, 0.95);
+   -moz-box-shadow:    53px 53px 0px -30px rgba(0, 0, 0, 0.95);
+   box-shadow:         53px 53px 0px -30px rgba(0, 0, 0, 0.95);
+   background-size: cover;
+}
+
+.texto_destaque form {
+    display: flex;
+    justify-content: center;
+    font-family: "Abadi";
+    text-transform: uppercase;
+}
+/*Copied from bootstrap */
+.btn {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 1px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+}
+/*Also */
+ .btn-success {
+    color: #fff;
+    background-color: #000000;
+    border-color: #E7C512;
+}
+/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
+ .fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+/*Also*/
+ .fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter:'alpha(opacity=0)';
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
+}
+
+/* ingridentes para preparo */
+.ingredientes h2 {
+    max-width: auto;
+    background-color: #E7C512;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 0px 20px 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+    text-align: left;
+}
+
+.ingredientes input {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 50px;
+    padding: 5px;
+    width: 500px;
+    border-bottom: solid #000000 1px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background: transparent;
+}
+
+.ingredientes input:focus {
+    border: none;
+}
+
+.modo_de_preparo h2 {
+    max-width: auto;
+    background-color: #E7C512;
+    font-family: 'Montserrat';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 0px 20px 50px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.modo_de_preparo textarea {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    margin: 2%;
+    padding: 30px;
+    font-weight: bold;
+}
+
+/* botões de interação */
+.interacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Abadi';
+    margin-bottom: 2%;
+}
+
+.interacao ul {
+    padding:0px;
+    margin:15px;
+    background-color:#FFFFFF;
+    list-style:none;
+}
+
+.interacao ul li {
+    display: inline;    
+}
+
+.interacao ul li a:hover {
+    background-color:#FFFFFF;
+    color: #6D6D6D;
+    border: 2px solid #E7C512;
+}
+
+.interacao ul a {
+    padding: 2px 10px;
+    display: inline-block;
+
+    /* visual do link */
+    background-color:#E7C512;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom:3px solid #E7C512;
+    border-radius: 1px;
+    text-transform: uppercase;
+    border: 2px solid #0000; 
+}
