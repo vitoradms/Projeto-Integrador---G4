@@ -13,6 +13,11 @@
          
 }
 
+#upperlist_f img:hover {
+    opacity: 65%;
+    transition: 400ms;
+}
+
 #upperlist_f ul {
     display: flex;
     list-style:none;
@@ -101,7 +106,7 @@
 }
 
 #midiaList_f ul li img:hover {
-    opacity: 100%;
+    opacity: 65%;
     transition: 300ms;
 }
 

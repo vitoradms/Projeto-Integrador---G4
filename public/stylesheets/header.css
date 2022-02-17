@@ -20,6 +20,11 @@ footer {
 
 }
 
+.logo_h:hover {
+    opacity: 65%;
+    transition: 400ms;
+}
+
 #upperlist_h ul {
     display: flex;
     list-style:none;
