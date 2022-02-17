@@ -2,21 +2,20 @@
     box-sizing: border-box;
 }
 
-
-header {
+/* header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #eaebe6;
-}
+} */
 
-.container-logo {
+/* .container-logo {
     width: 150px;  
-}
+} */
 
-.logotipo {
+/* .logotipo {
     width: 100%;
     height: auto;
     align-self: center;
@@ -26,7 +25,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
+} */
 
 .botao {
     background-color: #e6c93d;
@@ -43,23 +42,25 @@ header {
 }
 
 .carrossel {
+    position: relative;
     width: 100%;
-    height: 43vh;
+    height: 60vh;
     overflow: hidden;
 }
 
 .img-background {
     width: 100%;
-    margin-top: -1300px;
+    
 }
 
 .texto-centro {
     font-family: "Abadi";
     color: rgb(248, 247, 232);
     text-align: center;
-    font-size: 60px;
+    font-size: 80px;
     position: absolute;
-    top: 30%;
+    font-weight: bold;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -67,13 +68,7 @@ header {
 
 @font-face {
     font-family: "Abadi";
-    src: url(../../assets/fonts/abadi.ttf);
-}
-
-@font-face {
-    font-family: "AbadiExtraLight";
-    src: url(../../assets/fonts/abadiExtraLight.otf);
-    font-weight: lighter;
+    src: url(../fonts/abadi-mt-std-cond-light.otf);
 }
 
 
@@ -103,7 +98,6 @@ header {
     align-items: center;
     text-align: center;
     font-size: 35px;
-
 }
 
 .footer {
@@ -123,11 +117,13 @@ header {
     justify-content: center;
     align-items: stretch;
     margin: 50px;
+    font-weight: bold;
        
 }
 
 
 .primeira-frase {
+    font-weight: bold;
     justify-items: center;
     align-items: center;
     background-color: #e6c93d;  
@@ -137,28 +133,29 @@ header {
     padding-right: 30px;
     margin-left: 20px;  
     margin-right: 20px; 
-    margin-bottom: -30px;
-    
+    margin-bottom: 5px; 
 }
 
 .segunda-frase {
     justify-items: center;
     align-items: center;
     background-color: #e6c93d; 
-    width: 280px;
-    padding: 0px 0px;
-    margin-left: 20px;  
-    margin-right: 20px; 
+    width: 200px;
+    padding: 6px 5px;
+    margin-left: 35px;  
+    margin-right: 35px; 
     margin-bottom: 25px;
     
 }
 
 .subtópico {
     align-self: stretch;
-    border-top: 2px solid gray;  
+    border-top: 1px solid gray;  
     text-align: center;
-    font-family: "AbadiExtraLight";
-    font-size: 16px;
+    font-family: "Abadi";
+    font-size: 20px;
     font-weight: bold;
+    padding-top: 10px; 
+    
 }
 
