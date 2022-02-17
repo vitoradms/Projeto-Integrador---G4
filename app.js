@@ -11,6 +11,7 @@ var quemSomosRouter = require('./routes/quemSomos');
 var homeRouter = require('./routes/home');
 var usuarioRouter = require('./routes/usuario');
 var loginRouter = require('./routes/login')
+var ingredientesRouter = require('./routes/ingredientes')
 
 var app = express();
 
@@ -30,7 +31,8 @@ app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
-app.use('/login', loginRouter)
+app.use('/login', loginRouter);
+app.use('/ingredientes', ingredientesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
