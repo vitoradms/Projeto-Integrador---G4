@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="/stylesheets/areaLogada.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <title>Área Logada</title>
 </head>
 
 <body class="content"> 
+
+    <%- include("./partials/header")  %>
        
         <div class="cont-account">
 
@@ -64,5 +68,7 @@
         </div>
       </div>
       <!--FIM-->
-
-      <div></div>
+      <%- include("./partials/footer")  %>
+      
+    </body>
+      
