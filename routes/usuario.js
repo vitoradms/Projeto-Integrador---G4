@@ -4,8 +4,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/cadastro', usuarioControllers.cadastro)
-router.get('/deletar', usuarioControllers.deletar)
-router.get('/atualizarDados', usuarioControllers.atualizarDados)
+router.delete('/deletar', usuarioControllers.deletar)
+router.put('/atualizarDados', usuarioControllers.atualizarDados)
 
 
 module.exports = router;
