@@ -13,5 +13,8 @@ router.get('/compartilharReceita', shareRecipeController.index);
 
 /* Get receitas */
 router.get('/receita', receitaController.index);
+router.get('/cadastrar', receitaController.cadastrar);
+router.get('/favoritar', receitaController.favoritar);
+
 
 module.exports = router;
