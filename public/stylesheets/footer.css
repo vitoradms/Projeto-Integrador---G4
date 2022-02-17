@@ -66,9 +66,15 @@
 }   
 
 
-#linha_f {
+#linha_f {    
     padding-top: 18px;
 }
+
+#linha_f hr {
+    margin: auto;
+    width: 50%;
+}
+
 
 #midiaList_f {
     display: flex;
@@ -99,6 +105,5 @@
     transition: 300ms;
 }
 
-hr {
-    width: 47%;
-}
+
+

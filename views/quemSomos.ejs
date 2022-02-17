@@ -6,13 +6,13 @@
         <title>Quem somos</title>
         <link rel="stylesheet" href="/stylesheets/reset.css">
         <link rel="stylesheet" href="/stylesheets/quemSomos.css">
-
+        <link rel="stylesheet" href="/stylesheets/header.css">
+        <link rel="stylesheet" href="/stylesheets/footer.css">
     </head>
 
-    
+    <%- include('./partials/header.ejs'); %>
 
-    <body>
-               
+    <body>               
         <section class="carrossel">
             <div class="container-img-background">
                 <img class="img-background" src="/images/banner6.png" alt="IMAGEM BACKGROUND">
@@ -60,6 +60,8 @@
             </div>
         </section>
 
+        <%- include('./partials/footer.ejs'); %>
+
     </body>
-    <%- include('./partials/footer.ejs'); %>
+    
 </html>

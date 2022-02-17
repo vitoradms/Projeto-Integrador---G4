@@ -7,7 +7,7 @@ footer {
     display: flex;
 }
 
-.content { 
+.content_h { 
    
     text-align: center;
     width: 100%;
@@ -20,55 +20,55 @@ footer {
 
 }
 
-#upperlist ul {
+#upperlist_h ul {
     display: flex;
     list-style:none;
     justify-content: center;
     align-items: center;
 }
 
-#upperlist ul li {
+#upperlist_h ul li {
     display: inline; 
     padding-right: 60px;
     color: black; 
     font-size: 1.2rem;
 }
 
-#upperlist ul li a {
+#upperlist_h ul li a {
     text-decoration: none;
     color: black; 
 }
 
-#upperlist ul li a:hover {
+#upperlist_h ul li a:hover {
     color: grey;
     transition: 400ms;
 }
 
-#upperlist ul li img {
+#upperlist_h ul li img {
     width: 210px;
 }
 
-#login {
+#login_h {
     background-color: #FFCC18;
     color: white;
     padding: 12px 30px;
 }
 
-#login:hover {
+#login_h:hover {
     background-color: #ffdf6c;
     transition: 400ms;
     border: solid 1px #FFCC18;
     color: #000000;
 }
 
-#cadastrar {
+#cadastrar_h {
     background-color: black;
     color: white;
     padding: 12px 30px;
     margin-top: 15px;
 }
 
-#cadastrar:hover {
+#cadastrar_h:hover {
     background-color: #3b3b3b;
     transition: 400ms;
     border: solid 1px #FFCC18;
