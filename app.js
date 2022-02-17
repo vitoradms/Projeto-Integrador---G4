@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var areaLogadaRouter = require('./routes/areaLogada')
 var quemSomosRouter = require('./routes/quemSomos');
 var homeRouter = require('./routes/home');
-var cadastroRouter = require('./routes/cadastro');
+var usuarioRouter = require('./routes/usuario');
 var loginRouter = require('./routes/login')
 
 var app = express();
@@ -29,7 +29,7 @@ app.use('/users', usersRouter);
 app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);
-app.use('/cadastro', cadastroRouter);
+app.use('/usuario', usuarioRouter);
 app.use('/login', loginRouter)
 
 // catch 404 and forward to error handler

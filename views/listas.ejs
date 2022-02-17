@@ -11,28 +11,9 @@
     <title>Listas</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-          <img src="../assets/Caseiro_da_Casa_-_Logotipo.png" alt="logo">
-          <nav>
-            <ul>
-                <ul>
 
-                    <li><a href="#"> Página Inicial </a></li>
-                    <li><a href="#"> Top Ingredientes </a></li>
-                    <li><a href="#"> Matadores de larica </a></li>
-                    <li><a href="#"> Receitas Rápidas </a></li>                    
-    
-                </ul>
-    
-                <ul>
-    
-                    <li><a href="#"> Cadastro </a></li>
-                    <li><a href="#"> Login </a></li>
-    
-                </ul>
-        </div>
-    </header>
+    <%- include('./partials/header.ejs'); %>
+
     <main>
         <section>
             <div class="imagem_principal">
@@ -53,19 +34,7 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer">
-            <img src="../assets/Caseiro_da_Casa_-_Logotipo.png" alt="logo">
-        </div>
-        <div class="footer-menu">
-            <h4>Menu</h4>
-            <ul>
-              <li><a href="#">Página Inicial</a></li>
-              <li><a href="#">Matadores de larica</a></li>
-              <li><a href="#">Top Ingredientes/a></li>
-              <li><a href="#">Receitas Rápidas</a></li>
-            </ul>
-        </div>
-    </footer>
+    <%- include('./partials/footer.ejs'); %>
+
 </body>
 </html>
