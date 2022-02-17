@@ -4,7 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+<<<<<<< HEAD
 
+=======
+var receitaRouter = require('./routes/receita');
+var compartilharReceitaRouter = require('./routes/compartilharReceita')
+>>>>>>> 0bccca014f2882b491a038f7db10cce526cb0fa6
 var usersRouter = require('./routes/users');
 var areaLogadaRouter = require('./routes/areaLogada')
 var quemSomosRouter = require('./routes/quemSomos');
@@ -25,7 +30,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+<<<<<<< HEAD
 
+=======
+app.use('/receita', receitaRouter);
+app.use('/compartilharreceita', compartilharReceitaRouter)
+>>>>>>> 0bccca014f2882b491a038f7db10cce526cb0fa6
 app.use('/users', usersRouter);
 app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
@@ -33,6 +43,7 @@ app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/login', loginRouter)
 app.use('/lista', listaRouter)
+
 
 
 // catch 404 and forward to error handler
