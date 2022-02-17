@@ -3,6 +3,31 @@
   box-sizing: border-box;
 }
 
+.logotipo {
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.botao {
+  background-color: #e6c93d;
+  color: rgb(248, 247, 232);
+  width: 150px;
+  font-family: "Abadi";
+  text-align: center;
+  border-color: rgb(194, 178, 148);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 7px;
+  padding: 5px 5px;
+  margin: 5px 20px;
+}
 
 ul {
     list-style-type: none;
@@ -93,7 +118,7 @@ li {
 }
 
 .first-background {
-  background: url("imagens/Imagem7.jpg");
+  background: url("images/banner6.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -215,7 +240,7 @@ margin-right:100px;
 }
 
 .last-pic {
-  background-image: url('imagens/heather-ford-vZrw7cX8fJs-unsplash.jpg');
+  background-image: url('images/imagemFundo.jpg');
   font-size: 65px;
   color: white;
   height: 150px;
