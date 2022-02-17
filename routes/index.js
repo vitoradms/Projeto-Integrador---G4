@@ -15,3 +15,4 @@ router.get('/compartilharReceita', shareRecipeController.index);
 router.get('/receita', receitaController.index);
 
 module.exports = router;
+
