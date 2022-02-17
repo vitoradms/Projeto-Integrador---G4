@@ -10,22 +10,14 @@ html, body, figure, img, div, input, p, h1, h2, h3, h4, h5, h6, ul, li, a, main{
 /* FONTES */
 
 @font-face {
-  font-family: southEast;
-  src: url(../../assets/fonts/southEast.otf);
-}
-@font-face {
-  font-family: Montserrat-Thin;
-  src: url(../../assets/fonts/Montserrat-Thin.ttf);
+  font-family: 'Quicksand';
+  src: url(../fonts/Quicksand-Regular.ttf);
 }
 
-<<<<<<< HEAD
 /* BODY */
 
-=======
->>>>>>> b2de05e46823160bacd2c45cf2795e107f488c43
-
 body {
-  background-image: url("../../assets/images/heather-barnes-FaIb6he_a7Q-unsplash");
+  background-image: url("/images/image5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -52,7 +44,7 @@ body #principal img {
   flex-direction: column;
   align-items: center;
   color: white;
-  font-family: Montserrat-Thin;
+  font-family: Quicksand;
   border-left: 10px solid #E7C512;
   border-bottom: 10px solid #E7C512 ;
 }
@@ -89,7 +81,7 @@ body #principal img {
 }
 #ladoDir h1 {
   margin: 0 0 50px 0;
-  font-family: southEast;
+  font-family: Quicksand;
   font-size: 30px;
 }
 
