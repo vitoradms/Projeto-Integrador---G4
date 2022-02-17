@@ -1,15 +1,23 @@
 @font-face {
     font-family: "abadi";
-    src: url(../../../assets/fonts/abadi.ttf);
+    src: url(../fonts/abadi-mt-std-cond-light.otf);
+}
+
+footer {
+    display: flex;
 }
 
 .content { 
+   
     text-align: center;
     width: 100%;
-    height: 5vh;
+    height: 13vh;
     background-color: #f0f0f0;
-    font-family: "abadi"; 
-         
+    font-family: "abadi";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #upperlist ul {
@@ -21,9 +29,9 @@
 
 #upperlist ul li {
     display: inline; 
-    padding-right: 30px;
+    padding-right: 60px;
     color: black; 
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 #upperlist ul li a {
@@ -47,7 +55,7 @@
 }
 
 #login:hover {
-    background-color: #f0f0f0;
+    background-color: #ffdf6c;
     transition: 400ms;
     border: solid 1px #FFCC18;
     color: #000000;
@@ -63,41 +71,6 @@
 #cadastrar:hover {
     background-color: #3b3b3b;
     transition: 400ms;
+    border: solid 1px #FFCC18;
+    color: #ffffff;
 }   
-
-
-
-#linha {
-    padding-top: 18px;
-}
-
-#midiaList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 32px;
-    padding-left: 450px;
-}
-
-#midiaList ul {
-    display: flex;
-    align-items: center;
-}
-
-#midiaList ul li {
-    display: inline; 
-    font-size: 1.0rem;
-}
-
-#midiaList ul li img {
-    width: 200px;
-    margin-left: 30px;
-    opacity: 70%;
-}
-
-#midiaList ul li img:hover {
-    opacity: 100%;
-    transition: 300ms;
-}
-
-
