@@ -4,7 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+
+var receitaRouter = require('./routes/receita');
+var compartilharReceitaRouter = require('./routes/compartilharReceita')
 var usersRouter = require('./routes/users');
 var areaLogadaRouter = require('./routes/areaLogada')
 var quemSomosRouter = require('./routes/quemSomos');
@@ -12,6 +14,7 @@ var homeRouter = require('./routes/home');
 var usuarioRouter = require('./routes/usuario');
 var loginRouter = require('./routes/login')
 var ingredientesRouter = require('./routes/ingredientes')
+var listaRouter = require('./routes/lista');
 
 var app = express();
 
@@ -25,7 +28,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+
+app.use('/receita', receitaRouter);
+app.use('/compartilharreceita', compartilharReceitaRouter)
 app.use('/users', usersRouter);
 app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
@@ -33,6 +38,10 @@ app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/login', loginRouter);
 app.use('/ingredientes', ingredientesRouter);
+app.use('/login', loginRouter)
+app.use('/lista', listaRouter)
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

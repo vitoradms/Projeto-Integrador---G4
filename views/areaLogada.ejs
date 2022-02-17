@@ -4,68 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/reset.css">
     <link rel="stylesheet" href="/stylesheets/areaLogada.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <title>Área Logada</title>
 </head>
+
 <body class="content"> 
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="#">Menu</a></li>
-                    <li style="float: right;"><a href="#"><button class="bt1">Cadastre-se</button></a></li>
-                    <li style="float: right;"><a href="#"><button class="bt2">Login</button></a></li>
-                </ul>
-            </nav>
+
+    <%- include("./partials/header")  %>
+       
+        <div class="cont-account">
+
+            <div class="icon1"><img src="https://i0.wp.com/diplomartbrussels.com/wp-content/uploads/2020/09/food-background-images-94-images-in-co-381169-png-images-pngio-food-background-png-1440_619.png?fit=1440%2C619&ssl=1" alt="background-image"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
         </div>
-    <header>
-        <div class="container-logo">
-            <img class="logotipo" src="../../assets/images/logo.png" alt="LOGOTIPO">
-        </div>
-        <div>
-            <ul type="none" class="nav-bar">
-                <li class="botao">Receitas</li>   <!-- -->
-                <li class="botao">Ingredientes</li>
-                <li class="botao">Log in</li>
-                <li class="botao">Cadastre-se</li>
+            <h4>NOME DO USUÁRIO</h4>
+            <h4 class="email">YourEmail@gmail.com</h4>
+
+            <ul class="nav-bar">
+                <button class="botao"><li>Suas Receitas</li></button> 
+                <button class="botao"><li>Compartilhar</li></button>
+                <button class="botao"><li>Salvos</li></button>
             </ul>
         </div>
     </header>
-
-    <section class="content"></section>
-    
-    <div class="images-recipes">
-        <h1 class="categorias">CATEGORIAS</h1>
-        
-        <img src="imagens/adedotun-adegborioye-iLVmduqz23g-unsplash.jpg" alt="bolo" style = "width:50%;">
-        <a href="#"><button class = "btd" type="submit">DOCES</button></a>
-    </div>
-
-    <div class="assados">
-        <img src="imagens/hayley-ryczek-HQ22vVXhWcc-unsplash.jpg" alt="frango" style = "width:50%;">
-        <a href="#"><button class = "btd2" type="submit">ASSADOS</button></a>
-    </div>
-
-    <div class="fritos">
-        <img src="imagens/louis-hansel-vi0kZuoe0-8-unsplash.jpg" alt="fritos" style = "width:50%;">
-        <a href="#"><button class = "btd3" type="submit">FRITOS</button></a>
-    </div>
-
-    <a href="#"><button class="mais-receitas" type="submit">Mostrar Mais Receitas</button></a>
-
-    <div class="last-section">
-        <div class = "yellow-rectangle">
-            <h2>CONFIRA TAMBÉM</h2>
-        </div>
-        <div class="last-pic"></div>
-        <div class="options-2">
-            <ul>
-                <li><a href="#"><button class = "bt-2" type="submit" style="margin-left: 100px;">TOP INGREDIENTS</button></a></li>
-                <li><a href="#"><button class = "bt-2" type="submit" style="margin-left: 415px;">MATADORES DE LARICA</button></a></li>
-                <li><a href="#"><button class = "bt-2" type="submit" style="margin-left: 725px;">TEMPO DE PREPARO</button></a></li>
-                <li><a href="#"><button class = "bt-2" type="submit" style="margin-left: 1035px; padding: 25px 5px;">RECEITAS DE IMPROVISO</button></a></li>
-            </ul>
+ 
+    <!--GELADEIRA-->
+    <div class="container-fluid">
+        <img class="img-geladeira" src="/images/blackpie].png" alt="black-pie">
+        <div class="row">
+          <div class="col">
+            <h1>O QUE</h1><h1>TEM NA SUA</h1><h1>GELADEIRA?</h1>
+          </div>
+          <div class="col-2">
+            <div class="ingredient1"><h3>Digite seu ingrediente +</h3></div>
+          </div>
         </div>
     </div>
-</body>
-</html>
+    <!--FIM-->
+
+    <!--CATEGORIAS-->
+    <div class="containerr">
+        <div class="row">
+          <div class="col-sm">
+
+            <img class="image-categorias" src="/images/anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg" alt="image-categorias">
+            <button>DOCES</button>
+          </div>
+          <div class="col-sm">
+            <img class="image-categorias" src="/images/frango.jpg" alt="image-categorias">
+            <button>ASSADOS</button>
+          </div>
+          <div class="col-sm">
+            <img class="image-categorias" src="/images/louis-hansel-vi0kZuoe0-8-unsplash.jpg" alt="image-categorias">
+            <button>FRITOS</button>
+          </div>
+        </div>
+      </div>
+      <!--FIM-->
+      <%- include("./partials/footer")  %>
+      
+    </body>
+      
