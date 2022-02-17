@@ -9,34 +9,89 @@
     <link rel="stylesheet" href="/stylesheets/lista.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
+    
 
-    <title>Categorias de Receitas</title>
+    <title>Listas Categorias de Receitas</title>
 </head>
 <body>
 
-    <%- include('./partials/header.ejs'); %>
+    <%- include("./partials/header")  %>
 
     <main>
         <section>
-            <div class="imagem_principal">
-                <img src="../assets/massas.jpg" alt="lista de massas">
-                <img src="../assets/sanduiche.jpg" alt="lista de sanduiches">
+            <!-- <div class="img-text">
+                O título precisa ser dinâmico, ou seja, vai receber o valor do card que foi clicado na pagina anterior
+                <h1>Top Ingredientes</h1>
+            </div> -->
+            <div class="imagem-principal">
+                <h1 class="img-text">Categorias de Receitas</h1>
             </div>
         </section>
-        <section>
-            <div class="posicao">
-                <ol>
-                    <li>1ª receita melhor avaliada</li>
-                    <li>2ª receita melhor avaliada</li>
-                    <li>3ª receita melhor avaliada</li>
-                    <li>4ª receita melhor avaliada</li>
-                    <li>5ª receita melhor avaliada</li>
-                </ol>
+        <section class="pagina">
+            <div class="ordena-cards">
+                <div class="card-ordem">
+                    <h2 class="h2">1</h2>
+                </div>
+                <div class="card">
+                    <!-- <a href="#" class="card"> -->
+                      <h3 class="h3">Nome da Receita</h3>
+                      <h4 class="h4">Ingredientes</h4>
+                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                      <span class="p">View Information
+                </div>
+            </div>
+            <div class="ordena-cards">
+                <div class="card-ordem">
+                    <h2 class="h2">2</h2>
+                </div>
+                <div class="card">
+                    <!-- <a href="#" class="card"> -->
+                      <h3 class="h3">Nome da Receita</h3>
+                      <h4 class="h4">Ingredientes</h4>
+                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                      <span class="p">View Information
+                </div>
+            </div>
+            <div class="ordena-cards">
+                <div class="card-ordem">
+                    <h2 class="h2">3</h2>
+                </div>
+                <div class="card">
+                    <!-- <a href="#" class="card"> -->
+                      <h3 class="h3">Nome da Receita</h3>
+                      <h4 class="h4">Ingredientes</h4>
+                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                      <span class="p">View Information
+                </div>
+            </div>
+            <div class="ordena-cards">
+                <div class="card-ordem">
+                    <h2 class="h2">4</h2>
+                </div>
+                <div class="card">
+                    <!-- <a href="#" class="card"> -->
+                      <h3 class="h3">Nome da Receita</h3>
+                      <h4 class="h4">Ingredientes</h4>
+                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                      <span class="p">View Information
+                </div>
+            </div>
+            <div class="ordena-cards">
+                <div class="card-ordem">
+                    <h2 class="h2">5</h2>
+                </div>
+                <div class="card">
+                    <!-- <a href="#" class="card"> -->
+                      <h3 class="h3">Nome da Receita</h3>
+                      <h4 class="h4">Ingredientes</h4>
+                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                      <span class="p">View Information
+                </div>
             </div>
         </section>
     </main>
-
-    <%- include('./partials/footer.ejs'); %>
+     
+    <%- include("./partials/footer")  %>
 
 </body>
 </html>
