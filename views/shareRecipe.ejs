@@ -27,18 +27,17 @@
         </div>
 
         <div class="digite_nome_aqui">             
-                <form action="#" method="POST"> </form>
-                <input type="text" name="nome_da_receita" placeholder="Digite aqui" required>
+            <form action="/compartilharreceita" method="POST">
+                <input type="text" name="nome_da_receita" placeholder="Digite aqui" required>                        
         </div> 
 
 <!-- ADICIONAR FOTOS E VÍDEOS -->
         <div class="destaque">
-            <div class="imagem_destaque">
-            </div>
+            <div class="imagem_destaque"></div>
            
             <div class="texto_destaque">
                 <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
-                <form method="POST" action="#"> <span class="btn btn-success fileinput-button">
+              <span class="btn btn-success fileinput-button">
                     <span>Selecionar arquivos</span>
                 <input type="file" name="file">
             </div>
@@ -49,22 +48,13 @@
         <div class="ingredientes">
             <div>
                 <h2> Adicione os ingredientes </h2>
-
-                <form action="#" method="POST"> </form>
-                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
-
-                <form action="#" method="POST"> </form>
-                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
-
-                <form action="#" method="POST"> </form>
-                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
-
-                <form action="#" method="POST"> </form>
-                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
-
-                <form action="#" method="POST"> </form>
-                <input type="text" name="ingrediente" placeholder="Digite o nome do ingrediente aqui" required>
-
+                
+                    <input type="text" name="ingrediente1" placeholder="Digite o nome do ingrediente aqui" >                
+                    <input type="text" name="ingrediente2" placeholder="Digite o nome do ingrediente aqui" >                
+                    <input type="text" name="ingrediente3" placeholder="Digite o nome do ingrediente aqui" >                
+                    <input type="text" name="ingrediente4" placeholder="Digite o nome do ingrediente aqui" >                
+                    <input type="text" name="ingrediente5" placeholder="Digite o nome do ingrediente aqui" >        
+                
             </div>
         </div>
 
@@ -73,21 +63,13 @@
             <div>
                 <h2> Modo de Preparo </h2>
                 <!-- CAIXA DE COMENTÁRIO -->
-                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="10" cols="135" placeholder="Corte a cebola em rodelas..."></textarea>
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="10" cols="125" placeholder="Corte a cebola em rodelas..."></textarea>
+
+                <button type="submit"> Salvar </button>
             </div>
         </div>
 
-<!-- BOTÕES DE INTERAÇÃO-->
-        <div class="interacao">
-            <ul>
-                <li><a href="#"> Compartilhar receita </a></li>
-            </ul>
-                
-            <ul>
-                <li><a href="#"> Salvar receita</a></li>
-            </ul> 
-                    
-        </div>
+    </form>
     </body>
 
     <footer class="footer">
