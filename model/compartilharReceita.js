@@ -12,8 +12,10 @@ const writeToDB = async () => {
 
 const compartilharReceita = {
     async criar(nome, fotos, ingredientes, modoDePreparo) {
-        db.compartilharReceita.push({ id: v4(), ...compartilharReceita, fotos, ingredientes, modoDePreparo});
+        const receita = { id: v4(), nome, fotos, ingredientes, modoDePreparo}
+        db.receitas.push(receita);
         await writeToDB();
+        return receita
     }
 }
 
