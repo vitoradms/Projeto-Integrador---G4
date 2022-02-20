@@ -3,15 +3,15 @@ const { v4 } = require('uuid');
 
 let db = require('../database/db.json');
 
-const { uploadPath } = require('../config/upload');
+const { uploadPath } = require('../config/multer');
 
 const writeToDB = async () => {
     const json = JSON.stringify(db);
     await fs.promises.writeFile('database/db.json', json);
 };
 
-const compartilharReceita = {
-    async criar(nome, fotos, ingredientes, modoDePreparo) {
+const salvarReceita = {
+    async salvar(nome, fotos, ingredientes, modoDePreparo) {
         const receita = { id: v4(), nome, fotos, ingredientes, modoDePreparo}
         db.receitas.push(receita);
         await writeToDB();
@@ -19,4 +19,4 @@ const compartilharReceita = {
     }
 }
 
-module.exports = compartilharReceita
+module.exports = salvarReceita

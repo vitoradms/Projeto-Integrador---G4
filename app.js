@@ -6,8 +6,7 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 
 
-const receitaRouter = require('./routes/receita');
-const compartilharReceitaRouter = require('./routes/compartilharReceita')
+const receitaRouter = require('./routes/receitas');
 const usersRouter = require('./routes/users');
 const areaLogadaRouter = require('./routes/areaLogada')
 const quemSomosRouter = require('./routes/quemSomos');
@@ -32,7 +31,6 @@ app.use(methodOverride('_method'));
 
 
 app.use('/receita', receitaRouter);
-app.use('/compartilharreceita', compartilharReceitaRouter)
 app.use('/users', usersRouter);
 app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
