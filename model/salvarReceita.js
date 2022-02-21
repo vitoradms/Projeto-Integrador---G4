@@ -11,8 +11,8 @@ const writeToDB = async () => {
 };
 
 const salvarReceita = {
-    async salvar(nome, fotos, ingredientes, modoDePreparo) {
-        const receita = { id: v4(), nome, fotos, ingredientes, modoDePreparo}
+    async salvar(nomeReceita, fotoReceita, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, modoDePreparo) {
+        const receita = { id: v4(), nomeReceita, fotoReceita, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, modoDePreparo}
         db.receitas.push(receita);
         await writeToDB();
         return receita
