@@ -1,4 +1,4 @@
-const salvarReceita = require('../model/salvarReceita');
+const receitas = require('../model/Receitas');
 
 const receitasController = {
     showReceita: (req, res) => {
@@ -8,9 +8,12 @@ const receitasController = {
         return res.render('salvarReceita');
     },
     salvarReceita: async (req, res) => {
-        const { filename } = req.file
-        let { nome_da_receita, foto_receita, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, modo_de_preparo } = req.body
-        const receita = await salvarReceita.salvar(nome_da_receita, filename, ingrediente1, ingrediente2, ingrediente3, ingrediente4, ingrediente5, modo_de_preparo);
+        console.log(req.body)
+        const { nome_da_receita, modo_de_preparo } = req.body
+        const fotoReceita = req.file.filename
+        const { ingredientes } = req.body
+       
+       const novaReceita = await receitas.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo);
         res.send('receita salva')
 
     },
