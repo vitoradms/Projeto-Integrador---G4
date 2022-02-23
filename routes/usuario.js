@@ -4,6 +4,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/cadastro', usuarioControllers.cadastro)
+router.post('/cadastro', usuarioControllers.salvar)
 router.delete('/deletar', usuarioControllers.deletar)
 router.put('/atualizarDados', usuarioControllers.atualizarDados)
 
