@@ -175,6 +175,37 @@
 
 }
 
+.preparo_porcoes h2 {
+    max-width: auto;
+    background-color: #E7C512;
+    font-family: 'Abadi';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 0px 20px 50px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.preparo_porcoes label {
+    font-family: 'Abadi';
+    font-size: 24px;
+    margin-left: 420px;
+}
+
+.preparo_porcoes input {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    padding: 5px;
+    width: 400px;
+    border-bottom: solid #000000 1px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background: transparent;
+    margin: 0px 0px 30px 420px;
+}
+
 .salvar_receita {
     display: flex;
     justify-content: center;
@@ -189,7 +220,8 @@
     padding: 10px 25px;
     border-radius: 0px;
     border: 1px solid ;
-    background: #E7C512;;
+    background: #E7C512;
+    margin-top: 80px;
 }
 
 .botao_salvar:hover {
