@@ -144,11 +144,153 @@
                 ""
             ],
             "modoDePreparo": "Esquenta na sanduicheira ou na frigideira"
+        },
+        {
+            "id": "5116ff78-17f6-4a5b-bbef-bc440d23025e",
+            "nomeReceita": "Bolo simples",
+            "fotoReceita": "a6e2df3b-7538-4f53-89d9-f6aad2ad5d13 - anna-tukhfatullina-food-photographer-stylist-Mzy-OjtCI70-unsplash.jpg",
+            "ingredientes": [
+                "2 xícaras de açúcar",
+                "3 xícaras de farinha de trigo",
+                "4 colheres de sopa de margarina",
+                "3 ovos",
+                "1 xícara e meia de leite",
+                "1 colher de sopa de fermento"
+            ],
+            "modoDePreparo": "Misture os líquidos primeiro, depois acrescente a farinha e leve ao forno em uma forma untada. ",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "12 porções"
+        },
+        {
+            "id": "b65a83e0-8a15-4811-8f5a-1d81c50c9543",
+            "nomeReceita": "arroz",
+            "fotoReceita": "c7d556f3-164b-4248-ab30-ad9b82eeff73 - banner1.png",
+            "ingredientes": [
+                null
+            ],
+            "modoDePreparo": "Arroz é fácil, se vira",
+            "tempoPreparo": "20 min",
+            "porcoes": "Serve 4 pessoas"
+        },
+        {
+            "id": "f953690f-d128-4340-afdc-d7e6829d3b41",
+            "nomeReceita": "Bolo simples",
+            "fotoReceita": "09aad791-f017-4e5d-bce7-27f539aaeae0 - destaque2.jpg",
+            "ingredientes": [
+                [
+                    "2 xícaras de açucar",
+                    "",
+                    "leite",
+                    "",
+                    "ovos",
+                    ""
+                ]
+            ],
+            "modoDePreparo": "Mistura tudo",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "12 fatias"
+        },
+        {
+            "id": "47e1e2ba-a995-4195-9ccc-dc107586c8f9",
+            "nomeReceita": "Torta salgada de frango",
+            "fotoReceita": "b1702da9-f38c-4037-9191-e450c5482283 - destaque1.jpg",
+            "ingredientes": [
+                [
+                    "Frango",
+                    "",
+                    "farinha",
+                    "",
+                    "ovos",
+                    "leite"
+                ]
+            ],
+            "modoDePreparo": "Mistura tudo",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "12 fatias"
+        },
+        {
+            "id": "73fe5970-b244-4bde-9856-7973f9ae858e",
+            "nomeReceita": "Torta salgada de frango",
+            "fotoReceita": "78465144-a475-4f2b-9bca-64aff47ec2e6 - destaque1.jpg",
+            "ingredientes": [
+                [
+                    "Frango",
+                    "",
+                    "farinha",
+                    "",
+                    "ovos",
+                    "leite"
+                ]
+            ],
+            "modoDePreparo": "Mistura tudo",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "12 fatias"
+        },
+        {
+            "id": "e8a5c89a-9972-481f-b46a-3992ddb4a24b",
+            "nomeReceita": "Feijão",
+            "fotoReceita": "2550b09e-530a-4b71-9af8-360556510ad2 - destaque1.jpg",
+            "ingredientes": [
+                [
+                    "Feijão",
+                    "",
+                    "água",
+                    "",
+                    "sal",
+                    "coentro"
+                ]
+            ],
+            "modoDePreparo": "Panela de pressão",
+            "tempoPreparo": "30 minutos",
+            "porcoes": "Serve 6 pessoas"
+        },
+        {
+            "id": "6e70319c-93f7-46b3-871f-ff9cd8e7d0f1",
+            "nomeReceita": "Vitamina",
+            "fotoReceita": "837ac9e6-67a8-4a55-8606-c85894d5e4e4 - background2.jpg",
+            "ingredientes": "falseBanana,,,leite,,",
+            "modoDePreparo": "Bata tudo no liquidificador",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "2 copos"
+        },
+        {
+            "id": "a8b0df04-21b4-4e8c-b73d-f23894047979",
+            "nomeReceita": "Vitamina",
+            "fotoReceita": "b54c4378-2e78-403b-b793-4e8aee20d634 - background2.jpg",
+            "ingredientes": [
+                [
+                    "Banana",
+                    "",
+                    "",
+                    "leite",
+                    "",
+                    ""
+                ]
+            ],
+            "modoDePreparo": "Bata tudo no liquidificador",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "2 copos"
+        },
+        {
+            "id": "a4c8d42c-1823-4cb2-b1fc-3545403e0124",
+            "nomeReceita": "Vitamina",
+            "fotoReceita": "f1c992db-5e3d-4a3c-9883-63ba90aa8092 - background2.jpg",
+            "ingredientes": [
+                [
+                    "Banana",
+                    "",
+                    "",
+                    "leite",
+                    "",
+                    ""
+                ]
+            ],
+            "modoDePreparo": "Bata tudo no liquidificador",
+            "tempoPreparo": "40 minutos",
+            "porcoes": "2 copos"
         }
     ],
-    "usuario":[
-        {
-
-        }
+    "usuario": [
+        {}
     ]
 }

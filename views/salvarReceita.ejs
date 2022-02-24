@@ -29,7 +29,7 @@
 
         <div class="digite_nome_aqui">             
             <form action="/receita/salvar" method="POST" enctype="multipart/form-data">
-                <input type="text" class="digite_caixa" name="nome_da_receita" placeholder="Digite aqui" required>                        
+                <input type="text" class="digite_caixa" name="nome_da_receita" placeholder="Bolo simples" required>                        
         </div> 
 
 <!-- ADICIONAR FOTOS E VÍDEOS -->
@@ -49,12 +49,12 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
                 
-                    <input type="text" name="ingredientes[0]" placeholder="Informe o nome e a quantidade do ingrediente" required>                
-                    <input type="text" name="ingredientes[1]" placeholder="Informe o nome e a quantidade do ingrediente" required>                
-                    <input type="text" name="ingredientes[2]" placeholder="Informe o nome e a quantidade do ingrediente" >                
-                    <input type="text" name="ingredientes[3]" placeholder="Informe o nome e a quantidade do ingrediente" >                
-                    <input type="text" name="ingredientes[4]" placeholder="Informe o nome e a quantidade do ingrediente" >  
-                    <input type="text" name="ingredientes[5]" placeholder="Informe o nome e a quantidade do ingrediente" >       
+                    <input type="text" name="ingrediente" placeholder="2 xícaras de açúcar " required>                
+                    <input type="text" name="ingrediente" placeholder="3 xícaras de farinha de trigo">                
+                    <input type="text" name="ingrediente" placeholder="4 colheres de sopa de margarina" >                
+                    <input type="text" name="ingrediente" placeholder="3 ovos" >                
+                    <input type="text" name="ingrediente" placeholder="1 xícara e meia de leite" >  
+                    <input type="text" name="ingrediente" placeholder="1 colher de sopa bem cheia de fermento em pó" >       
                 
             </div>
         </div>
@@ -64,7 +64,7 @@
             <div>
                 <h2> Modo de Preparo </h2>
                 <!-- CAIXA DE COMENTÁRIO -->
-                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" placeholder="Corte a cebola em rodelas..." required></textarea>               
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" placeholder="Bata as claras em neve..." required></textarea>               
             </div>
         </div>
 
@@ -72,10 +72,10 @@
             <div>
                 <h2> Tempo de preparo e porções </h2>
                     <label> Quanto tempo leva para preparar a receita? </label><br>     
-                    <input type="text" name="tempo_preparo" placeholder="30 minutos" required>
+                    <input type="text" name="tempo_preparo" placeholder="40 minutos" required>
                     <br>
                     <label> Qual rendimento da receita? </label><br>              
-                    <input type="text" name="porcoes" placeholder="6 porções" required>                      
+                    <input type="text" name="porcoes" placeholder="12 porções" required>                      
                 
         </div>
 

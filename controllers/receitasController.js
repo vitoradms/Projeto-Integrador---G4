@@ -8,12 +8,19 @@ const receitasController = {
         return res.render('salvarReceita');
     },
     salvarReceita: async (req, res) => {
-        console.log(req.body)
         const { nome_da_receita, modo_de_preparo } = req.body
         const fotoReceita = req.file.filename
-        const { ingredientes } = req.body
-       
-       const novaReceita = await receitas.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo);
+        const { ingrediente } = req.body
+        const { tempo_preparo } = req.body
+        const { porcoes } = req.body
+
+        let ingredientes = []
+
+        if( ingrediente !== "" ) {
+            ingredientes.push(ingrediente)
+        }
+
+        const novaReceita = await receitas.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
         res.send('receita salva')
 
     },
