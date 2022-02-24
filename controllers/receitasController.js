@@ -14,11 +14,7 @@ const receitasController = {
         const { tempo_preparo } = req.body
         const { porcoes } = req.body
 
-        let ingredientes = []
-
-        if( ingrediente !== "" ) {
-            ingredientes.push(ingrediente)
-        }
+        let ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "")
 
         const novaReceita = await receitas.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
         res.send('receita salva')
