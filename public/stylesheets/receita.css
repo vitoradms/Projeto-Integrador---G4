@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@font-face {
+    font-family: Abadi;
+    src: url(../fonts/abadi-mt-std-cond-light.otf);
+  }
+
 
 .content {
-    background-image: url(/images/background4.jpg);
-    background-size: cover;
+    background-color: #f0f0f0;
 }
 
 
@@ -20,21 +24,16 @@
     text-align: left;
     max-width: auto;
     background-color: #E7C512;
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 48px;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding: 20px 0px 20px 50px;
-    margin-left: 35px;
-    margin-right: 35px;
-    
-
+    padding: 20px 0px 20px 50px; 
+    margin-top: 50px;  
 }
 
 .imagem_destaque {
-    background-image: url(/images/destaque2.jpg);
-    background-size: cover;
-    width: 300px;
+    width: 400px;
     height: 300px;
     margin: 6% 2% 2% 2%;
     border: solid 1px #000000;
@@ -54,7 +53,7 @@
 }
 
 .prepare_info h2 {
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 30px;
     margin-left: 50px;
 
@@ -63,7 +62,9 @@
 .prepare_info p {
     font-family: 'Montserrat';
     padding: 5px; 
-    margin-left: 50px;     
+    margin-left: 50px; 
+    margin-top: 10px;  
+    margin-bottom: 15px;  
 }
 
 
@@ -95,9 +96,8 @@
 }
 
 .interacao ul li a:hover {
-    background-color:#ffffff00;
-    color: #6D6D6D;
-    border: 1px solid #E7C512;
+    background-color:#E7C512;
+    border: 1px solid #000000;
 }
 
 .interacao ul a {
@@ -105,7 +105,7 @@
     display: inline-block;
     
     /* visual do link */
-    background-color:#000000;
+    background-color:#E7C512;
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 1px;
@@ -206,7 +206,7 @@
     color: #FFFFFF;
     text-decoration: none;
     border-radius: 1px;
-    margin-top: 125px;
+    margin-top: 60px;
    }
    
 .footer.footer {
