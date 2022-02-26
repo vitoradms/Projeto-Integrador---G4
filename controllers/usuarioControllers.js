@@ -1,9 +1,9 @@
-const usuarioModel = require('../model/cadastroUsuario');
+const usuario = require('../model/Usuario');
 
 
-const loginControllers = {
+const usuarioControllers = {
   cadastro: (req, res) => {
-      return res.render('cadastro')
+    return res.render('cadastro')
   },
   deletar: (req, res) => {
     return res.send('deletando usuario')
@@ -12,14 +12,11 @@ const loginControllers = {
     return res.send('atualizando dados usuarios')
   },
   salvar: async (req, res) => {
-    console.log(req.body)
-    const { nome_do_usuario} = req.body
-    const { criar_senha } = req.body
-    const { confirmar_senha } = req.body
-   
-   const novoUsuario = await usuarioModel.salvar(nome_do_usuario, criar_senha, confirmar_senha);
-    res.send('Usuario salvo')
-}
+    const { nome_do_usuario, email, criar_senha, confirmar_senha } = req.body
+
+    const novoUsuario = await usuario.salvar(nome_do_usuario, email, criar_senha, confirmar_senha);
+    res.send(novoUsuario)
+  }
 }
 
-module.exports = loginControllers
+module.exports = usuarioControllers

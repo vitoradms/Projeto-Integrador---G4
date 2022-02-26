@@ -7,7 +7,6 @@ const methodOverride = require('method-override');
 
 
 const receitaRouter = require('./routes/receitas');
-const usersRouter = require('./routes/users');
 const areaLogadaRouter = require('./routes/areaLogada')
 const quemSomosRouter = require('./routes/quemSomos');
 const homeRouter = require('./routes/home');
@@ -31,7 +30,6 @@ app.use(methodOverride('_method'));
 
 
 app.use('/receita', receitaRouter);
-app.use('/users', usersRouter);
 app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);

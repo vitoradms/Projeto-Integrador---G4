@@ -21,16 +21,23 @@
 
                 <form action="/usuario/cadastro" method="POST" enctype="multipart/form-data"> 
                     <div class="mb-3">
-                      <input type="text" class="form-control" placeholder="Crie um nome de usuário" name="nome_do_usuario">
+                        <label for="nome">Nome completo</label>
+                      <input type="text" class="form-control" id="nome" placeholder="Crie um nome de usuário" name="nome_do_usuario">
                     </div>
                     <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Crie uma senha" name="criar_senha">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Informe seu email" name="email_usuario">
+                      </div>
+                    <div class="mb-3">
+                        <label for="senha1">Crie uma senha</label>
+                      <input type="password" class="form-control" id="senha1" placeholder="Crie uma senha" name="criar_senha">
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Confirme a senha!" name="confirmar_senha">
+                        <label for="senha2">Confirme sua senha</label>
+                        <input type="password" class="form-control" id="senha2" placeholder="Confirme sua senha" name="confirmar_senha">
                     </div>
                     
-                    <button type="submit">Cadastrar!</button>
+                    <button type="submit">Cadastrar</button>
                   </form>
 
             </section>
