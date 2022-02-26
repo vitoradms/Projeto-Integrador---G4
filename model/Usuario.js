@@ -11,8 +11,8 @@ const writeToDB = async () => {
 };
 
 const Usuario =  {
-    async salvar (nomeUsuario, email, senha, confirmacaoSenha) {
-        const cadastro = { id: v4(), nomeUsuario, email,  senha, confirmacaoSenha }
+    async salvar (nome, email, senha) {
+        const cadastro = { id: v4(), nome, email, senha,}
         db.usuarios.push(cadastro);
         await writeToDB();
         return cadastro

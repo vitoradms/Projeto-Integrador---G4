@@ -34,7 +34,6 @@ app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/login', loginRouter);
-app.use('/login', loginRouter)
 app.use('/lista', listaRouter)
 
 

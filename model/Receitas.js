@@ -10,7 +10,7 @@ const writeToDB = async () => {
     await fs.promises.writeFile('database/db.json', json);
 };
 
-const salvarReceita = {
+const Receitas= {
     async salvar(nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes) {
         const receita = { id: v4(), nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes}
         db.receitas.push(receita);
@@ -19,4 +19,4 @@ const salvarReceita = {
     }
 }
 
-module.exports = salvarReceita
+module.exports = Receitas
