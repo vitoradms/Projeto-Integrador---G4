@@ -12,7 +12,6 @@ const quemSomosRouter = require('./routes/quemSomos');
 const homeRouter = require('./routes/home');
 const usuarioRouter = require('./routes/usuario');
 const loginRouter = require('./routes/login')
-const ingredientesRouter = require('./routes/ingredientes')
 const listaRouter = require('./routes/lista');
 
 const app = express();
@@ -35,7 +34,6 @@ app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
 app.use('/login', loginRouter);
-app.use('/ingredientes', ingredientesRouter);
 app.use('/login', loginRouter)
 app.use('/lista', listaRouter)
 
