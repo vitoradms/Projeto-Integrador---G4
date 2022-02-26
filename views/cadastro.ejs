@@ -19,15 +19,15 @@
             <section class="bloco-cadastro">
                 <img src="/images/logo-branco.png" width="350px" height="auto" alt="logo">
 
-                <form action="/arealogada"> 
+                <form action="/usuario/cadastro" method="POST" enctype="multipart/form-data"> 
                     <div class="mb-3">
-                      <input type="text" class="form-control" placeholder="Crie um nome de usuário">
+                      <input type="text" class="form-control" placeholder="Crie um nome de usuário" name="nome_do_usuario">
                     </div>
                     <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Crie uma senha">
+                      <input type="password" class="form-control" placeholder="Crie uma senha" name="criar_senha">
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Confirme a senha!">
+                        <input type="password" class="form-control" placeholder="Confirme a senha!" name="confirmar_senha">
                     </div>
                     
                     <button type="submit">Cadastrar!</button>

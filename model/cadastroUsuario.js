@@ -10,11 +10,13 @@ const writeToDB = async () => {
     await fs.promises.writeFile('database/dbUsuario.json', json);
 };
 
-const cadastroUsuarios = async (nomeUsuario, senha, confirmacaoSenha) => {
-    const cadastro = { id: v4(), nomeUsuario, senha, confirmacaoSenha}
-    db.receitas.push(cadastro);
-    await writeToDB();
-    return cadastro
+const cadastroUsuarios =  {
+    async salvar (nomeUsuario, senha, confirmacaoSenha) {
+        const cadastro = { id: v4(), nomeUsuario, senha, confirmacaoSenha}
+        db.receitas.push(cadastro);
+        await writeToDB();
+        return cadastro
+    }
 }
 
 module.exports = cadastroUsuarios

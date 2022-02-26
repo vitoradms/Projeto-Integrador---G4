@@ -19,6 +19,8 @@ const receitasController = {
         const novaReceita = await receitas.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
         res.send('receita salva')
 
+        // estudar redirecionamento de páginas para aplicar. Redirecionar e voltar para as receitas.
+
     },
     favoritar: (req, res) => {
         return res.send('favoritando receita')
