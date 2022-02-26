@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 
-    <head>
-        <link rel="stylesheet" href="/stylesheets/reset.css">
-        <link rel="stylesheet" href="/stylesheets/shareRecipe.css">
-        <link rel="stylesheet" href="/stylesheets/header.css">
-        <link rel="stylesheet" href="/stylesheets/footer.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<header>
+    <%- include("./partials/header")  %> 
+</header>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/reset.css">
+    <link rel="stylesheet" href="/stylesheets/shareRecipe.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <!-- MENU -->
-<body class="content">
-    
-    <%- include("./partials/header")  %> 
+<body class="content"> 
 
 <!-- BANNER -->
         <div class="banner">
             <div class="banner_text">
-                <h2> Compartilhe sua receita improvisada! </h2>
-                <h3> Em apenas 5 passos! </h3>
+                <h2> <mark>Compartilhe</mark> sua receita!</h2>
             </div>             
         </div>
 
@@ -28,7 +29,7 @@
 
         <div class="digite_nome_aqui">             
             <form action="/receita/salvar" method="POST" enctype="multipart/form-data">
-                <input type="text" name="nome_da_receita" placeholder="Digite aqui" required>                        
+                <input type="text" class="digite_caixa" name="nome_da_receita" placeholder="Bolo simples" required>                        
         </div> 
 
 <!-- ADICIONAR FOTOS E VÍDEOS -->
@@ -38,8 +39,7 @@
             <div class="texto_destaque">
                 <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
               <span class="btn btn-success fileinput-button">
-                    <span>Selecionar arquivos</span>
-                <input type="file" name="foto_receita">
+                <input type="file" name="foto_receita" class="adicionar_foto">
             </div>
 
         </div>
@@ -49,11 +49,12 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
                 
-                    <input type="text" name="ingredientes[0]" placeholder="Digite o nome do ingrediente aqui" >                
-                    <input type="text" name="ingredientes[1]" placeholder="Digite o nome do ingrediente aqui" >                
-                    <input type="text" name="ingredientes[2]" placeholder="Digite o nome do ingrediente aqui" >                
-                    <input type="text" name="ingredientes[3]" placeholder="Digite o nome do ingrediente aqui" >                
-                    <input type="text" name="ingredientes[4]" placeholder="Digite o nome do ingrediente aqui" >        
+                    <input type="text" name="ingrediente" placeholder="2 xícaras de açúcar " required>                
+                    <input type="text" name="ingrediente" placeholder="3 xícaras de farinha de trigo">                
+                    <input type="text" name="ingrediente" placeholder="4 colheres de sopa de margarina" >                
+                    <input type="text" name="ingrediente" placeholder="3 ovos" >                
+                    <input type="text" name="ingrediente" placeholder="1 xícara e meia de leite" >  
+                    <input type="text" name="ingrediente" placeholder="1 colher de sopa bem cheia de fermento em pó" >       
                 
             </div>
         </div>
@@ -63,12 +64,26 @@
             <div>
                 <h2> Modo de Preparo </h2>
                 <!-- CAIXA DE COMENTÁRIO -->
-                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="10" cols="125" placeholder="Corte a cebola em rodelas..."></textarea>
-
-                <button type="submit"> Salvar </button>
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" placeholder="Bata as claras em neve..." required></textarea>               
             </div>
         </div>
 
+        <div class="preparo_porcoes">
+            <div>
+                <h2> Tempo de preparo e porções </h2>
+                    <label> Quanto tempo leva para preparar a receita? </label><br>     
+                    <input type="text" name="tempo_preparo" placeholder="40 minutos" required>
+                    <br>
+                    <label> Qual rendimento da receita? </label><br>              
+                    <input type="text" name="porcoes" placeholder="12 porções" required>                      
+                
+        </div>
+
+        <div class="salvar_receita"> 
+            <button class="botao_salvar" type="submit"> Salvar receita </button>
+        </div>
+
+        
     </form>
     </body>
 

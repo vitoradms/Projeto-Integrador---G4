@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@font-face {
+    font-family: Abadi;
+    src: url(../fonts/abadi-mt-std-cond-light.otf);
+  }
 
 # {
     box-sizing: border-box;
 }
-}
 
-}
 .content {
-    background-image: url(/images/background1.jpg);
+    background-color: #f0f0f0;
     
 }
 
@@ -16,12 +18,10 @@
 .banner {
     display: flex;
     justify-content: center;
-    height: 300px;
+    height: 200px;
+    width: auto;
     padding: 60px;
-    background: url(/images/banner6.png) no-repeat center; 
-    background-size: cover;
-    margin-left: 35px;
-    margin-right: 35px;
+    background: url(/images/imagemFundo.jpg) 100%; 
 }
 
 .banner_text {
@@ -30,23 +30,21 @@
 
 .banner h2 {
     font-size: 48px;
-    font-family: 'Oxygen'; 
+    font-family: 'Abadi'; 
     text-transform: uppercase;
     text-align: center;
     padding: 5px;
     color: #FFFFFF;  
     margin-top: 60px;  
-    background-color: #E7C512;
     border-radius: 1px;
 }
 
 .banner h3 {
     font-size: 70px;
-    font-family: 'Roboto';
+    font-family: 'Abadi';
     color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
-    
     margin-top: 60px;
 }
 
@@ -56,23 +54,26 @@
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 20px;
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 40px;
     text-transform: uppercase;
     width: auto;
 }
 
 /* Formulário nome da receita */
+
 .digite_nome_aqui {
     display: flex;
     justify-content: center;
  }
 
  .digite_nome_aqui input{
+    margin-left: -20px;
+    margin-right: 150px;
     padding: 20px;
-    width: 35%;
-    font-family: 'Montserrat';
-    text-transform: ;
+    height: 5px;
+    width: 100%;
+    font-family: 'Abadi';
     font-size: 24px;
     border: 1px solid #000000;
     border-radius: 2px;
@@ -95,7 +96,7 @@
 
 .texto_destaque {
     text-transform: uppercase;
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 40px;
     height: 600px;
     width: 30%;
@@ -120,73 +121,24 @@
     font-family: "Abadi";
     text-transform: uppercase;
 }
-/*Copied from bootstrap */
-.btn {
-    padding: 6px 12px;
-    margin-bottom: 0;
-    font-size: 24px;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 1px;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    
-}
-/*Also */
- .btn-success {
-    color: #fff;
-    background-color: #000000;
-    border-color: #E7C512;
-}
-/* This is copied from https://github.com/blueimp/jQuery-File-Upload/blob/master/css/jquery.fileupload.css */
- .fileinput-button {
-    position: relative;
-    overflow: hidden;
-}
-/*Also*/
- .fileinput-button input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    opacity: 0;
-    -ms-filter:'alpha(opacity=0)';
-    font-size: 200px;
-    direction: ltr;
-    cursor: pointer;
-}
 
 /* ingridentes para preparo */
 .ingredientes h2 {
     max-width: auto;
     background-color: #E7C512;
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 40px;
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 20px 0px 20px 50px;
-    margin-left: 35px;
-    margin-right: 35px;
     text-align: left;
 }
 
 .ingredientes input {
-    display: flex;
-    align-items: flex-start;
     font-family: 'Montserrat';
     font-size: 18px;
-    font-weight: bold;
     margin-top: 25px;
-    margin-left: 50px;
+    margin-left: 420px;
     padding: 5px;
     width: 500px;
     border-bottom: solid #000000 1px;
@@ -196,73 +148,87 @@
     background: transparent;
 }
 
-.ingredientes input:focus {
-    border: none;
+.ingredientes input:focus-visible {
+    border: hidden;
 }
 
 .modo_de_preparo h2 {
     max-width: auto;
     background-color: #E7C512;
-    font-family: 'Montserrat';
+    font-family: 'Abadi';
     font-size: 40px;
     text-transform: uppercase;
     color: #FFFFFF;
     padding: 20px 0px 20px 50px;
-    margin-left: 35px;
-    margin-right: 35px;
     margin-top: 20px;
     text-align: left;
 }
 
 .modo_de_preparo textarea {
-    font-family: 'Montserrat';
-    font-size: 18px;
-    font-weight: bold;
-    margin: 2%;
-    padding: 30px;
-    font-weight: bold;
-}
-
-/* botões de interação */
-.interacao{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    margin:20px 100px 20px 155px;
+    padding: 30px;
+
+}
+
+.preparo_porcoes h2 {
+    max-width: auto;
+    background-color: #E7C512;
     font-family: 'Abadi';
-    margin-bottom: 2%;
-}
-
-.interacao ul {
-    padding:0px;
-    margin:15px;
-    background-color:#FFFFFF;
-    list-style:none;
-}
-
-.interacao ul li {
-    display: inline;    
-}
-
-.interacao ul li a:hover {
-    background-color:#FFFFFF;
-    color: #6D6D6D;
-    border: 2px solid #E7C512;
-}
-
-.interacao ul a {
-    padding: 2px 10px;
-    display: inline-block;
-
-    /* visual do link */
-    background-color:#E7C512;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-bottom:3px solid #E7C512;
-    border-radius: 1px;
+    font-size: 40px;
     text-transform: uppercase;
-    border: 2px solid #0000; 
+    color: #FFFFFF;
+    padding: 20px 0px 20px 50px;
+    text-align: left;
+    margin-bottom: 30px;
 }
+
+.preparo_porcoes label {
+    font-family: 'Abadi';
+    font-size: 24px;
+    margin-left: 420px;
+}
+
+.preparo_porcoes input {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    padding: 5px;
+    width: 400px;
+    border-bottom: solid #000000 1px;
+    border-top: hidden;
+    border-left: hidden;
+    border-right: hidden;
+    background: transparent;
+    margin: 0px 0px 30px 420px;
+}
+
+.salvar_receita {
+    display: flex;
+    justify-content: center;
+}
+
+.botao_salvar{
+    font-family: "Abadi";
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #A1A1A1;
+    color: #f0f0f0;
+    font-size: 30px;
+    padding: 10px 25px;
+    border-radius: 0px;
+    border: 1px solid ;
+    background: #E7C512;
+    margin-top: 80px;
+}
+
+.botao_salvar:hover {
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+ 
 
 .footer.footer {
     display: flex;
