@@ -27,7 +27,7 @@
             <h2> Digite o nome da <mark> sua receita </mark> </h2> 
         </div>            
         
-    <form method="POST" action="<%= receita ? `/receita/${receita.id}?_method=PUT` : '/receita/Salvar' %>" enctype="multipart/form-data">
+    <form method="POST" action="<%= receita ? `/receita/editar${receita.id}?_method=PUT` : '/receita/Salvar' %>" enctype="multipart/form-data">
         
         <div class="digite_nome_aqui"> 
                 <input type="text" class="digite_caixa" name="nome_da_receita" value="<%= receita ? receita.nomeReceita : '' %>" required>                        

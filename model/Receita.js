@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { v4 } = require('uuid');
+
 
 let db = require('../database/db.json');
 
@@ -13,8 +13,9 @@ const Receita= {
         return db.receitas.find(receita => receita.id === id);
     }, 
     
-    async salvar(nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes) {
-        const receita = { id: v4(), nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes};
+    async salvar(id, nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes) {
+        
+        const receita = { id, nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes};
         db.receitas.push(receita);
         await writeToDB();
     },

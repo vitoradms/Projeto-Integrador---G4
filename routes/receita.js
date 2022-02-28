@@ -6,13 +6,12 @@ const uploadFotos = require('../middlewares/uploadFotos')
 
 const router = express.Router();
 
-router.get('/', receitasController.index)
-router.get('/show/:id', receitasController.showReceita);
-router.get('/salvar', receitasController.showForm);
+router.get('/salvar', receitasController.formulario);
 router.post('/salvar', uploadFotos, receitasController.salvar);
+router.get('/:id', receitasController.receita)
 router.get('/favoritar', receitasController.favoritar);
-router.put('/id:', receitasController.atualizar);
-router.delete('/id:', receitasController.deletar);
+router.put('/editar/:id', receitasController.atualizar);
+router.delete('/deletar/:id:', receitasController.deletar);
 
 
 module.exports = router;

@@ -1,27 +1,26 @@
+const { v4 } = require('uuid');
 const Receita = require('../model/Receita');
 
 const receitasController = {
-    index: (req, res) => {
-        res.render('receita', { receita: null });
-    },
-
-    showForm: (req, res) => {
+    formulario: (req, res) => {
         res.render('salvarReceita', { receita: null });
     },
 
-    showReceita: (req, res) => {
+    receita: (req, res) => {
         const { id } = req.params;
         const receita = Receita.findById(id);
-        res.render('receita', { receita});
+        res.render('receita', { receita });
     },
 
     salvar: async (req, res) => {
         const { nome_da_receita, modo_de_preparo, ingrediente, tempo_preparo, porcoes } = req.body;
         const fotoReceita = req.file.filename;
-        
+        const id = v4()
+
         let ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
-        await Receita.salvar(nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
-        res.redirect('/receita')
+        const receita = await Receita.salvar( id, nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
+        
+        res.redirect(`/receita/${id}`)
     },
 
     editar: (req, res) => {

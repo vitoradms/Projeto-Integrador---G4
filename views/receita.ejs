@@ -19,17 +19,13 @@
 
 <!-- INFO DA RECEITA -->
     <section>
-                  
-        <% if (receita){ %>
-             <% receita.map(receita => { %> 
-
             <div class="title">
                 <h2> <%= receita.nomeReceita %> </h2>
             </div>
             
         <div class="receita">    
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita.fotoReceita %>" >
+                <img width="100%" height="100%" src="</uploads/<%= receita.fotoReceita %>" >
             </div>
 
             <div class="prepare_info">
@@ -58,7 +54,9 @@
 
             <div class="ingredientes">
                 <ul>
-                    <li><% receita.ingrediente %></li>                     
+                    <% receita.ingredientes.forEach(ingrediente => { %>
+                        <li><%= ingrediente %> </li>
+                      <% }) %>                   
                 </ul>
                 
             </div>
@@ -70,7 +68,7 @@
     <section> 
         <div class="title">
             <h2> Modo de preparo </h2>
-            <p><%= receita.modoDePreparo %></p>
+            
         </div>
         <div class="prepare_mod">
             <div class="imagem_destaque">
@@ -78,7 +76,7 @@
             </div>
     
             <div class="prepare">
-                    
+                <p><%= receita.modoDePreparo %></p>
             </div>
         </div>
     </section>   
@@ -113,12 +111,7 @@
                 <input type="submit" name="comentar"> 
             </div>
             
-        </div>
-        <% }) %> 
-        <% } else {%>
-            <h1> RECEITA NÃO ENCONTRADA </h1>
-        <% } %>  
-       
+        </div>   
     </section>
 </body>
 
