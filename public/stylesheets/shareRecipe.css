@@ -67,23 +67,23 @@
     justify-content: center;
  }
 
- .digite_nome_aqui input{
-    margin-left: -20px;
-    margin-right: 150px;
+.digite_nome_aqui input{
+    margin-left: 40px;
+    margin-right: 40px;
     padding: 20px;
     height: 5px;
-    width: 100%;
+    width: 300px;
     font-family: 'Abadi';
     font-size: 24px;
     border: 1px solid #000000;
     border-radius: 2px;
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
- }
+}
 
- .digite_nome_aqui input:focus{
+.digite_nome_aqui input:focus{
     border: 1px #E7C512;
- }
+}
 
 /* Adicione Fotos ou vídeos */
 .destaque {

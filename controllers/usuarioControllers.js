@@ -11,7 +11,7 @@ const usuarioControllers = {
     return res.send('atualizando dados usuarios')
   },
   salvarUsuario: async (req, res) => {
-    const { nome, email, senha} = req.body
+    const { nome, email, senha } = req.body
 
     const novoUsuario = await usuario.salvar(nome, email, senha);
     res.send(novoUsuario)

@@ -6,7 +6,7 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 
 
-const receitaRouter = require('./routes/receitas');
+const receitaRouter = require('./routes/receita');
 const areaLogadaRouter = require('./routes/areaLogada')
 const quemSomosRouter = require('./routes/quemSomos');
 const homeRouter = require('./routes/home');

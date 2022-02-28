@@ -25,11 +25,12 @@
 <!-- BOTÃO NOME DA RECEITA -->
         <div class="nome_receita"> 
             <h2> Digite o nome da <mark> sua receita </mark> </h2> 
-        </div>
-
-        <div class="digite_nome_aqui">             
-            <form action="/receita/salvar" method="POST" enctype="multipart/form-data">
-                <input type="text" class="digite_caixa" name="nome_da_receita" placeholder="Bolo simples" required>                        
+        </div>            
+        
+    <form method="POST" action="<%= receita ? `/receita/${receita.id}?_method=PUT` : '/receita/Salvar' %>" enctype="multipart/form-data">
+        
+        <div class="digite_nome_aqui"> 
+                <input type="text" class="digite_caixa" name="nome_da_receita" value="<%= receita ? receita.nomeReceita : '' %>" required>                        
         </div> 
 
 <!-- ADICIONAR FOTOS E VÍDEOS -->
@@ -39,7 +40,7 @@
             <div class="texto_destaque">
                 <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
               <span class="btn btn-success fileinput-button">
-                <input type="file" name="foto_receita" class="adicionar_foto">
+                <input type="file" name="foto_receita" class="adicionar_foto" value="<%= receita ? receita.fotoReceita : '' %>">
             </div>
 
         </div>
@@ -49,12 +50,12 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
                 
-                    <input type="text" name="ingrediente" placeholder="2 xícaras de açúcar " required>                
-                    <input type="text" name="ingrediente" placeholder="3 xícaras de farinha de trigo">                
-                    <input type="text" name="ingrediente" placeholder="4 colheres de sopa de margarina" >                
-                    <input type="text" name="ingrediente" placeholder="3 ovos" >                
-                    <input type="text" name="ingrediente" placeholder="1 xícara e meia de leite" >  
-                    <input type="text" name="ingrediente" placeholder="1 colher de sopa bem cheia de fermento em pó" >       
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[0] : '' %>" required>                
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[1] : '' %>" >                
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[2] : '' %>" >                
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[3] : '' %>" >               
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[4] : '' %>" >  
+                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[5] : '' %>" >       
                 
             </div>
         </div>
@@ -63,8 +64,7 @@
         <div class="modo_de_preparo">
             <div>
                 <h2> Modo de Preparo </h2>
-                <!-- CAIXA DE COMENTÁRIO -->
-                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" placeholder="Bata as claras em neve..." required></textarea>               
+                    <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" value="<%= receita ? receita.modoDePreparo : '' %>" required></textarea>               
             </div>
         </div>
 
@@ -72,10 +72,10 @@
             <div>
                 <h2> Tempo de preparo e porções </h2>
                     <label> Quanto tempo leva para preparar a receita? </label><br>     
-                    <input type="text" name="tempo_preparo" placeholder="40 minutos" required>
+                    <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : '' %>" required>
                     <br>
                     <label> Qual rendimento da receita? </label><br>              
-                    <input type="text" name="porcoes" placeholder="12 porções" required>                      
+                    <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : '' %>" required>                      
                 
         </div>
 
