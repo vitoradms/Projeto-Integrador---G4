@@ -1,9 +1,8 @@
 const fs = require('fs');
 const { v4 } = require('uuid');
+const bcrypt = require('bcrypt');
 
 let db = require('../database/db.json');
-
-const { uploadPath } = require('../config/multer');
 
 const writeToDB = async () => {
     const json = JSON.stringify(db);
@@ -11,11 +10,14 @@ const writeToDB = async () => {
 };
 
 const Usuario =  {
-    async salvar (nome, email, senha) {
-        const cadastro = { id: v4(), nome, email, senha,}
-        db.usuarios.push(cadastro);
+    async salvar(nome, sobrenome, data_nascimento, email, senha) {
+        const saltRounds = 10
+        const hash = bcrypt.hashSync(senha, saltRounds)
+
+        const novoUsuario = { id: v4(), nome, sobrenome, data_nascimento, email, senha:hash, admin:false };
+        db.usuarios.push(novoUsuario);
         await writeToDB();
-        return cadastro
+        return novoUsuario
     }
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <header>
-    <%- include("./partials/header")  %> 
+    <%- include("./partials/header") %>
 </header>
 
 <head>
@@ -13,83 +13,87 @@
 </head>
 
 <!-- MENU -->
-<body class="content"> 
 
-<!-- BANNER -->
-        <div class="banner">
-            <div class="banner_text">
-                <h2> <mark>Compartilhe</mark> sua receita!</h2>
-            </div>             
+<body class="content">
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="banner_text">
+            <h2> <mark>Compartilhe</mark> sua receita!</h2>
+        </div>
+    </div>
+
+    <!-- BOTÃO NOME DA RECEITA -->
+    <div class="nome_receita">
+        <h2> Digite o nome da <mark> sua receita </mark> </h2>
+    </div>
+
+    <form method="POST" action="<%= receita ? `/receita/editar${receita.id}?_method=PUT` : '/receita/Salvar' %>"
+        enctype="multipart/form-data">
+
+        <div class="digite_nome_aqui">
+            <input type="text" class="digite_caixa" name="nome_da_receita"
+                value="<%= receita ? receita.nomeReceita : '' %>" required>
         </div>
 
-<!-- BOTÃO NOME DA RECEITA -->
-        <div class="nome_receita"> 
-            <h2> Digite o nome da <mark> sua receita </mark> </h2> 
-        </div>            
-        
-    <form method="POST" action="<%= receita ? `/receita/editar${receita.id}?_method=PUT` : '/receita/Salvar' %>" enctype="multipart/form-data">
-        
-        <div class="digite_nome_aqui"> 
-                <input type="text" class="digite_caixa" name="nome_da_receita" value="<%= receita ? receita.nomeReceita : '' %>" required>                        
-        </div> 
-
-<!-- ADICIONAR FOTOS E VÍDEOS -->
+        <!-- ADICIONAR FOTOS E VÍDEOS -->
         <div class="destaque">
             <div class="imagem_destaque"></div>
-           
+
             <div class="texto_destaque">
                 <p> Adicone <br><mark>fotos ou <br>vídeos</mark> do<br> seu prato </p>
-              <span class="btn btn-success fileinput-button">
-                <input type="file" name="foto_receita" class="adicionar_foto" value="<%= receita ? receita.fotoReceita : '' %>">
+                <span class="btn btn-success fileinput-button">
+                    <input type="file" name="foto_receita" class="adicionar_foto"
+                        value="<%= receita ? receita.fotoReceita : '' %>">
             </div>
 
         </div>
 
-<!-- INGREDIENTES -->
+        <!-- INGREDIENTES -->
         <div class="ingredientes">
             <div>
                 <h2> Adicione os ingredientes </h2>
-                
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[0] : '' %>" required>                
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[1] : '' %>" >                
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[2] : '' %>" >                
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[3] : '' %>" >               
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[4] : '' %>" >  
-                    <input type="text" name="ingrediente"  value="<%= receita ? receita.ingrediente[5] : '' %>" >       
-                
+
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[0] : '' %>" required>
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[1] : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[2] : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[3] : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[4] : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[5] : '' %>">
+
             </div>
         </div>
 
-<!-- MODO DE PREPARO -->
+        <!-- MODO DE PREPARO -->
         <div class="modo_de_preparo">
             <div>
                 <h2> Modo de Preparo </h2>
-                    <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100" value="<%= receita ? receita.modoDePreparo : '' %>" required></textarea>               
+                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100"
+                    value="<%= receita ? receita.modoDePreparo : '' %>" required></textarea>
             </div>
         </div>
 
         <div class="preparo_porcoes">
             <div>
                 <h2> Tempo de preparo e porções </h2>
-                    <label> Quanto tempo leva para preparar a receita? </label><br>     
-                    <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : '' %>" required>
-                    <br>
-                    <label> Qual rendimento da receita? </label><br>              
-                    <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : '' %>" required>                      
-                
-        </div>
+                <label> Quanto tempo leva para preparar a receita? </label><br>
+                <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : '' %>" required>
+                <br>
+                <label> Qual rendimento da receita? </label><br>
+                <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : '' %>" required>
 
-        <div class="salvar_receita"> 
-            <button class="botao_salvar" type="submit"> Salvar receita </button>
-        </div>
+            </div>
 
-        
+            <div class="salvar_receita">
+                <button class="botao_salvar" type="submit"> Salvar receita </button>
+            </div>
+
     </form>
-    </body>
+</body>
 
-    <footer class="footer">
-        <%- include("./partials/footer")  %> 
-    </footer>
-    
-    
+<footer class="footer">
+    <%- include("./partials/footer") %>
+</footer>
+
+
 </html>
