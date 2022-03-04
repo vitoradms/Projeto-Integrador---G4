@@ -10,11 +10,11 @@ const writeToDB = async () => {
 };
 
 const Usuario =  {
-    async salvar(nome, sobrenome, data_nascimento, email, senha) {
+    async salvar(fotoPerfil, nome, sobrenome, data_nascimento, email, senha) {
         const saltRounds = 10
         const hash = bcrypt.hashSync(senha, saltRounds)
 
-        const novoUsuario = { id: v4(), nome, sobrenome, data_nascimento, email, senha:hash, admin:false };
+        const novoUsuario = { id: v4(), fotoPerfil, nome, sobrenome, data_nascimento, email, senha:hash, admin:false };
         db.usuarios.push(novoUsuario);
         await writeToDB();
         return novoUsuario

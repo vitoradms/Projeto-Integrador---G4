@@ -18,7 +18,7 @@ const receitasController = {
         const id = v4()
 
         let ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
-        const receita = await Receita.salvar( id, nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
+        await Receita.salvar( id, nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
         
         res.redirect(`/receita/${id}`)
     },

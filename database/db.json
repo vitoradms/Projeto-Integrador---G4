@@ -832,74 +832,34 @@
             "modoDePreparo": "Moa o feijão e faça um bolinho. ",
             "tempoPreparo": "60 minutos",
             "porcoes": "10 porções"
+        },
+        {
+            "id": "adee15d0-98c6-4172-ac58-eb3f1618e2e2",
+            "nomeReceita": "Misto Quente",
+            "fotoReceita": "73503d9f-22b1-48ca-b2a4-e600645300de - banner3.jpg",
+            "ingredientes": [
+                "Pão",
+                "Queijo",
+                "Presunto"
+            ],
+            "modoDePreparo": "Põe na chapa e enjoy!",
+            "tempoPreparo": "5 minutos",
+            "porcoes": "1 pessoa"
+        },
+        {
+            "id": "a0b46a75-79da-4f2b-afde-be295207c59d",
+            "nomeReceita": "Arroz",
+            "fotoReceita": "63f5af01-3e5e-4739-aacb-b1a6649bb584 - ree-マ-winston-by-picolo-kun-overwatch-11470652 (2).jpg",
+            "ingredientes": [
+                "arroz",
+                "água"
+            ],
+            "modoDePreparo": "Se vira",
+            "tempoPreparo": "15 minutos",
+            "porcoes": "2 pessoas"
         }
     ],
     "usuarios": [
-        {
-            "id": "1",
-            "nomeUsuario": "João da Silva",
-            "email": "joao@email.com",
-            "senha": "123456",
-            "confirmacaoSenha": "123456"
-        },
-        {
-            "id": "887c9113-d5b0-4c5f-b6b1-8b20cf8802a3"
-        },
-        {
-            "id": "27fe2560-aef4-47b0-883f-fe204c4e576a"
-        },
-        {
-            "id": "33c99859-ac15-4c62-9911-33788713aecc"
-        },
-        {
-            "id": "1e4ab894-86af-4573-9987-ee9d4f2f2f68"
-        },
-        {
-            "id": "f035897c-6e9f-4bbf-8fae-e81f8d9f832f"
-        },
-        {
-            "id": "8818c897-6490-4cd8-a37b-ddbe5e3cf8ed"
-        },
-        {
-            "id": "28da07a9-17c0-455c-b66c-894af5c7b5ab"
-        },
-        {
-            "id": "d2f65a9a-79e3-4774-9d82-70218c0f19e0"
-        },
-        {
-            "id": "c356a9ea-0509-4ada-8170-e0b8288892d6"
-        },
-        {
-            "id": "16b1c550-e800-4f0b-9523-bd62721dc7a4",
-            "user": {}
-        },
-        {
-            "id": "44929f2f-11ea-44e9-b152-69e64176aa01"
-        },
-        {
-            "id": "bdde2ff2-a68a-4b86-bbcb-c989e590dea5"
-        },
-        {
-            "id": "8c576c3c-d56c-421a-9528-898f4ff464d1"
-        },
-        {
-            "id": "56083325-1a55-40d1-b30a-bc1da3c1656b"
-        },
-        {
-            "id": "2dba067f-2b0f-4e60-bbe0-fb6e4d2a2d0b"
-        },
-        {
-            "id": "a49410ac-64de-4c9a-82f7-344e8213229e"
-        },
-        {
-            "id": "7f73dd0e-decd-4b00-b511-3aa02167c907"
-        },
-        {
-            "id": "c559c593-64a1-4bd8-9fce-1a9b2cd9ad99",
-            "nome": "João da Silva",
-            "email": "joao@email.com",
-            "senha": "123456"
-        },
         {
             "id": "a96f3cb0-a1f8-4181-a9b5-7b25fe32c762",
             "nome": "Maria ",
@@ -916,6 +876,16 @@
             "data_nascimento": "2001-06-18",
             "email": "fernando@email.com",
             "senha": "$2b$10$gWTf9b0Wcy1E1wwIQDhE0uHgavfobEiw2P6AhZNhnAtrjg1Y8DZ7a",
+            "admin": false
+        },
+        {
+            "id": "4bd26b5f-1eb4-4dfa-8918-48e20c3b314a",
+            "fotoPerfil": "99b97335-a8b2-460b-a052-7130b69956e5 - ree-マ-winston-by-picolo-kun-overwatch-11470652 (2).jpg",
+            "nome": "Winston",
+            "sobrenome": "Overwatch",
+            "data_nascimento": "1994-08-01",
+            "email": "winston@email.com",
+            "senha": "$2b$10$VSvsbXrHNuof0N0j3lX8kOBZMFXIhjPCV0yVFwwb8d6FAwxRt5ZUy",
             "admin": false
         }
     ]

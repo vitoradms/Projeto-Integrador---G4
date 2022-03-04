@@ -22,7 +22,12 @@
         <section class="bloco-cadastro">
             <img src="/images/logo-branco.png" width="350px" height="auto" alt="logo">
 
-            <form method="POST" action="/usuario/cadastro">
+            <form method="POST" action="/usuario/cadastro" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                    <label for="foto">Adicione uma foto de perfil</label>
+                    <input type="file" name="foto" class="form-control" id="foto">
+                </div>
 
                 <div class="mb-3">
                     <label for="nome">Nome</label>

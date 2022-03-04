@@ -7,7 +7,9 @@ const usuarioControllers = {
 
   async salvarUsuario(req, res){
     const { nome, sobrenome, data_nascimento, email, senha }= req.body;
-    await Usuario.salvar(nome, sobrenome, data_nascimento, email, senha);
+    const fotoPerfil = req.file.filename
+
+    await Usuario.salvar(fotoPerfil, nome, sobrenome, data_nascimento, email, senha);
     res.send("Salvo com sucesso")
 
   },
