@@ -19,7 +19,7 @@
     <!-- BANNER -->
     <div class="banner">
         <div class="banner_text">
-            <h2> <mark>Compartilhe</mark> sua receita!</h2>
+            <h2> <mark> Compartilhe </mark> sua receita!</h2>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         <h2> Digite o nome da <mark> sua receita </mark> </h2>
     </div>
 
-    <form method="POST" action="<%= receita ? `/receita/editar${receita.id}?_method=PUT` : '/receita/Salvar' %>"
+    <form method="POST" action="<%= receita ? `/receita/editar/${receita.id}?_method=PUT` : '/receita/Salvar' %>"
         enctype="multipart/form-data">
 
         <div class="digite_nome_aqui">
@@ -54,12 +54,12 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
 
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[0] : '' %>" required>
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[1] : '' %>">
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[2] : '' %>">
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[3] : '' %>">
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[4] : '' %>">
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente[5] : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>" required>
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>">
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingrediente : '' %>">
 
             </div>
         </div>
@@ -85,8 +85,16 @@
             </div>
 
             <div class="salvar_receita">
-                <button class="botao_salvar" type="submit"> Salvar receita </button>
+                <% if(receita){ %> 
+                <button class="botao_salvar" type="submit">Salvar edição</button>
+                <% } else { %> 
+                <button class="botao_salvar" type="submit">Salvar Receita</button>
+                <% } %> 
             </div>
+            
+
+
+      
 
     </form>
 </body>

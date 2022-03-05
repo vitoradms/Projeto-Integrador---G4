@@ -29,11 +29,19 @@ const receitasController = {
         res.render('salvarReceita', { receita });
     },
 
-    atualizar: (req, res) => {
+    atualizar: async (req, res) => {
         const { id } = req.params;
         const receita = req.body;
-        Receita.atualizar(id, receita);
-        res.redirect('/receita')
+        const fotoReceita = req.file ? req.file.filename : undefined
+       await Receita.atualizar(id, receita);
+
+       if(fotoReceita){
+           await Receita.removeFoto(id);
+           Receita.atualizar(id, receita, fotoReceita);
+       } else {
+           Receita.update(id, receita)
+       }
+        res.redirect(`/receita${id}`)
     },
 
     deletar: async (req, res) => {
