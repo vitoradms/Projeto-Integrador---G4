@@ -21,15 +21,15 @@
       </div>
       <div id="ladoDir">
         <h1>Fazer login</h1>
-        <form action="/areaLogada">
+        <form action='login/' method="post">
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Nome de usuário">
+            <input type="text" class="form-control" name="email" id="email" placeholder="Email do usuário">
           </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
           </div>
           <a href="/cadastro"><p>Esqueceu sua senha?</p></a>
-          <button type="submit">Acessar</button>
+          <button type="submit" value="Enviar">Acessar</button>
         </form>
   </div>
   
