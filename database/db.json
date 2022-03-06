@@ -1,49 +1,20 @@
 {
     "receitas": [
         {
-            "id": "54777e70-f309-443f-94cd-338c3ec04c2e",
-            "nome_da_receita": "Torta de limão",
-            "ingrediente": [
-                "Limão",
-                "farinha",
-                "leite",
-                "ovo",
-                "óleo",
-                ""
-            ],
-            "modo_de_preparo": "Misture os líquidos primeiro. Leve ao forno pré-aquecido a 180º",
-            "tempo_preparo": "40 minutos",
-            "porcoes": "12 fatias"
-        },
-        {
-            "id": "67ee1632-866e-4956-a626-4bba1d91124a",
-            "nomeReceita": "Macarronada",
-            "fotoReceita": "d698187f-6071-4673-99fc-60dea6184920 - background3.jpg",
+            "id": "56c41042-76e6-4563-9218-af15f4341b07",
+            "nomeReceita": "Mousse de limão",
             "ingredientes": [
-                "Macarrão",
-                "Sal",
-                "Pimenta",
-                "Molho de tomate"
+                "1 lata/caixa de leite condensado",
+                "1 lata de creme de leite",
+                "1/2 copo (americano) de suco puro de limão"
             ],
-            "modoDePreparo": "Macarrão é fácil, se vira.",
-            "tempoPreparo": "15 minutos",
-            "porcoes": "Serve duas pessoas"
-        },
-        {
-            "id": "c7f62056-36ce-44f3-abd1-f77caad2dd10",
-            "nome_da_receita": "Purê de batata",
-            "modo_de_preparo": " Cozinhe as batatas, depois amasse e misture com o restante dos ingredientes. Sal a gosto.  ",
-            "ingredientes": [
-                "2 batatas médias",
-                "Manteiga",
-                "Sal",
-                "Creme de leite",
-                "Pimenta"
-            ],
-            "tempo_preparo": "25 minutos",
-            "porcoes": "Serve 2 pessoas"
+            "modoDePreparo": "No liquidificador, bata o leite condensado e o creme de leite por 3 minutos.\r\nAcrescente aos poucos o suco de limão e continue batendo.\r\nDespeje o mousse em um refratário e leve à geladeira. \r\n\r\nDICA: Se quiser, pode triturar biscoito wafer ou bis para dar uma crocância",
+            "tempoPreparo": "10 minutos",
+            "porcoes": "8 porções",
+            "fotoReceita": "0e07e93c-f598-40a3-a207-c5f8fa7253f9 - mousse de limão.jpg"
         }
     ],
+
     "usuarios": [
         {
             "id": "a96f3cb0-a1f8-4181-a9b5-7b25fe32c762",
@@ -71,16 +42,6 @@
             "data_nascimento": "1994-08-01",
             "email": "winston@email.com",
             "senha": "$2b$10$VSvsbXrHNuof0N0j3lX8kOBZMFXIhjPCV0yVFwwb8d6FAwxRt5ZUy",
-            "admin": false
-        },
-        {
-            "id": "3bcefabe-13bb-4d50-9b35-5e331f381281",
-            "fotoPerfil": "21b94dea-ebfc-468b-b68e-afbd3ed2b4ca - 5092188.jpg",
-            "nome": "rearfdsa",
-            "sobrenome": "fdasfds",
-            "data_nascimento": "1998-05-04",
-            "email": "asdf@fdsfs.com",
-            "senha": "$2b$10$QRmEEJUz5pbXS.vi4jqSQOl/E3tsy2OpCcKLoUKbjgIN3HWeeAaTO",
             "admin": false
         }
     ]

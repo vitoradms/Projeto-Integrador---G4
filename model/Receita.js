@@ -13,7 +13,7 @@ const Receita= {
         return db.receitas.find(receita => receita.id === id);
     }, 
 
-    async removeAvatar(id) {
+    async removeFotoReceita(id) {
         const receitaIndex = db.receitas.findIndex(receita => receita.id == id);
         
         await fs.promises.unlink(
@@ -21,16 +21,16 @@ const Receita= {
         );
     },
     
-    async salvar(id, nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes) {
+    async salvar(id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita) {
         
-        const receita = { id, nomeReceita, fotoReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes};
+        const receita = { id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita};
         db.receitas.push(receita);
         await writeToDB();
     },
 
-    async atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita) {
+    async atualizar(id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita) {
         const receitaIndex = db.receitas.findIndex(receita => receita.id === id);
-        db.receitas[receitaIndex] = fotoReceita ? { id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita} : {id, id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes};
+        db.receitas[receitaIndex] = fotoReceita ? { id, nomeReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita } : { id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes };
         await writeToDB();
     }, 
 

@@ -18,7 +18,7 @@ const receitasController = {
         const id = v4()
         const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
-        await Receita.salvar( id, nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
+        await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);
         
         res.redirect(`/receita/${id}`)
     },
@@ -36,12 +36,12 @@ const receitasController = {
         const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
        if(fotoReceita){
-           await Receita.removeFoto(id);
+           await Receita.removeFotoReceita(id);
            Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita);
        } else {
            Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes)
        }
-        res.redirect(`/receita${id}`)
+        res.redirect(`/receita/${id}`)
     },
 
     deletar: async (req, res) => {
