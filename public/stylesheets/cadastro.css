@@ -4,7 +4,6 @@ body{
     background-image: url("/images/destaque1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,36 +12,36 @@ body{
 
             
 header {
-    
     color: white;
     text-align: center;
-    margin: 75px;
+    margin: 40px;
 }
 
 header h1 {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     margin: -100px 50px 35px 50px;
 }
 
 header h2 {
-    font-size: 35px;
+    font-size: 23px;
     font-weight: 400;
     font-style: italic;
 }
 
 body #principal {
-    height: 100vh;
-    display: flex;
+    height: 140vh;
+    display: flex;  
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .bloco-cadastro {
+    box-sizing: border-box;
     background-color: #8ba01f;
-    width:450px;
-    height:450px;
+    width:500px;
+    height:570px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -54,11 +53,10 @@ body #principal {
 }
 
 .bloco-cadastro img {
-    margin-bottom: 25px;
-    margin-left: 30px;
+    width: 250px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
-
-
 
 button {
     border-radius: 10px;
@@ -67,5 +65,8 @@ button {
     size: 100px;
     margin-top: 10px;
     height: 35px;
+}
 
+.mb-3 {
+    height: 45px;
 }
