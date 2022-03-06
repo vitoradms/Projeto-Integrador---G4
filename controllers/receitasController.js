@@ -2,7 +2,7 @@ const { v4 } = require('uuid');
 const Receita = require('../model/Receita');
 
 const receitasController = {
-    formulario: (req, res) => {
+    formSalvar: (req, res) => {
         res.render('salvarReceita', { receita: null });
     },
 
@@ -13,11 +13,11 @@ const receitasController = {
     },
 
     salvar: async (req, res) => {
-        const { nome_da_receita, modo_de_preparo, ingrediente, tempo_preparo, porcoes } = req.body;
+        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
         const fotoReceita = req.file.filename;
         const id = v4()
+        const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
-        let ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
         await Receita.salvar( id, nome_da_receita, fotoReceita, ingredientes, modo_de_preparo, tempo_preparo, porcoes);
         
         res.redirect(`/receita/${id}`)
@@ -31,15 +31,15 @@ const receitasController = {
 
     atualizar: async (req, res) => {
         const { id } = req.params;
-        const receita = req.body;
+        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
         const fotoReceita = req.file ? req.file.filename : undefined
-       await Receita.atualizar(id, receita);
+        const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
        if(fotoReceita){
            await Receita.removeFoto(id);
-           Receita.atualizar(id, receita, fotoReceita);
+           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita);
        } else {
-           Receita.update(id, receita)
+           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes)
        }
         res.redirect(`/receita${id}`)
     },

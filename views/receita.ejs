@@ -22,23 +22,23 @@
 <!-- INFO DA RECEITA -->
     <section>
             <div class="title">
-                <h2> <%= receita.nomeReceita %> </h2>
+                <h2> <%= receita && receita.nomeReceita %> </h2>
             </div>
             
         <div class="receita">    
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita.fotoReceita %>" >
+                <img width="100%" height="100%" src="/uploads/<%= receita && receita.fotoReceita %>" >
             </div>
 
             <div class="prepare_info">
                 <h2></i> Tempo de Preparo </h2>
-                <p><%= receita.tempoPreparo %></p>
+                <p><%= receita && receita.tempoPreparo %></p>
                 <h2></i> Rendimento </h2>
-                <p> <%= receita.porcoes %> </p>
+                <p> <%= receita && receita.porcoes %> </p>
 
                 <div class="interacao">
                     <button type="button"> Compartilhar receita </button>
-                    <a href="/receita/editar/<%= receita.id %> " button type="button"> Editar receita </button></a>
+                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button"> Editar receita </button></a>
 
                     
                 </div>
@@ -57,7 +57,7 @@
 
             <div class="ingredientes">
                 <ul>
-                    <% receita.ingredientes.forEach(ingrediente => { %>
+                    <% receita && receita.ingredientes.forEach(ingrediente => { %>
                         <li><%= ingrediente %> </li><br>
                       <% }) %>                   
                 </ul>
@@ -79,7 +79,7 @@
             </div>
     
             <div class="prepare">
-                <p><%= receita.modoDePreparo %></p>
+                <p><%= receita && receita.modoDePreparo %></p>
             </div>
         </div>
     </section>   
