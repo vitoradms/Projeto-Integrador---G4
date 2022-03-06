@@ -38,9 +38,11 @@
 
                 <div class="interacao">
                     <button type="button"> Compartilhar receita </button>
-                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button"> Editar receita </button></a>
+                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button"> Editar </button></a> 
 
-                    
+                    <form method="POST" action="/receita/<%= receita && receita.id %>?_method=DELETE">
+                        <button class="botao_salvar" type="submit"> Apagar </button>
+                    </form>
                 </div>
                 
             </div>

@@ -46,8 +46,9 @@ const receitasController = {
 
     deletar: async (req, res) => {
         const { id } = req.params;
+        await Receita.removeFotoReceita(id);
         await Receita.deletar(id);
-        res.redirect('/receita');
+        res.redirect('/home');
     },
 
     favoritar: (req, res) => {

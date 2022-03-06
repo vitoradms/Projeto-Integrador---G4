@@ -9,13 +9,11 @@ const router = express.Router();
 
 router.get('/salvar', receitasController.formSalvar);
 router.get('/:id', receitasController.receita)
-
+router.delete('/:id', receitasController.deletar);
 
 router.post('/salvar', uploadFotos, receitasController.salvar);
-
 router.get('/editar/:id', receitasController.editar)
 router.put('/salvar/:id', uploadFotos, receitasController.atualizar);
-router.delete('/salvar/:id:', receitasController.deletar);
 
 router.get('/favoritar', receitasController.favoritar);
 

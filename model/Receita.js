@@ -1,7 +1,7 @@
 const fs = require('fs');
+const db = require('../database/db.json');
 
-
-let db = require('../database/db.json');
+const { uploadPath } = require('../config/multer')
 
 const writeToDB = async () => {
     const json = JSON.stringify(db);

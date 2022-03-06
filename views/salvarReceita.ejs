@@ -90,10 +90,6 @@
             <div class="salvar_receita">
                 <% if(receita){ %>
                     <button class="botao_salvar" type="submit"> Editar </button>
-
-                    <form method="POST" action="/receita/salvar/<%= receita.id %> ?_method=DELETE">
-                        <button class="botao_salvar" type="submit"> Deletar </button>
-                    </form>
                     
                     <% } else { %>
                         <button class="botao_salvar" type="submit">Salvar Receita</button>
