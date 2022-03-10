@@ -38,7 +38,7 @@
 
                 <div class="interacao">
                          <div class="w3-container">
-                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Compartilhar</button>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="botao">Compartilhar</button>
                       
                         <div id="id01" class="w3-modal">
                           <div class="w3-modal-content">
@@ -59,10 +59,10 @@
                         </div>
                       </div>
 
-                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button"> Editar </button></a> 
+                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button" class="botao">Editar</button></a> 
 
                     <form method="POST" action="/receita/<%= receita && receita.id %>?_method=DELETE">
-                        <button class="botao_salvar" type="submit"> Apagar </button>
+                        <button class="botao" type="submit">Apagar</button>
                     </form>
                 </div>
                 
