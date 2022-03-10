@@ -30,7 +30,7 @@ const Receita= {
 
     async atualizar(id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita) {
         const receitaIndex = db.receitas.findIndex(receita => receita.id === id);
-        db.receitas[receitaIndex] = fotoReceita ? { id, nomeReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita } : { id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes };
+        db.receitas[receitaIndex] = fotoReceita ? { id, nomeReceita, ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita } : { id, nomeReceita,ingredientes, modoDePreparo, tempoPreparo, porcoes, fotoReceita };
         await writeToDB();
     }, 
 

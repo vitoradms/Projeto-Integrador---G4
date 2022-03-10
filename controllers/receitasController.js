@@ -14,12 +14,11 @@ const receitasController = {
 
     salvar: async (req, res) => {
         const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
-        const fotoReceita = req.file.filename;
         const id = v4()
+        const fotoReceita = req.file.filename
         const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
         await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);
-        
         res.redirect(`/receita/${id}`)
     },
 
@@ -31,15 +30,15 @@ const receitasController = {
 
     atualizar: async (req, res) => {
         const { id } = req.params;
-        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
+        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes, foto } = req.body
         const fotoReceita = req.file ? req.file.filename : undefined
         const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
 
-       if(fotoReceita){
+       if (fotoReceita) {
            await Receita.removeFotoReceita(id);
            Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita);
        } else {
-           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes)
+           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, foto)
        }
         res.redirect(`/receita/${id}`)
     },
