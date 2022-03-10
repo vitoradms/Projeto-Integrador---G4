@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/stylesheets/receita.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,7 +37,28 @@
                 <p> <%= receita && receita.porcoes %> </p>
 
                 <div class="interacao">
-                    <button type="button"> Compartilhar receita </button>
+                         <div class="w3-container">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Compartilhar</button>
+                      
+                        <div id="id01" class="w3-modal">
+                          <div class="w3-modal-content">
+                            <div class="w3-container">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                              <p><h1><mark><%=receita && receita.nomeReceita%></mark></h1></p>
+                              <ul>
+                                  <h1>Ingredientes:</h1>
+                                <% receita && receita.ingredientes.forEach(ingrediente => { %>
+                                    <li><%= ingrediente %> </li><br>
+                                  <% }) %><br>
+                                <p><h1>Modo de preparo:</h1><%= receita && receita.modoDePreparo %></p>
+                                <p><h1>Tempo de preparo:</h1><%= receita && receita.tempoPreparo %></p>
+                                <p><h1>Rendimento:</h1><%= receita && receita.porcoes %></p>     
+                            </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     <a href="/receita/editar/<%= receita && receita.id %> " button type="button"> Editar </button></a> 
 
                     <form method="POST" action="/receita/<%= receita && receita.id %>?_method=DELETE">
