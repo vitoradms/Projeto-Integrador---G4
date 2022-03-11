@@ -16,6 +16,8 @@
 
 <body class="content">
 
+   
+
     <!-- BANNER -->
     <div class="banner">
         <div class="banner_text">
@@ -24,6 +26,17 @@
     </div>
 
     <!-- BOTÃO NOME DA RECEITA -->
+    <div class="erro">
+        <% if(typeof(errors) != "undefined"){ %> 
+            <ul type="disc">
+                <li>ALGO DE ERRADO NÃO ESTÁ CERTO</li><br>
+                <% errors.forEach(error => {%> 
+                    <li><%= error.msg %></li>
+                <% }) %> 
+            </ul>
+        <% } %> 
+    </div>
+    
     <div class="nome_receita">
         <h2> Digite o nome da <mark> sua receita </mark> </h2>
     </div>
@@ -35,24 +48,24 @@
 
         <div class="digite_nome_aqui">
             <input type="text" class="digite_caixa" name="nome_da_receita"
-                value="<%= receita ? receita.nomeReceita : '' %>" required>
+                value="<%= receita ? receita.nomeReceita : "" %>">
         </div>
 
         <!-- ADICIONAR FOTOS E VÍDEOS -->
         <div class="destaque">
             <% if(receita) {%> 
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita.fotoReceita%>">
+                <img width="100%" height="100%" src="/uploads/<%= receita ? receita.fotoReceita : batata.jpg %>">
             </div>
 
             <div class="texto_destaque">
-                <p> Adicone <br><mark>fotos</mark> do<br> seu prato </p>
-                <input type="file" name="foto" class="adicionar_foto" required>
+                <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
+                <input type="file" name="foto" class="adicionar_foto">
             </div>
             <% } else { %>
                 <div class="texto_destaque">
-                    <p> Adicone <br><mark>fotos</mark> do<br> seu prato </p>
-                    <input type="file" name="foto" class="adicionar_foto" required>
+                    <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
+                    <input type="file" name="foto" class="adicionar_foto">
                 </div>
             <% } %>
         </div>
@@ -62,7 +75,7 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
 
-                <input type="text" name="ingrediente" value="<%= receita ? receita.ingredientes[0] : '' %>" required>
+                <input type="text" name="ingrediente" value="<%= receita ? receita.ingredientes[0] : '' %>">
                 <input type="text" name="ingrediente" value="<%= receita ? receita.ingredientes[1] : '' %>">
                 <input type="text" name="ingrediente" value="<%= receita ? receita.ingredientes[2] : '' %>">
                 <input type="text" name="ingrediente" value="<%= receita ? receita.ingredientes[3] : '' %>">
@@ -77,7 +90,7 @@
             <div>
                 <h2> Modo de Preparo </h2>
                 <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100"
-                    required><%= receita ? receita.modoDePreparo : '' %> </textarea>
+                    ><%= receita ? receita.modoDePreparo : '' %> </textarea>
             </div>
         </div>
 
@@ -85,10 +98,10 @@
             <div>
                 <h2> Tempo de preparo e porções </h2>
                 <label> Quanto tempo leva para preparar a receita? </label><br>
-                <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : '' %>" required>
+                <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : '' %>">
                 <br>
                 <label> Qual rendimento da receita? </label><br>
-                <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : '' %>" required>
+                <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : '' %>">
             </div>
 
             <div class="salvar_receita">

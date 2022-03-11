@@ -1,5 +1,6 @@
 const { v4 } = require('uuid');
 const Receita = require('../model/Receita');
+const { check, validationResult, body } = require('express-validator')
 
 const receitasController = {
     formSalvar: (req, res) => {
@@ -13,13 +14,20 @@ const receitasController = {
     },
 
     salvar: async (req, res) => {
-        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
-        const id = v4()
-        const fotoReceita = req.file.filename
-        const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
+        const listaDeErros = validationResult(req);
 
-        await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);
-        res.redirect(`/receita/${id}`)
+        if(listaDeErros.isEmpty()){
+            const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
+            const id = v4()
+            const fotoReceita = req.file.filename
+            const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
+    
+            await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);
+            res.redirect(`/receita/${id}`)
+
+        } else {
+            res.render('salvarReceita', { receita:null, errors:listaDeErros.errors, old:req.body })
+        }
     },
 
     editar: (req, res) => {
