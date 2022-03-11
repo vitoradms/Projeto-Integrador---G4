@@ -8,7 +8,7 @@ const usuarioEstaLogado = require('../middlewares/usuarioEstaLogado')
 const router = express.Router();
 
 
-router.get('/salvar', usuarioEstaLogado, receitasController.formSalvar);
+router.get('/salvar', receitasController.formSalvar);
 router.get('/:id', receitasController.receita)
 router.delete('/:id', receitasController.deletar);
 

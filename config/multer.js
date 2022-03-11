@@ -7,12 +7,12 @@ module.exports = {
   uploadPath,
 
   storage: multer.diskStorage({
-    destination: (request, file, callback) => {
-      callback(null, uploadPath);
+    destination: (req, file, cb) => {
+      cb(null, uploadPath);
     },
-
-    filename: (request, file, callback) => {
-      callback(null, `${ v4() } - ${ file.originalname }`);
-    }
-  }),
+    
+    filename: (req, file, cb) => {
+      cb(null, `${v4()} - ${file.originalname}`);
+    }    
+  })
 }
