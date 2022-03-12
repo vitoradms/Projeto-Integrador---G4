@@ -28,7 +28,6 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false }
 }));
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
