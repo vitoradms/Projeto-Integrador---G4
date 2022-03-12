@@ -15,7 +15,7 @@ router.delete('/:id', receitasController.deletar);
 
 router.post('/salvar', uploadFotos, receitaValidator, receitasController.salvar);
 router.get('/editar/:id', receitasController.editar)
-router.put('/salvar/:id', uploadFotos, receitasController.atualizar);
+router.put('/salvar/:id', uploadFotos, receitaValidator, receitasController.atualizar);
 
 router.get('/favoritar', receitasController.favoritar);
 

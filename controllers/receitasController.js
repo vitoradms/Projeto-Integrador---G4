@@ -4,7 +4,7 @@ const { check, validationResult, body } = require('express-validator')
 
 const receitasController = {
     formSalvar: (req, res) => {
-        res.render('salvarReceita', { receita: null });
+        res.render('salvarReceita', { receita: null, errors: null });
     },
 
     receita: (req, res) => {
@@ -19,7 +19,7 @@ const receitasController = {
         if(listaDeErros.isEmpty()){
             const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
             const id = v4()
-            const fotoReceita = req.file.filename
+            const fotoReceita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
             const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
     
             await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);

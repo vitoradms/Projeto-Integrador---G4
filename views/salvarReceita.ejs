@@ -28,9 +28,8 @@
     <!-- BOTÃO NOME DA RECEITA -->
     <div class="erro">
         <% if(typeof(errors) != "undefined"){ %> 
-            <ul type="disc">
-                <li><mark>ALGO DE ERRADO NÃO ESTÁ CERTO</mark></li><br>
-                <% errors.forEach(error => {%> 
+            <ul>
+                <% errors && errors.forEach(error => {%> 
                     <li><%= error.msg %></li><br>
                 <% }) %> 
             </ul>
