@@ -1,5 +1,4 @@
-const { v4 } = require('uuid');
-const Receita = require('../model/Receita');
+const { Receita, ingrediente} = require('../database/models')
 const { check, validationResult, body } = require('express-validator')
 
 const receitasController = {
@@ -18,12 +17,15 @@ const receitasController = {
 
         if(listaDeErros.isEmpty()){
             const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
-            const id = v4()
-            const fotoReceita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
+            const foto_receita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
             const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
     
-            await Receita.salvar( id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita,);
-            res.redirect(`/receita/${id}`)
+            Receita.create({
+                nome:nome_da_receita,
+                foto_receita,
+                modo_preparo: modo_de_preparo,
+                tempo_preparo,
+                rencimento:porcoes})
 
         } else {
             res.render('salvarReceita', { receita:null, errors:listaDeErros.errors, old:req.body })
