@@ -10,17 +10,25 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Usuario.hasMany(models.Receita, {
+        as: 'pizza_usuario',
+        foreignKey: 'usuarios_id',
+        onDelete: 'RESTRICT',
+        onUpdate: 'NO ACTION'
+      })
     }
   }
   Usuario.init({
-    nome: DataTypes.STRING,
+    nome: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     data_nascimento: DataTypes.DATE,
     avatar: DataTypes.STRING,
     email: {
       type: DataTypes.STRING(100),
-      unique: true,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     senha: {
       type: DataTypes.STRING,
@@ -28,13 +36,13 @@ module.exports = (sequelize, DataTypes) => {
     },
     admin: {
       type: DataTypes.BOOLEAN,
-      defaultValue: DataTypes.BOOLEAN(0)
+      defaultValue: 0
     }
   }, {
     sequelize,
     modelName: 'Usuario',
     tableName: 'usuarios',
-    freezeTableName: true,
+    freezeTableName: true
   });
   return Usuario;
 };

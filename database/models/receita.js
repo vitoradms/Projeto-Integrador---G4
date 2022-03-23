@@ -10,15 +10,31 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Receita.belongsTo(models.Usuario, {
+        as: 'usuario_receita',
+        foreignKey: 'usuarios_id',
+        onDelete: 'RESTRICT',
+        onUpdate: 'NO ACTION'
+      });
+
+      Receita.belongsToMany(models.Ingrediente, {
+        through: 'Receita_ingrediente',
+        as: 'receita_tem_ingredientes',
+        foreignKey: 'receitas_id'
+      })
     }
   }
   Receita.init({
-    nome: DataTypes.STRING,
+    nome: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    ingredientes: DataTypes.JSON,
     foto_receita: DataTypes.STRING,
     modo_preparo: DataTypes.TEXT,
     tempo_preparo: DataTypes.STRING,
     rendimento: DataTypes.STRING,
+    avalicao: DataTypes.INTEGER,
     usuarios_id: DataTypes.INTEGER
   }, {
     sequelize,

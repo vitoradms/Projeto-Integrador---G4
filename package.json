@@ -23,5 +23,8 @@
     "sequelize": "^6.17.0",
     "session": "^0.1.0",
     "uuidv4": "^6.2.12"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
   }
 }

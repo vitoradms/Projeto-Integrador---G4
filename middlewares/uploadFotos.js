@@ -1,9 +1,9 @@
 const multer = require('multer');
-const multerConfig = require('../config/multer');
+const { storage } = require('../config/multer');
 
 const upload = multer({
     
-    multerConfig,
+    storage,
 
     fileFilter: (req, file, cb) => {
         if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {

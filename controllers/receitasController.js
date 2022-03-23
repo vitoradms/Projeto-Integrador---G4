@@ -1,4 +1,4 @@
-const { Receita, ingrediente} = require('../database/models')
+const { Receita, Ingrediente} = require('../database/models')
 const { check, validationResult, body } = require('express-validator')
 
 const receitasController = {
@@ -8,7 +8,7 @@ const receitasController = {
 
     receita: (req, res) => {
         const { id } = req.params;
-        const receita = Receita.findById(id);
+        const receita = Receita.findOne({ where: { id }});
         res.render('receita', { receita });
     },
 
@@ -19,14 +19,19 @@ const receitasController = {
             const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
             const foto_receita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
             const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
-    
-            Receita.create({
+
+            await Receita.create({
                 nome:nome_da_receita,
+                ingredientes: [{
+                    ingredientes
+                }],
                 foto_receita,
                 modo_preparo: modo_de_preparo,
                 tempo_preparo,
-                rencimento:porcoes})
-
+                rendimento:porcoes
+            })
+        
+                res.redirect('receita', { receita: null })
         } else {
             res.render('salvarReceita', { receita:null, errors:listaDeErros.errors, old:req.body })
         }

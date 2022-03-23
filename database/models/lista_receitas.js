@@ -14,12 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Lista_receitas.init({
-    nome: DataTypes.STRING(50)
+    nome: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Lista_receitas',
-    tableName: 'lista_receitas',
-    freezeTableName: true
   });
   return Lista_receitas;
 };
