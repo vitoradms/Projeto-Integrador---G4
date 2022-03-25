@@ -11,9 +11,6 @@ module.exports = {
       nome: {
         type: Sequelize.STRING
       },
-      ingredientes: {
-        type: Sequelize.JSON
-      },
       foto_receita: {
         type: Sequelize.STRING
       },
@@ -39,6 +36,13 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      usuarios_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'usuarios', 
+          key: 'id'
+        }
       }
     });
   },

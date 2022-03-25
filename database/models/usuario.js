@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Usuario.hasMany(models.Receita, {
-        as: 'pizza_usuario',
+        as: 'receita_usuario',
         foreignKey: 'usuarios_id',
         onDelete: 'RESTRICT',
         onUpdate: 'NO ACTION'

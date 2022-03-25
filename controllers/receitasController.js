@@ -1,5 +1,6 @@
-const { Receita, Ingrediente} = require('../database/models')
-const { check, validationResult, body } = require('express-validator')
+const { Receita, Ingrediente, Receita_ingrediente} = require('../database/models')
+const { check, validationResult, body } = require('express-validator');
+
 
 const receitasController = {
     formSalvar: (req, res) => {
@@ -18,20 +19,32 @@ const receitasController = {
         if(listaDeErros.isEmpty()){
             const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
             const foto_receita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
-            const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
+            const ingredientes = []
+            ingrediente.forEach((ingrediente) => {
+                if(ingrediente !== "") {
+                    ingredientes.push({nome: ingrediente})
+                }
+            })
+            // const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
+            // const usuarios_id = req.session.usuario.id
 
-            await Receita.create({
+          
+
+            const novaReceita = await Receita.create({
                 nome:nome_da_receita,
-                ingredientes: [{
-                    ingredientes
-                }],
+                ingredientes,                 
                 foto_receita,
                 modo_preparo: modo_de_preparo,
                 tempo_preparo,
-                rendimento:porcoes
-            })
-        
-                res.redirect('receita', { receita: null })
+                rendimento:porcoes,
+                usuarios_id: 1
+            }, {
+                include: ['ingredientes']
+            }).catch(console.log)
+
+            res.send('ok')
+            // res.redirect(`/receita/${novaReceita.id}`)
+
         } else {
             res.render('salvarReceita', { receita:null, errors:listaDeErros.errors, old:req.body })
         }

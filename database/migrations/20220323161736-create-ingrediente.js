@@ -9,7 +9,8 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nome: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
@@ -18,6 +19,13 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      receitas_id: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'receitas', 
+          key: 'id'
+        }
       }
     });
   },

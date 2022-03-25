@@ -17,9 +17,8 @@ module.exports = (sequelize, DataTypes) => {
         onUpdate: 'NO ACTION'
       });
 
-      Receita.belongsToMany(models.Ingrediente, {
-        through: 'Receita_ingrediente',
-        as: 'receita_tem_ingredientes',
+      Receita.hasMany(models.Ingrediente, {
+        as: 'ingredientes',
         foreignKey: 'receitas_id'
       })
     }
@@ -29,7 +28,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    ingredientes: DataTypes.JSON,
     foto_receita: DataTypes.STRING,
     modo_preparo: DataTypes.TEXT,
     tempo_preparo: DataTypes.STRING,
