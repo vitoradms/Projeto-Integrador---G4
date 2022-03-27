@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Receita.belongsTo(models.Usuario, {
         as: 'usuario_receita',
         foreignKey: 'usuarios_id',
-        onDelete: 'RESTRICT',
+        onDelete: 'NULL',
         onUpdate: 'NO ACTION'
       });
 

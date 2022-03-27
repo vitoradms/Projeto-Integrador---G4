@@ -16,7 +16,7 @@
 
 <body class="content">
 
-   
+
 
     <!-- BANNER -->
     <div class="banner">
@@ -27,34 +27,32 @@
 
     <!-- BOTÃO NOME DA RECEITA -->
     <div class="erro">
-        <% if(typeof(errors) != "undefined"){ %> 
-            <ul>
-                <% errors && errors.forEach(error => {%> 
-                    <li><%= error.msg %></li><br>
-                <% }) %> 
-            </ul>
-        <% } %> 
+        <% if(typeof(errors) != "undefined"){ %>
+        <ul>
+            <% errors && errors.forEach(error => {%>
+            <li><%= error.msg %></li><br>
+            <% }) %>
+        </ul>
+        <% } %>
     </div>
-    
+
     <div class="nome_receita">
         <h2> Digite o nome da <mark> sua receita </mark> </h2>
     </div>
 
-    <form 
-        method="POST" 
-        action="<%= receita ? `/receita/salvar/${receita.id}?_method=PUT` : '/receita/salvar' %>"
+    <form method="POST" action="<%= receita ? `/receita/salvar/${receita.id}?_method=PUT` : '/receita/salvar' %>"
         enctype="multipart/form-data">
 
         <div class="digite_nome_aqui">
-            <input type="text" class="digite_caixa" name="nome_da_receita"
-                value="<%= receita ? receita.nomeReceita : errors ? old.nome_da_receita : "" %>">
+            <input type="text" class="digite_caixa" name="nome_receita"
+                value="<%= receita ? receita.nome : errors ? old.nome_receita : "" %>">
         </div>
 
         <!-- ADICIONAR FOTOS E VÍDEOS -->
         <div class="destaque">
-            <% if(receita) {%> 
+            <% if(receita) {%>
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita ? receita.fotoReceita : batata.jpg %>">
+                <img width="100%" height="100%" src="/uploads/<%= receita ? receita.foto_receita : batata.jpg %>">
             </div>
 
             <div class="texto_destaque">
@@ -62,10 +60,10 @@
                 <input type="file" name="foto" class="adicionar_foto">
             </div>
             <% } else { %>
-                <div class="texto_destaque">
-                    <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
-                    <input type="file" name="foto" class="adicionar_foto">
-                </div>
+            <div class="texto_destaque">
+                <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
+                <input type="file" name="foto" class="adicionar_foto">
+            </div>
             <% } %>
         </div>
 
@@ -74,13 +72,25 @@
             <div>
                 <h2> Adicione os ingredientes </h2>
 
-                <input type="text" name="ingrediente[0]" value="<%= receita ? receita.ingredientes[0] : errors ? old.ingrediente[0] : '' %>">
-                <input type="text" name="ingrediente[1]" value="<%= receita ? receita.ingredientes[1] : errors ? old.ingrediente[1] : '' %>">
-                <input type="text" name="ingrediente[2]" value="<%= receita ? receita.ingredientes[2] : errors ? old.ingrediente[2] : '' %>">
-                <input type="text" name="ingrediente[3]" value="<%= receita ? receita.ingredientes[3] : errors ? old.ingrediente[3] : '' %>">
-                <input type="text" name="ingrediente[4]" value="<%= receita ? receita.ingredientes[4] : errors ? old.ingrediente[4] : '' %>">
-                <input type="text" name="ingrediente[5]" value="<%= receita ? receita.ingredientes[5] : errors ? old.ingrediente[5] : '' %>">
+                <% if(receita) { receita.ingredientes.forEach(ingrediente => {%>
+                <input type="text" name="ingrediente"
+                    value="<%= ingrediente.nome %>">
+                <% })} else { %>
 
+                <input type="text" name="ingrediente[0]"
+                    value="<%= errors ? old.ingrediente[0] : '' %>">
+                <input type="text" name="ingrediente[1]"
+                    value="<%= errors ? old.ingrediente[1] : '' %>">
+                <input type="text" name="ingrediente[2]"
+                    value="<%= errors ? old.ingrediente[2] : '' %>">
+                <input type="text" name="ingrediente[3]"
+                    value="<%= errors ? old.ingrediente[3] : '' %>">
+                <input type="text" name="ingrediente[4]"
+                    value="<%= errors ? old.ingrediente[4] : '' %>">
+                <input type="text" name="ingrediente[5]"
+                    value="<%= errors ? old.ingrediente[5] : '' %>">
+                <% } %> 
+                
             </div>
         </div>
 
@@ -88,8 +98,8 @@
         <div class="modo_de_preparo">
             <div>
                 <h2> Modo de Preparo </h2>
-                <textarea id="modo_de_preparo" name="modo_de_preparo" rows="5" cols="100"
-                    ><%= receita ? receita.modoDePreparo : errors ? old.modo_de_preparo : '' %> </textarea>
+                <textarea id="modo_de_preparo" name="modo_preparo" rows="5"
+                    cols="100"><%= receita ? receita.modo_preparo : errors ? old.modo_preparo : '' %> </textarea>
             </div>
         </div>
 
@@ -97,19 +107,21 @@
             <div>
                 <h2> Tempo de preparo e porções </h2>
                 <label> Quanto tempo leva para preparar a receita? </label><br>
-                <input type="text" name="tempo_preparo" value="<%= receita ? receita.tempoPreparo : errors ? old.tempo_preparo : '' %>">
+                <input type="text" name="tempo_preparo"
+                    value="<%= receita ? receita.tempo_preparo : errors ? old.tempo_preparo : '' %>">
                 <br>
                 <label> Qual rendimento da receita? </label><br>
-                <input type="text" name="porcoes" value="<%= receita ? receita.porcoes : errors ? old.porcoes : '' %>">
+                <input type="text" name="rendimento"
+                    value="<%= receita ? receita.rendimento : errors ? old.rendimento : '' %>">
             </div>
 
             <div class="salvar_receita">
                 <% if(receita){ %>
-                    <button class="botao_salvar" type="submit"> Editar </button>
-                    
-                    <% } else { %>
-                        <button class="botao_salvar" type="submit">Salvar Receita</button>
-                    <% } %>
+                <button class="botao_salvar" type="submit"> Editar </button>
+
+                <% } else { %>
+                <button class="botao_salvar" type="submit">Salvar Receita</button>
+                <% } %>
             </div>
 
     </form>
@@ -118,4 +130,5 @@
 <footer class="footer">
     <%- include("./partials/footer") %>
 </footer>
+
 </html>

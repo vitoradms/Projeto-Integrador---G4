@@ -13,10 +13,6 @@ const receitasController = {
             where: { id }, 
             include: ['ingredientes']
         });
-        
-        const { ingredientes } = receita
-
-            console.log(receita.ingredientes.nome)
         res.render('receita', { receita });
     },
 
@@ -24,7 +20,7 @@ const receitasController = {
         const listaDeErros = validationResult(req);
 
         if(listaDeErros.isEmpty()){
-            const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes } = req.body;
+            const { nome_receita, ingrediente, modo_preparo, tempo_preparo, rendimento } = req.body;
             const foto_receita = req.file ? req.file.filename : res.send("Por favor, adicione uma foto a sua receita!")
             const ingredientes = []
             ingrediente.forEach((ingrediente) => {
@@ -34,18 +30,16 @@ const receitasController = {
             })
             
             const novaReceita = await Receita.create({
-                nome:nome_da_receita,
+                nome:nome_receita,
                 ingredientes,                 
                 foto_receita,
-                modo_preparo: modo_de_preparo,
+                modo_preparo,
                 tempo_preparo,
-                rendimento:porcoes,
+                rendimento,
                 usuarios_id: 1
             }, {
                 include: ['ingredientes']
-            }).catch(console.log)
-
-           
+            })
             res.redirect(`/receita/${novaReceita.id}`)
 
         } else {
@@ -53,32 +47,83 @@ const receitasController = {
         }
     },
 
-    editar: (req, res) => {
+    editar: async (req, res) => {
         const { id } = req.params;
-        const receita = Receita.findById(id);
+
+        const receita = await Receita.findOne({ 
+            where: { id }, 
+            include: ['ingredientes']
+        });
+
         res.render('salvarReceita', { receita });
     },
 
     atualizar: async (req, res) => {
         const { id } = req.params;
-        const { nome_da_receita, ingrediente, modo_de_preparo, tempo_preparo, porcoes, foto } = req.body
-        const fotoReceita = req.file ? req.file.filename : undefined
-        const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
+        const receita = await Receita.findOne({ where: { id }});
+        const { nome_receita, ingrediente, modo_preparo, tempo_preparo, rendimento } = req.body;
+        const foto_receita = req.file ? req.file.filename : undefined;
+        const ingredientes = [];
+        ingrediente.forEach((ingrediente) => {
+            if(ingrediente !== "") {
+                ingredientes.push({nome: ingrediente})
+            }
+        });
+        
+        
 
-       if (fotoReceita) {
-           await Receita.removeFotoReceita(id);
-           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, fotoReceita);
+        const usuario = req.session.usuario;
+       if(receita.usuarios_id !== usuario.id){
+
+           res.send('Você não tem permisão para editar essa receita!')
+           
+       } else if(foto_receita !== undefined) {
+
+           await Receita.update({
+            nome:nome_receita,
+            ingredientes,
+            modo_preparo,
+            tempo_preparo,
+            rendimento,
+            foto_receita
+           }, {
+               where: { id },
+               include: [ 'ingredientes' ]
+           })
+
        } else {
-           Receita.atualizar(id, nome_da_receita, ingredientes, modo_de_preparo, tempo_preparo, porcoes, foto)
+
+        await Receita.update({
+            nome:nome_receita,
+            ingredientes,
+            modo_preparo,
+            tempo_preparo,
+            rendimento,
+           }, {
+               where: { id },
+               include: [ 'ingredientes' ]
+           })
        }
+
         res.redirect(`/receita/${id}`)
     },
 
     deletar: async (req, res) => {
         const { id } = req.params;
-        await Receita.removeFotoReceita(id);
-        await Receita.deletar(id);
-        res.redirect('/home');
+        const receita = await Receita.findOne({ where: { id }});
+        const usuario = req.session.usuario;
+
+        if(usuario.id === 'undefined' | receita.usuarios_id !== usuario.id ){
+           res.send('Você não tem permisão para editar essa receita!')
+        } else {
+            await Receita.destroy({ 
+                where: { id },
+                raw: true,
+                include: [ 'ingredientes' ]
+            }).catch(console.log);
+
+            res.redirect('/home');
+        };
     },
 
     favoritar: (req, res) => {
