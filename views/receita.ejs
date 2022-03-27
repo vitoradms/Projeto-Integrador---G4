@@ -22,19 +22,19 @@
 <!-- INFO DA RECEITA -->
     <section>
             <div class="title">
-                <h2> <%= receita && receita.nomeReceita %> </h2>
+                <h2> <%= receita && receita.nome %> </h2>
             </div>
             
         <div class="receita">    
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita && receita.fotoReceita %>" >
+                <img width="100%" height="100%" src="/uploads/<%= receita && receita.foto_receita %>" >
             </div>
 
             <div class="prepare_info">
                 <h2></i> Tempo de Preparo </h2>
-                <p><%= receita && receita.tempoPreparo %></p>
+                <p><%= receita && receita.tempo_preparo %></p>
                 <h2></i> Rendimento </h2>
-                <p> <%= receita && receita.porcoes %> </p>
+                <p> <%= receita && receita.rendimento %> </p>
 
                 <div class="interacao">
                          <div class="w3-container">
@@ -44,15 +44,15 @@
                           <div class="w3-modal-content">
                             <div class="w3-container">
                               <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                              <p><h1><mark><%=receita && receita.nomeReceita%></mark></h1></p>
+                              <p><h1><mark><%=receita && receita.nome%></mark></h1></p>
                               <ul>
                                   <h1>Ingredientes:</h1>
                                 <% receita && receita.ingredientes.forEach(ingrediente => { %>
                                     <li><%= ingrediente %> </li><br>
                                   <% }) %><br>
-                                <p><h1>Modo de preparo:</h1><%= receita && receita.modoDePreparo %></p>
-                                <p><h1>Tempo de preparo:</h1><%= receita && receita.tempoPreparo %></p>
-                                <p><h1>Rendimento:</h1><%= receita && receita.porcoes %></p>     
+                                <p><h1>Modo de preparo:</h1><%= receita && receita.modo_preparo %></p>
+                                <p><h1>Tempo de preparo:</h1><%= receita && receita.tempo_preparo %></p>
+                                <p><h1>Rendimento:</h1><%= receita && receita.rendimento %></p>     
                             </ul>
                             </div>
                           </div>
@@ -81,7 +81,7 @@
             <div class="ingredientes">
                 <ul>
                     <% receita && receita.ingredientes.forEach(ingrediente => { %>
-                        <li><%= ingrediente %> </li>
+                        <li><%= ingrediente.nome %> </li>
                       <% }) %>                   
                 </ul>
                 
@@ -102,7 +102,7 @@
             </div>
     
             <div class="prepare">
-                <p><%= receita && receita.modoDePreparo %></p>
+                <p><%= receita && receita.modo_preparo %></p>
             </div>
         </div>
     </section>   

@@ -23,6 +23,7 @@ const usuarioControllers = {
       senha:hash
     })
     
+    res.redirect('/usuario/login')
 
   },
 

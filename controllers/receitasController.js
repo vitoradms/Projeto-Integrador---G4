@@ -1,4 +1,4 @@
-const { Receita, Ingrediente, Receita_ingrediente} = require('../database/models')
+const { Receita, Ingrediente } = require('../database/models')
 const { check, validationResult, body } = require('express-validator');
 
 
@@ -7,9 +7,16 @@ const receitasController = {
         res.render('salvarReceita', { receita: null, errors: null });
     },
 
-    receita: (req, res) => {
+    receita: async (req, res) => {
         const { id } = req.params;
-        const receita = Receita.findOne({ where: { id }});
+        const receita = await Receita.findOne({ 
+            where: { id }, 
+            include: ['ingredientes']
+        });
+        
+        const { ingredientes } = receita
+
+            console.log(receita.ingredientes.nome)
         res.render('receita', { receita });
     },
 
@@ -25,11 +32,7 @@ const receitasController = {
                     ingredientes.push({nome: ingrediente})
                 }
             })
-            // const ingredientes = ingrediente.filter((ingrediente) => ingrediente !== "");
-            // const usuarios_id = req.session.usuario.id
-
-          
-
+            
             const novaReceita = await Receita.create({
                 nome:nome_da_receita,
                 ingredientes,                 
@@ -42,8 +45,8 @@ const receitasController = {
                 include: ['ingredientes']
             }).catch(console.log)
 
-            res.send('ok')
-            // res.redirect(`/receita/${novaReceita.id}`)
+           
+            res.redirect(`/receita/${novaReceita.id}`)
 
         } else {
             res.render('salvarReceita', { receita:null, errors:listaDeErros.errors, old:req.body })
