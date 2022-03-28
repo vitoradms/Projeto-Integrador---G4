@@ -22,6 +22,7 @@ module.exports = {
       },
       receitas_id: {
         type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
         references: {
           model: 'receitas', 
           key: 'id'

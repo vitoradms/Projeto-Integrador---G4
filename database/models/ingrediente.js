@@ -11,8 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Ingrediente.belongsTo(models.Receita, {
-        as: 'receita',
-        foreignKey: 'receitas_id'
+        as: 'receitas',
+        foreignKey: 'receitas_id',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
       })
     }
   }

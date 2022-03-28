@@ -10,17 +10,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Receita.belongsTo(models.Usuario, {
-        as: 'usuario_receita',
-        foreignKey: 'usuarios_id',
-        onDelete: 'NULL',
-        onUpdate: 'NO ACTION'
-      });
-
       Receita.hasMany(models.Ingrediente, {
         as: 'ingredientes',
-        foreignKey: 'receitas_id'
-      })
+        foreignKey: 'receitas_id',
+        onDelete: 'CASCADE',
+        hooks: true
+      });
+
+      Receita.belongsTo(models.Usuario, {
+        as: 'usuario_receita',
+        foreignKey: 'usuarios_id'
+      });
+
     }
   }
   Receita.init({

@@ -86,9 +86,8 @@ const receitasController = {
             tempo_preparo,
             rendimento,
             foto_receita
-           }, {
+           }, { 
                where: { id },
-               include: [ 'ingredientes' ]
            })
 
        } else {
@@ -113,17 +112,12 @@ const receitasController = {
         const receita = await Receita.findOne({ where: { id }});
         const usuario = req.session.usuario;
 
-        if(usuario.id === 'undefined' | receita.usuarios_id !== usuario.id ){
+        if( receita.usuarios_id !== usuario.id )
            res.send('Você não tem permisão para editar essa receita!')
-        } else {
-            await Receita.destroy({ 
-                where: { id },
-                raw: true,
-                include: [ 'ingredientes' ]
-            }).catch(console.log);
 
-            res.redirect('/home');
-        };
+           await receita.destroy({ where:{ id }}).catch(console.log)
+
+           res.redirect('/home');
     },
 
     favoritar: (req, res) => {
