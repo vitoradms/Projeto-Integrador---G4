@@ -1,1 +1,57 @@
-{"receitas":[],"usuarios":[{"id":"a96f3cb0-a1f8-4181-a9b5-7b25fe32c762","nome":"Maria ","sobrenome":"da Silva","data_nascimento":"2003-07-18","email":"maria@email.com","hash":"$2b$10$hTpvA45HM/jEXTYhlsqVkOe6SFwGf30ansQSiZSrTNxZytRcnZrra","admin":false},{"id":"9c529a6d-727d-4d79-8713-4b4b28097049","nome":"Fernando","sobrenome":"da Silva","data_nascimento":"2001-06-18","email":"fernando@email.com","senha":"$2b$10$gWTf9b0Wcy1E1wwIQDhE0uHgavfobEiw2P6AhZNhnAtrjg1Y8DZ7a","admin":false},{"id":"4bd26b5f-1eb4-4dfa-8918-48e20c3b314a","fotoPerfil":"99b97335-a8b2-460b-a052-7130b69956e5 - ree-マ-winston-by-picolo-kun-overwatch-11470652 (2).jpg","nome":"Winston","sobrenome":"Overwatch","data_nascimento":"1994-08-01","email":"winston@email.com","senha":"$2b$10$VSvsbXrHNuof0N0j3lX8kOBZMFXIhjPCV0yVFwwb8d6FAwxRt5ZUy","admin":false}]}
+{
+  "receitas": [
+    {
+      "id": "920e3ff4-a011-4309-8828-61eda5efdfb8",
+      "nomeReceita": "bolo",
+      "ingredientes": [
+        "sads",
+        "dsadsa",
+        "dsa"
+      ],
+      "modoDePreparo": " dsadsadsadsad\r\nsdasdsadsa\r\ndsadsadsa\r\ndsa",
+      "tempoPreparo": "40 minutos",
+      "porcoes": "8 porções",
+      "fotoReceita": "3e56f0ef-3421-415e-88fe-1029894266f5 - image (3).png"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "a96f3cb0-a1f8-4181-a9b5-7b25fe32c762",
+      "nome": "Maria ",
+      "sobrenome": "da Silva",
+      "data_nascimento": "2003-07-18",
+      "email": "maria@email.com",
+      "hash": "$2b$10$hTpvA45HM/jEXTYhlsqVkOe6SFwGf30ansQSiZSrTNxZytRcnZrra",
+      "admin": false
+    },
+    {
+      "id": "9c529a6d-727d-4d79-8713-4b4b28097049",
+      "nome": "Fernando",
+      "sobrenome": "da Silva",
+      "data_nascimento": "2001-06-18",
+      "email": "fernando@email.com",
+      "senha": "$2b$10$gWTf9b0Wcy1E1wwIQDhE0uHgavfobEiw2P6AhZNhnAtrjg1Y8DZ7a",
+      "admin": false
+    },
+    {
+      "id": "4bd26b5f-1eb4-4dfa-8918-48e20c3b314a",
+      "fotoPerfil": "99b97335-a8b2-460b-a052-7130b69956e5 - ree-マ-winston-by-picolo-kun-overwatch-11470652 (2).jpg",
+      "nome": "Winston",
+      "sobrenome": "Overwatch",
+      "data_nascimento": "1994-08-01",
+      "email": "winston@email.com",
+      "senha": "$2b$10$VSvsbXrHNuof0N0j3lX8kOBZMFXIhjPCV0yVFwwb8d6FAwxRt5ZUy",
+      "admin": false
+    },
+    {
+      "id": "4852f1ea-4271-4356-bf9e-64df2fe66e95",
+      "fotoPerfil": "62f7c715-5dd9-403d-907d-f14160272ed2 - image (3).png",
+      "nome": "dsadsa",
+      "sobrenome": "dsadsa",
+      "data_nascimento": "1986-12-05",
+      "email": "dsa@fdsf.com",
+      "senha": "$2b$10$qgxACtVB1kEnbKdNbtH2U.Bgi6JsZghrP4hHRK4dnzsqAB6DEMA8K",
+      "admin": false
+    }
+  ]
+}
