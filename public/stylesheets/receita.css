@@ -112,14 +112,23 @@
     border-radius: 1px;
 }
 
-/* avaliação */
-.avaliacao {
-    font-size: 30px;
+.botao{
+    font-family: "Abadi";
+    text-shadow: 1px 1px 1px #A1A1A1;
+    color: #f0f0f0;
+    font-size: 22px;
+    padding: 8px 16px;
+    border-radius: 0px;
+    border: 1px solid ;
+    background: #E7C512;
+    text-decoration: none;
+    
 }
 
-.checked {
-    color: #E7C512;
-  }
+.botao:hover {
+    border: 1px solid #000000;
+    cursor: pointer;
+}
 
   /* ingredientes */
 .ingredientes{
@@ -215,3 +224,4 @@
     display: flex;
     justify-content: center;
 }
+

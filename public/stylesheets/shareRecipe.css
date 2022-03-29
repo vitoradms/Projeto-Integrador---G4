@@ -233,3 +233,13 @@
     display: flex;
     justify-content: center;
 }
+
+.erro {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    color: #e20808;
+}

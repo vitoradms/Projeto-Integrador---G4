@@ -9,11 +9,9 @@ const session = require('express-session')
 
 
 const receitaRouter = require('./routes/receita');
-const areaLogadaRouter = require('./routes/areaLogada')
 const quemSomosRouter = require('./routes/quemSomos');
 const homeRouter = require('./routes/home');
 const usuarioRouter = require('./routes/usuario');
-const loginRouter = require('./routes/login')
 const listaRouter = require('./routes/lista');
 
 const app = express();
@@ -28,7 +26,6 @@ app.use(session({
   saveUninitialized: false,
   cookie: { secure: false }
 }));
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -38,11 +35,9 @@ app.use(methodOverride('_method'));
 
 
 app.use('/receita', receitaRouter);
-app.use('/areaLogada', areaLogadaRouter);
 app.use('/quemsomos', quemSomosRouter);
 app.use('/home', homeRouter);
 app.use('/usuario', usuarioRouter);
-app.use('/login', loginRouter);
 app.use('/lista', listaRouter)
 
 

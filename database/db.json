@@ -1,17 +1,32 @@
 {
   "receitas": [
     {
-      "id": "920e3ff4-a011-4309-8828-61eda5efdfb8",
-      "nomeReceita": "bolo",
+      "id": "2db313eb-5cc6-434e-a804-265cf3523f68",
+      "nomeReceita": "Panqueca",
       "ingredientes": [
-        "sads",
-        "dsadsa",
-        "dsa"
+        "2 xícaras (chá) de farinha de trigo",
+        "2 xícaras (chá) de leite",
+        "3 ovos",
+        "1 pitada de sal"
       ],
-      "modoDePreparo": " dsadsadsadsad\r\nsdasdsadsa\r\ndsadsadsa\r\ndsa",
+      "modoDePreparo": "Bata todos os ingredientes no liquidificador por 2 minutos.\r\nEm seguida desligue e, com uma colher, misture a farinha que grudou no copo do liquidificador.\r\nBata novamente só para misturar e reserve.\r\nUnte a frigideira com um fio de óleo e leve ao fogo até aquecer.\r\nCom o auxílio de uma concha, pegue uma porção de massa e coloque na frigideira, gire a frigideira para espalhar bem a massa.\r\nAbaixe o fogo e deixe dourar por baixo, em seguida vire do outro lado e deixe dourar, repita o processo com toda a massa. ",
+      "tempoPreparo": "30 minutos",
+      "porcoes": "15 panquecas"
+    },
+    {
+      "id": "6af165b1-e99c-4158-9563-f430bf1127f8",
+      "nomeReceita": "Bolo de cenoura",
+      "ingredientes": [
+        "1/2 xícara (chá) de óleo",
+        "3 cenouras médias raladas",
+        "4 ovos",
+        "2 xícaras (chá) de açúcar",
+        "2 e 1/2 xícaras (chá) de farinha de trigo",
+        "1 colher (sopa) de fermento em pó"
+      ],
+      "modoDePreparo": "Em um liquidificador, adicione a cenoura, os ovos e o óleo, depois misture.\r\nAcrescente o açúcar e bata novamente por 5 minutos.\r\nEm uma tigela ou na batedeira, adicione a farinha de trigo e depois misture novamente.\r\nAcrescente o fermento e misture lentamente com uma colher.\r\nAsse em um forno preaquecido a 180° C por aproximadamente 40 minutos. \r\n\r\nDica: faça cobertura de brigadeiro",
       "tempoPreparo": "40 minutos",
-      "porcoes": "8 porções",
-      "fotoReceita": "3e56f0ef-3421-415e-88fe-1029894266f5 - image (3).png"
+      "porcoes": "8 fatias"
     }
   ],
   "usuarios": [
@@ -44,13 +59,12 @@
       "admin": false
     },
     {
-      "id": "4852f1ea-4271-4356-bf9e-64df2fe66e95",
-      "fotoPerfil": "62f7c715-5dd9-403d-907d-f14160272ed2 - image (3).png",
-      "nome": "dsadsa",
-      "sobrenome": "dsadsa",
-      "data_nascimento": "1986-12-05",
-      "email": "dsa@fdsf.com",
-      "senha": "$2b$10$qgxACtVB1kEnbKdNbtH2U.Bgi6JsZghrP4hHRK4dnzsqAB6DEMA8K",
+      "id": "c7cbe35d-aaa0-4060-a174-9054e176239a",
+      "nome": "joao",
+      "sobrenome": "da silva",
+      "data_nascimento": "1994-08-01",
+      "email": "joao@email.com",
+      "senha": "$2b$10$hzib16cB5OwA0lfUk04WYOwSTCHG4q77ky5UORTFJPnCjIbr8VanS",
       "admin": false
     }
   ]
