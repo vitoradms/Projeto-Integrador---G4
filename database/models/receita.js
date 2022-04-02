@@ -30,11 +30,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Receita.init({
-    receitas_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false,
-    },
     nome: {
       type: DataTypes.STRING,
       allowNull: false

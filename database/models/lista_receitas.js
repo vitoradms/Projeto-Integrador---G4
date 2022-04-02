@@ -13,16 +13,11 @@ module.exports = (sequelize, DataTypes) => {
       Lista_receitas.belongsToMany(models.Receita, {
         through: 'listas_de_receitas_has_receitas',
         as: 'receitas',
-        foreignKey: 'lista_receitas_id'
+        foreignKey: 'listas_de_receitas_id'
       })
     }
   }
   Lista_receitas.init({
-    lista_receitas_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false
-    },
     nome: DataTypes.STRING  
   }, {
     sequelize,
