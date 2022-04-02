@@ -22,9 +22,19 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'usuarios_id'
       });
 
+      Receita.belongsToMany(models.Lista_receitas, {
+        through: 'listas_de_receitas_has_receitas',
+        as: 'listas',
+        foreignKey: 'receitas_id'
+      })
     }
   }
   Receita.init({
+    receitas_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+    },
     nome: {
       type: DataTypes.STRING,
       allowNull: false
@@ -34,11 +44,11 @@ module.exports = (sequelize, DataTypes) => {
     tempo_preparo: DataTypes.STRING,
     rendimento: DataTypes.STRING,
     avalicao: DataTypes.INTEGER,
-    usuarios_id: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'Receita',
-    tableName: 'receitas',
+    tableName: 'Receitas',
     freezeTableName: true
   });
   return Receita;
