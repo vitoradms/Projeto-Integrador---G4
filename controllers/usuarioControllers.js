@@ -62,7 +62,11 @@ const usuarioControllers = {
   },
 
   usuarioLogado(req, res){
-    res.render('areaLogada')
+
+    const meuUsuario = req.session.usuario
+
+
+    res.render('areaLogada', { meuUsuario })
   }
 
 }
