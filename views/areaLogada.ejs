@@ -27,11 +27,15 @@
             <h4><%=meuUsuario.nome%></h4>
             <h4 class="email"><%=meuUsuario.email%></h4>
 
+            
+
             <ul class="nav-bar">
-                <button class="botao"><li>Suas Receitas</li></button> 
+                <button class="botao"><li>Suas Receitas</li></button>
                 <button class="botao"><li>Compartilhar</li></button>
                 <button class="botao"><li>Salvos</li></button>
+                <button class="botao"><a href="/usuario/editar/<%=meuUsuario.id%>">Alterar Dados</a> </button>
             </ul>
+
         </div>
  
     <!--GELADEIRA-->
