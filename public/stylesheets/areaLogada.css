@@ -24,9 +24,13 @@ html {
 
 /*HEADER*/
 .cont-account {
-  position: relative;
+  /* position: relative; */
   width: 100%;
   margin: 0;
+}
+
+a {
+  text-decoration: none
 }
 
 .cont-account, img {
@@ -171,7 +175,7 @@ h3 {
   float: left;
 }
 
-button {
+/* button {
   width: 100%;
   height: 12vh;
   background-color: #c9b13d;
@@ -181,10 +185,10 @@ button {
   transition: all ease .6s;
   z-index: 1;
   margin-top: -100%;
-}
+} */
 
-button:hover {
+/* button:hover {
 cursor: pointer;
 background-color: #f5cd09;
-}
+} */
 /*FIM SECTION*/

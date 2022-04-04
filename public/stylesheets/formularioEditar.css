@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body{
+    background-image: url("/images/destaque1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+}
+
+            
+header {
+    color: white;
+    text-align: center;
+    margin: 40px;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: -100px 50px 35px 50px;
+}
+
+header h2 {
+    font-size: 23px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+body #principal {
+    height: 140vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloco-cadastro {
+    box-sizing: border-box;
+    background-color: #8ba01f;
+    width:500px;
+    height:570px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-top: 5px solid #E7C512;
+    border-right: 5px solid #E7C512 ;
+    border-left: 5px solid  #fdab2b;
+    border-bottom: 5px solid  #fdab2b ;
+}
+
+.bloco-cadastro img {
+    width: 250px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+button {
+    border-radius: 10px;
+    background-color:#2F384F ;
+    color: white;
+    size: 100px;
+    margin-top: 10px;
+    height: 35px;
+}
+
+.mb-3 {
+    height: 45px;
+}

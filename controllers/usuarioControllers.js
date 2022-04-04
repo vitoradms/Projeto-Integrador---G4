@@ -31,8 +31,32 @@ const usuarioControllers = {
     return res.send('deletando usuario')
   },
 
-  atualizarDados(req, res){
-    return res.send('atualizando dados usuarios')
+  async exibeFormularioEdicao (req, res){
+    const { id } = req.params
+
+    const usuario = await Usuario.findOne({ where: { id }})
+
+    return res.render('formularioEditarUsuario', { usuario })
+  },
+
+  async salvaUsuarioEditado (req, res){
+    const { id } = req.params
+    const { nome, data_nascimento, email, senha } = req.body
+    const imagem = req.file.filename
+
+    const saltRounds = 10
+    const hash = bcrypt.hashSync(senha, saltRounds)
+
+    await Usuario.update({
+      nome,
+      data_nascimento,
+      email,
+      senha: hash,
+      imagem,
+    }, {where: { id }});
+
+    res.redirect('/usuario/arealogada')
+
   },
 
   exibeFormularioLogin: (req, res) => {
@@ -62,7 +86,11 @@ const usuarioControllers = {
   },
 
   usuarioLogado(req, res){
-    res.render('areaLogada')
+
+    const meuUsuario = req.session.usuario
+
+
+    res.render('areaLogada', { meuUsuario })
   }
 
 }
