@@ -1,13 +1,21 @@
+const { Lista_receitas } = require('../database/models');
+
 const listaController = {
   topIngredientes: (req, res) => {
-      return res.render('listas')
+      return res.render('listas') 
   },
   melhoresreceitas: (req,res) => {
       return res.render('listasMR')
   },
-  categoriasreceitas: (req,res) => {
-      return res.render('listasCR')
-  }
+  categoriasreceitas: async (req,res) => { 
+    try {
+    const listas = await Lista_receitas.findAll({include: 'receitas'});//.catch(console.log)
+      return res.render('listasCR', {listas})
+    }
+    catch(err) {
+      console.log(err)
+    }
+  },
 };
 
 module.exports = listaController;   
