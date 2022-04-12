@@ -10,7 +10,7 @@ addInput.onclick = function () {
 };
 
 removeInput.onclick = function () {
-  if(ingredientes.children.length >= 2) {
+  if(ingredientes.children.length > 2) {
       ingredientes.removeChild(ingredientes.lastChild)
   }
 };

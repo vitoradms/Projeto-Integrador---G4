@@ -48,6 +48,7 @@ const receitasController = {
     },
 
     editar: async (req, res) => {
+        const listaDeErros = validationResult(req);
         const { id } = req.params;
 
         const receita = await Receita.findOne({ 
@@ -55,10 +56,11 @@ const receitasController = {
             include: ['ingredientes']
         });
 
-        res.render('salvarReceita', { receita });
+        res.render('salvarReceita', { receita, errors:listaDeErros.errors });
     },
 
     atualizar: async (req, res) => {
+        const listaDeErros = validationResult(req);
         const { id } = req.params;
         const receita = await Receita.findOne({ where: { id }});
         const { nome_receita, ingrediente, modo_preparo, tempo_preparo, rendimento } = req.body;
@@ -77,6 +79,9 @@ const receitasController = {
 
            res.send('Você não tem permisão para editar essa receita!')
            
+       } else if(!listaDeErros.isEmpty()){
+        res.render('salvarReceita', { receita:id, errors:listaDeErros.errors})
+
        } else if(foto_receita !== undefined) {
 
            await Receita.update({

@@ -73,18 +73,18 @@
             <h2> Adicione os ingredientes </h2>
 
             <% if(receita) { receita.ingredientes.forEach(ingrediente => {%>
-            <input type="text" name="ingrediente[]" value="<%= ingrediente.nome %>">
-            <input type="text" name="ingrediente[]" value="<%= errors ? old.ingrediente : '' %>">
-            <button type="button" id="addInput"><i class="fa fa-plus"></i></button>
-            <button type="button" id="removeInput"><i class="fa fa-minus"></i></button>
+            <div id="ingredientes">
+                <input type="text" name="ingrediente[]" value="<%= ingrediente.nome %>">
+            </div>
             <% })} else { %>
             <div id="ingredientes">
                 <input type="text" name="ingrediente[]" value="<%= errors ? old.ingrediente : '' %>">
-                <button type="button" id="addInput"><i class="fa fa-plus"></i></button>
-                <button type="button" id="removeInput"><i class="fa fa-minus"></i></button>
                 <% } %>
             </div>
-
+            <div class="add-remove-buttons">
+                <button type="button" id="addInput"><i class="fa fa-plus"></i></button>
+                <button type="button" id="removeInput"><i class="fa fa-minus"></i></button>
+            </div>         
         </div>
 
         <!-- MODO DE PREPARO -->
