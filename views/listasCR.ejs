@@ -23,30 +23,31 @@
                 O título precisa ser dinâmico, ou seja, vai receber o valor do card que foi clicado na pagina anterior
                 <h1>Top Ingredientes</h1>
             </div> -->
-            <% listas.map(function lista(listas) { %>
+            <% listas.map(function lista(lista) { %>
                 
                 <div class="img-text">
-                    <h1 class="img-text"> <%=listas.nome%> </h1>
+                    <h1 class="img-text"> <%=lista.nome%> </h1>
 
                 </div>
-        </section> 
-        <section>
                 <div class="ordena-cards">
-                    <div class="card-ordem">
-                        <h2 class="h2">1</h2>
-                    </div>
-                    <% listas.receitas.map(function lista.receitas(listas.receitas) { %>
+                    
+                   
                     <div class="card">
                         <!-- <a href="#" class="card"> -->
-                            <a href="/receita"><h3 class="h3">Nome da Receita</h3> </a>
-                          <h4 class="h4">Ingredientes</h4>
-                          <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                          <span class="p">View Information
+                            <% lista.receitas.map(function (receita ){ %>
+                                <a href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
+                                   <h4 class="h4">Ingredientes</h4>
+                        <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
+                        <span class="p">View Information</span>
+                            <% }); %> 
+                     
                     </div>
                 </div>
-            </section>
-            <% }); %> 
-       
+        
+                <% }); %>
+        
+        </section> 
+
     </main>
      
     <%- include("./partials/footer")  %>
