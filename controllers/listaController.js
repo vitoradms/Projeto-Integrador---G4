@@ -9,7 +9,8 @@ const listaController = {
   },
   categoriasreceitas: async (req,res) => { 
     try {
-    const listas = await Lista_receitas.findAll({include: 'receitas'});//.catch(console.log)
+    const listas = await Lista_receitas.findAll({include: {association: "receitas", include: {association: "ingredientes"}}});//.catch(console.log)
+
       return res.render('listasCR', {listas})
     }
     catch(err) {
