@@ -234,3 +234,11 @@ body{
   justify-content: left;
   align-items: left;
 }
+
+.hidden {
+  display: none;
+}
+
+.mostra {
+  display: block;
+}

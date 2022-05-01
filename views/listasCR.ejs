@@ -27,24 +27,27 @@
                 
                 <div class="img-text">
                     <h1 class="img-text"> <%=lista.nome%> </h1>
-
+                    <input type="button" id="ing" value="mostra">
                 </div>
                 <div class="ordena-cards">
                     
-                   
-                    <div class="card">
-                        <!-- <a href="#" class="card"> -->
-                            <% lista.receitas.map(function (receita ){ %>
-                                <a href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
-                                   <h4 class="h4">Ingredientes</h4>
-                                   <% receita.ingredientes.map(function ( ingrediente ){ %>
-                                    <p> <%= ingrediente.nome %> </p>
-                                   <% }); %> 
-                        <p> 
-                            
-                        </p>
-                            <% }); %> 
-                     
+                    <div class="hidden">
+                        <div class="card">
+                            <!-- <a href="#" class="card"> -->
+                                <% lista.receitas.map(function (receita ){ %>
+                                    <a href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
+                                    <h4 class="h4">Ingredientes</h4>
+                                    
+                                    
+                                            <% receita.ingredientes.map(function ( ingrediente ){ %>
+                                                <p> <%= ingrediente.nome %> </p>
+                                            <% }); %> 
+                            <p>         
+                                
+                            </p>
+                                <% }); %> 
+                        
+                        </div>
                     </div>
                 </div>
         
@@ -57,4 +60,5 @@
     <%- include("./partials/footer")  %>
 
 </body>
+<script src="/scripts/categorias-receitas.js"></script>
 </html>
