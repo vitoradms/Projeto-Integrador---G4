@@ -1,13 +1,12 @@
 let ingredientes = document.getElementsByClassName("hidden");
 
-ingredientes.classList.toggle("hidden")
+let funcaoMostrar = (evento, id)=>{ 
+    let elemento = document.getElementById(id);
+    elemento.classList.toggle("hidden");
+    if(evento.value === "Mostrar") {
+        evento.value = "Ocultar"
+    } else {
+        evento.value = "Mostrar"
+    }
+}
 
-// function mostra(id) {
-//     if (document.getElementById(id).style.display == 'block') {
-//         document.getElementById(id).style.display == 'none'
-//         document.getElementById(ing).value = "Mostrar"
-//     } else {
-//         document.getElementById(id).style.display == 'block'
-//         document.getElementById(ing).value = "Ocultar"
-//     }
-// }

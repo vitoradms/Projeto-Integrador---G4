@@ -27,11 +27,11 @@
                 
                 <div class="img-text">
                     <h1 class="img-text"> <%=lista.nome%> </h1>
-                    <input type="button" id="ing" value="mostra">
+                    <input type="button" onclick="funcaoMostrar(this, '<%=lista.nome%>')" value="Mostrar">
                 </div>
                 <div class="ordena-cards">
                     
-                    <div class="hidden">
+                    <div class="hidden" id="<%=lista.nome%>">
                         <div class="card">
                             <!-- <a href="#" class="card"> -->
                                 <% lista.receitas.map(function (receita ){ %>
