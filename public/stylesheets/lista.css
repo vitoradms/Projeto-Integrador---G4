@@ -153,7 +153,7 @@ body{
   padding-bottom: .5em;
   margin: 0 0 0.142857143em;
   border-bottom: 2px solid #2E3C40;
-  transition: color .45s ease, border .45s ease;
+  transition: color .45s ease, border .45s ease
 }
 
 .h4 {
@@ -239,6 +239,29 @@ body{
   display: none;
 }
 
-.mostra {
-  display: block;
+.nomeCategoria {
+  padding-left: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.titulo {
+  padding-right: 30%;
+  font-size: 40px
+}
+
+.ordena-cards {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+ 
+}
+
+.ingred {
+  padding-top: 30px;
+
 }

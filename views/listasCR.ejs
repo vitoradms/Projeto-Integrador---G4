@@ -25,8 +25,8 @@
             </div> -->
             <% listas.map(function lista(lista) { %>
                 
-                <div class="img-text">
-                    <h1 class="img-text"> <%=lista.nome%> </h1>
+                <div class="nomeCategoria">
+                    <h1 class="titulo" ><%=lista.nome%> </h1>
                     <input type="button" onclick="funcaoMostrar(this, '<%=lista.nome%>')" value="Mostrar">
                 </div>
                 <div class="ordena-cards">
@@ -35,16 +35,12 @@
                         <div class="card">
                             <!-- <a href="#" class="card"> -->
                                 <% lista.receitas.map(function (receita ){ %>
-                                    <a href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
+                                    <a class="ingred" href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
                                     <h4 class="h4">Ingredientes</h4>
-                                    
-                                    
                                             <% receita.ingredientes.map(function ( ingrediente ){ %>
                                                 <p> <%= ingrediente.nome %> </p>
                                             <% }); %> 
-                            <p>         
-                                
-                            </p>
+
                                 <% }); %> 
                         
                         </div>
