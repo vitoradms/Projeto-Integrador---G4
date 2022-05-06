@@ -27,7 +27,8 @@
                 
                 <div class="nomeCategoria">
                     <h1 class="titulo" ><%=lista.nome%> </h1>
-                    <input type="button" onclick="funcaoMostrar(this, '<%=lista.nome%>')" value="Mostrar">
+                    <!-- button, dentro um span, dentro um icone -->
+                    <button onclick="funcaoMostrar(this, '<%=lista.nome%>')"> <span class="material-symbols-outlined"> expand_more </span></button>
                 </div>
                 <div class="ordena-cards">
                     
