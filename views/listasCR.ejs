@@ -23,76 +23,39 @@
                 O título precisa ser dinâmico, ou seja, vai receber o valor do card que foi clicado na pagina anterior
                 <h1>Top Ingredientes</h1>
             </div> -->
-            <div class="imagem-principal">
-                <h1 class="img-text">Categorias de Receitas</h1>
-            </div>
-        </section>
-        <section class="pagina">
-            <div class="ordena-cards">
-                <div class="card-ordem">
-                    <h2 class="h2">1</h2>
+            <% listas.map(function lista(lista) { %>
+                
+                <div class="nomeCategoria">
+                    <h1 class="titulo" ><%=lista.nome%> </h1>
+                    <!-- button, dentro um span, dentro um icone -->
+                    <button onclick="funcaoMostrar(this, '<%=lista.nome%>')"> <span class="material-symbols-outlined"> expand_more </span></button>
                 </div>
-                <div class="card">
-                    <!-- <a href="#" class="card"> -->
-                        <a href="/receita"><h3 class="h3">Nome da Receita</h3> </a>
-                      <h4 class="h4">Ingredientes</h4>
-                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                      <span class="p">View Information
-                </div>
-            </div>
-            <div class="ordena-cards">
-                <div class="card-ordem">
-                    <h2 class="h2">2</h2>
-                </div>
-                <div class="card">
-                    <!-- <a href="#" class="card"> -->
-                        <a href="/receita"><h3 class="h3">Nome da Receita</h3></a>
-                      <h4 class="h4">Ingredientes</h4>
-                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                      <span class="p">View Information
-                </div>
-            </div>
-            <div class="ordena-cards">
-                <div class="card-ordem">
-                    <h2 class="h2">3</h2>
-                </div>
-                <div class="card">
-                    <!-- <a href="#" class="card"> -->
-                        <a href="/receita"><h3 class="h3">Nome da Receita</h3> </a>
-                      <h4 class="h4">Ingredientes</h4>
-                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                      <span class="p">View Information
-                </div>
-            </div>
-            <div class="ordena-cards">
-                <div class="card-ordem">
-                    <h2 class="h2">4</h2>
-                </div>
-                <div class="card">
-                    <!-- <a href="#" class="card"> -->
-                        <a href="/receita"><h3 class="h3">Nome da Receita</h3></a>
-                      <h4 class="h4">Ingredientes</h4>
-                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                      <span class="p">View Information
-                </div>
-            </div>
-            <div class="ordena-cards">
-                <div class="card-ordem">
-                    <h2 class="h2">5</h2>
-                </div>
-                <div class="card">
-                    <!-- <a href="#" class="card"> -->
+                <div class="ordena-cards">
+                    
+                    <div class="hidden" id="<%=lista.nome%>">
+                        <div class="card">
+                            <!-- <a href="#" class="card"> -->
+                                <% lista.receitas.map(function (receita ){ %>
+                                    <a class="ingred" href="/receita"><h3 class="h3"><%=receita.nome%> </h3> </a>
+                                    <h4 class="h4">Ingredientes</h4>
+                                            <% receita.ingredientes.map(function ( ingrediente ){ %>
+                                                <p> <%= ingrediente.nome %> </p>
+                                            <% }); %> 
+
+                                <% }); %> 
                         
-                        <a href="/receita"><h3 class="h3">Nome da Receita</h3></a>
-                      <h4 class="h4">Ingredientes</h4>
-                      <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ullam ea illum necessitatibus animi quis facere reiciendis accusantium alias, hic doloribus eius vitae vero placeat ut error est. Cumque, perferendis!</p>
-                      <span class="p">View Information
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+        
+                <% }); %>
+        
+        </section> 
+
     </main>
      
     <%- include("./partials/footer")  %>
 
 </body>
+<script src="/scripts/categorias-receitas.js"></script>
 </html>

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/shareRecipe.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
+    <script src="https://kit.fontawesome.com/caba1438d9.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -69,29 +70,21 @@
 
         <!-- INGREDIENTES -->
         <div class="ingredientes">
-            <div>
-                <h2> Adicione os ingredientes </h2>
+            <h2> Adicione os ingredientes </h2>
 
-                <% if(receita) { receita.ingredientes.forEach(ingrediente => {%>
-                <input type="text" name="ingrediente"
-                    value="<%= ingrediente.nome %>">
-                <% })} else { %>
-
-                <input type="text" name="ingrediente[0]"
-                    value="<%= errors ? old.ingrediente[0] : '' %>">
-                <input type="text" name="ingrediente[1]"
-                    value="<%= errors ? old.ingrediente[1] : '' %>">
-                <input type="text" name="ingrediente[2]"
-                    value="<%= errors ? old.ingrediente[2] : '' %>">
-                <input type="text" name="ingrediente[3]"
-                    value="<%= errors ? old.ingrediente[3] : '' %>">
-                <input type="text" name="ingrediente[4]"
-                    value="<%= errors ? old.ingrediente[4] : '' %>">
-                <input type="text" name="ingrediente[5]"
-                    value="<%= errors ? old.ingrediente[5] : '' %>">
-                <% } %> 
-                
+            <% if(receita) { receita.ingredientes.forEach(ingrediente => {%>
+            <div id="ingredientes">
+                <input type="text" name="ingrediente[]" value="<%= ingrediente.nome %>">
             </div>
+            <% })} else { %>
+            <div id="ingredientes">
+                <input type="text" name="ingrediente[]" value="<%= errors ? old.ingrediente : '' %>">
+                <% } %>
+            </div>
+            <div class="add-remove-buttons">
+                <button type="button" id="addInput"><i class="fa fa-plus"></i></button>
+                <button type="button" id="removeInput"><i class="fa fa-minus"></i></button>
+            </div>         
         </div>
 
         <!-- MODO DE PREPARO -->
@@ -125,6 +118,7 @@
             </div>
 
     </form>
+    <script src="/scripts/salvar-receita.js"></script>
 </body>
 
 <footer class="footer">
