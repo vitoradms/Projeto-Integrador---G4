@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/stylesheets/receitaBuscada.css">
+  <link rel="stylesheet" href="/stylesheets/header.css">
+  <link rel="stylesheet" href="/stylesheets/footer.css">
+  <title>Receitas</title>
+</head>
+<body>
+  <header>
+    <%- include("./partials/header")  %>
+  </header>
+
+    <div class="titulo">
+      <h1>Receitas:</h1>
+    </div>
+
+    <br>
+
+    <div id="containerReceitas">
+    <% receitas.forEach(receita => { %> 
+    <a href="/receita/<%=receita.id%>"> 
+      <div class="itensReceita">
+        <img src="/uploads/<%= receita.foto_receita %>" alt="" width="200px">
+        <h3><%= receita.nome%></h3>
+        <p><%= receita.tempo_preparo%></p>
+      </div>
+  </a> 
+    <% }) %>
+    </div>
+
+
+    <br><br><br><br><br><br>
+ 
+  <%- include("./partials/footer")  %> 
+</body>
+</html>

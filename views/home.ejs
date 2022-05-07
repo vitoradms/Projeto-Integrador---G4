@@ -59,8 +59,10 @@
         
         <div class="input">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Pesquisa de Ingredientes" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <a href="/ingredientes/buscaringrediente"> <button class="btn btn-outline-secondary"  id="button-addon2">+</button></a>
+            <form method="post" action="/receita/buscarReceita">
+              <input type="text" size="60" height="100px" name="buscaIngrediente" id="buscaIngrediente" placeholder="Pesquisa de Ingredientes">
+              <button class="btn btn-outline-secondary"  id="button-addon2" type="submit">+</button>
+          </form>
           </div>
         </div>
 

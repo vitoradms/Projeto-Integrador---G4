@@ -47,14 +47,19 @@ const usuarioControllers = {
     const saltRounds = 10
     const hash = bcrypt.hashSync(senha, saltRounds)
 
-    await Usuario.update({
-      nome,
-      data_nascimento,
-      email,
-      senha: hash,
-      imagem,
-    }, {where: { id }});
+    const usuario = await Usuario.findOne({where: {id}})
 
+    usuario.nome = nome
+    usuario.data_nascimento = data_nascimento
+    usuario.email = email
+    usuario.senha = hash
+    usuario.imagem = imagem
+
+    await usuario.save()
+
+    req.session.usuario = usuario
+
+    console.log(usuario)
     res.redirect('/usuario/arealogada')
 
   },
@@ -96,3 +101,5 @@ const usuarioControllers = {
 }
 
 module.exports = usuarioControllers
+
+

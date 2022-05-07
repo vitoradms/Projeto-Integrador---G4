@@ -17,6 +17,7 @@ const receitasController = {
     },
 
     salvar: async (req, res) => {
+        console.log("teste")
         const listaDeErros = validationResult(req);
 
         if(listaDeErros.isEmpty()){
@@ -40,6 +41,8 @@ const receitasController = {
             }, {
                 include: ['ingredientes']
             })
+
+            console.log(novaReceita)
             res.redirect(`/receita/${novaReceita.id}`)
 
         } else {
@@ -122,6 +125,29 @@ const receitasController = {
 
     favoritar: (req, res) => {
         return res.send('favoritando receita')
+    },
+
+    buscarReceita: async (req, res) => {
+        const { buscaIngrediente } = req.body;
+
+        const filtroReceita = []
+
+        const receita = await Receita.findAll({include: 'ingredientes'})
+
+        for(var i = 0; i < receita.length; i++){
+            for(var j = 0; j < receita[i].ingredientes.length; j++){
+                if (receita[i].ingredientes[j].nome == buscaIngrediente){
+                    filtroReceita.push(receita[i])
+                }
+            }
+        }
+
+
+
+        res.render('receitaBuscada', {receitas: filtroReceita})
+            
+          
+        
     },
 };
 

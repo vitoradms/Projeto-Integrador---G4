@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Abadi;
+  src: url(../fonts/abadi-mt-std-cond-light.otf);
+}
+
+body {
+  font-family: "Abadi";
+
+}
+
+
+
+.titulo{
+  display: flex; 
+}
+
+#containerReceitas {
+  display: flex;
+  justify-content: center;
+}
+
+.itensReceita {
+  padding: 0 16px;
+}
+
+
+h1 {
+  font-size: 50px;
+}
+
+.itensReceita h3 {
+  font-size: 30px;
+}
+
+a {
+  font-size: 100%;
+  font:inherit;
+  text-decoration: none;
+  color: black;
+}

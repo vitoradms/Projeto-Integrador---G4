@@ -62,6 +62,8 @@ main #container {
 
 main #container section .input {
   margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
 }
 
 main #container section h3 {
