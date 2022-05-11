@@ -20,9 +20,6 @@ const receitasController = {
             },
             include: ['usuario_comentario']
         })
-
-        console.log(comentarios)
-
         res.render('receita', { receita, comentarios });
     },
 
