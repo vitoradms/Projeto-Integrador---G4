@@ -79,7 +79,7 @@
 .interacao{
     display: flex;
     align-items: left;
-    font-size: 1.1rem
+    font-size: 1.1rem;
     font-family: 'Abadi';
 
 }
@@ -170,8 +170,34 @@
     font-size: 22px;
 }
 
+/* Comentarios */
+
+
+.inputComentario {
+    display: flex;
+    justify-content: center;
+}
+
+.coment {
+    background-color: #dfdada;
+}
+.imgComentario {
+    border-radius: 100%;
+}
+
+hr {
+    background-color: #000000;
+}
+
+
+
+/* 
+.imgComentario {
+    align-items: flex-start;
+} */
+
 /* confira tmb */
-.confira_tmb h2 {
+/* .confira_tmb h2 {
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 38px;
@@ -193,7 +219,7 @@
     width: 250px;
     height: 250px;
     margin: 50px;
-}
+} */
 
 /* comentar */ 
 .comentar {

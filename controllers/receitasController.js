@@ -1,4 +1,4 @@
-const { Receita, Ingrediente } = require('../database/models')
+const { Receita, Ingrediente, Comentarios } = require('../database/models')
 const { check, validationResult, body } = require('express-validator');
 
 
@@ -13,7 +13,17 @@ const receitasController = {
             where: { id }, 
             include: ['ingredientes']
         });
-        res.render('receita', { receita });
+
+        const comentarios = await Comentarios.findAll({
+            where: {
+               receita_id: id 
+            },
+            include: ['usuario_comentario']
+        })
+
+        console.log(comentarios)
+
+        res.render('receita', { receita, comentarios });
     },
 
     salvar: async (req, res) => {
@@ -147,13 +157,25 @@ const receitasController = {
             }
         }
 
-
-
-        res.render('receitaBuscada', {receitas: filtroReceita})
-            
-          
-        
+        res.render('receitaBuscada', {receitas: filtroReceita})   
     },
+    comentarReceita: async (req, res) => {
+        const { idReceita, comentario } = req.body;
+        const usuario = req.session.usuario;
+
+         if (usuario == undefined){
+           return res.redirect('/usuario/login')
+        }
+
+        await Comentarios.create({
+            comentario: comentario,
+            receita_id: idReceita,
+            usuario_id: usuario.id
+          });
+
+
+          res.redirect(`/receita/${idReceita}`)
+    }
 };
 
 module.exports = receitasController

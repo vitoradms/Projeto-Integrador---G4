@@ -20,6 +20,7 @@ router.put('/salvar/:id', uploadFotos, receitaValidator, receitasController.atua
 router.get('/favoritar', receitasController.favoritar);
 
 router.post('/buscarReceita', receitasController.buscarReceita)
+router.post('/comentarReceita', receitasController.comentarReceita)
 
 
 

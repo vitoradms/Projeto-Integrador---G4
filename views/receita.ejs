@@ -17,132 +17,164 @@
 
 <body class="content">
 
-    <%- include("./partials/header")  %>
+    <%- include("./partials/header") %>
 
-    <!-- INFO DA RECEITA -->
-    <section>
-        <div class="title">
-            <h2> <%= receita && receita.nome %> </h2>
-        </div>
-
-        <div class="receita">
-            <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita && receita.foto_receita %>">
+        <!-- INFO DA RECEITA -->
+        <section>
+            <div class="title">
+                <h2>
+                    <%= receita && receita.nome %>
+                    
+                </h2>
             </div>
 
-            <div class="prepare_info">
-                <h2></i> Tempo de Preparo </h2>
-                <p><%= receita && receita.tempo_preparo %></p>
-                <h2></i> Rendimento </h2>
-                <p> <%= receita && receita.rendimento %> </p>
+            <div class="receita">
+                <div class="imagem_destaque">
+                    <img width="100%" height="100%" src="/uploads/<%= receita && receita.foto_receita %>">
+                </div>
 
-                <div class="interacao">
-                    <div class="w3-container">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="botao">Compartilhar</button>
+                <div class="prepare_info">
+                    <h2></i> Tempo de Preparo </h2>
+                    <p>
+                        <%= receita && receita.tempo_preparo %>
+                    </p>
+                    <h2></i> Rendimento </h2>
+                    <p>
+                        <%= receita && receita.rendimento %>
+                    </p>
 
-                        <div id="id01" class="w3-modal">
-                            <div class="w3-modal-content">
-                                <div class="w3-container">
-                                    <span onclick="document.getElementById('id01').style.display='none'"
-                                        class="w3-button w3-display-topright">&times;</span>
-                                    <p>
-                                        <h1><mark><%=receita && receita.nome%></mark></h1>
-                                    </p>
-                                    <ul>
-                                        <h1>Ingredientes:</h1>
-                                        <% receita && receita.ingredientes.forEach(ingrediente => { %>
-                                        <li><%= ingrediente.nome %> </li><br>
-                                        <% }) %><br>
+                    <div class="interacao">
+                        <div class="w3-container">
+                            <button onclick="document.getElementById('id01').style.display='block'"
+                                class="botao">Compartilhar</button>
+
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content">
+                                    <div class="w3-container">
+                                        <span onclick="document.getElementById('id01').style.display='none'"
+                                            class="w3-button w3-display-topright">&times;</span>
                                         <p>
-                                            <h1>Modo de preparo:</h1><%= receita && receita.modo_preparo %>
+                                        <h1><mark>
+                                                <%=receita && receita.nome%>
+                                            </mark></h1>
                                         </p>
-                                        <p>
-                                            <h1>Tempo de preparo:</h1><%= receita && receita.tempo_preparo %>
-                                        </p>
-                                        <p>
-                                            <h1>Rendimento:</h1><%= receita && receita.rendimento %>
-                                        </p>
-                                    </ul>
+                                        <ul>
+                                            <h1>Ingredientes:</h1>
+                                            <% receita && receita.ingredientes.forEach(ingrediente=> { %>
+                                                <li>
+                                                    <%= ingrediente.nome %>
+                                                </li><br>
+                                                <% }) %><br>
+                                                    <p>
+                                                    <h1>Modo de preparo:</h1>
+                                                    <%= receita && receita.modo_preparo %>
+                                                        </p>
+                                                        <p>
+                                                        <h1>Tempo de preparo:</h1>
+                                                        <%= receita && receita.tempo_preparo %>
+                                                            </p>
+                                                            <p>
+                                                            <h1>Rendimento:</h1>
+                                                            <%= receita && receita.rendimento %>
+                                                                </p>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <a href="/receita/editar/<%= receita && receita.id %> " button type="button"
+                            class="botao">Editar</button></a>
+
+                        <form method="POST" action="/receita/<%= receita && receita.id %>?_method=DELETE">
+                            <button class="botao" type="submit">Apagar</button>
+                        </form>
                     </div>
 
-                    <a href="/receita/editar/<%= receita && receita.id %> " button type="button"
-                        class="botao">Editar</button></a>
+                </div>
+            </div>
 
-                    <form method="POST" action="/receita/<%= receita && receita.id %>?_method=DELETE">
-                        <button class="botao" type="submit">Apagar</button>
-                    </form>
+        </section>
+
+        <!-- INGREDIENTES -->
+        <section>
+            <div>
+                <div class="title">
+                    <h2> Ingredientes </h2>
+                </div>
+
+                <div class="ingredientes">
+                    <ul>
+                        <% receita && receita.ingredientes.forEach(ingrediente=> { %>
+                            <li>
+                                <%= ingrediente.nome %>
+                            </li>
+                            <% }) %>
+                    </ul>
+
                 </div>
 
             </div>
-        </div>
+        </section>
 
-    </section>
-
-    <!-- INGREDIENTES -->
-    <section>
-        <div>
+        <!-- MODO DE PREPARO -->
+        <section>
             <div class="title">
-                <h2> Ingredientes </h2>
-            </div>
-
-            <div class="ingredientes">
-                <ul>
-                    <% receita && receita.ingredientes.forEach(ingrediente => { %>
-                    <li><%= ingrediente.nome %> </li>
-                    <% }) %>
-                </ul>
+                <h2> Modo de preparo </h2>
 
             </div>
+            <div class="prepare_mod">
+                <div class="imagem_destaque">
+                    <img src="/images/destaque2.jpg" width="100%" height="100%">
+                </div>
 
+                <div class="prepare">
+                    <p>
+                        <%= receita && receita.modo_preparo %>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMENTÁRIOS -->
+        <section>
+            <div class="comentarios">
+                <div class="title">
+                    <h2>Escrever comentário</h2>
+                </div>
+                <br>
+                <div class="inputComentario">
+                    <form method="post" action="/receita/comentarReceita">
+                        <input type="hidden" name="idReceita" id="idReceita" value="<%= receita && receita.id %>">
+                        <textarea name="comentario" id="comentario" cols="100" rows="5"></textarea>
+                        <button class="botao" type="submit">Comentar</button>
+                    </form>
+                </div>
+                <div>
+                    <div class="title">
+                        <h2>Comentários</h2>
+                    </div>
+                    <br>
+                    <div class="coment">
+                        <% comentarios.forEach(comentario => { %>
+                            <img class="imgComentario" width="60px" src="/uploads/<%= comentario.usuario_comentario.avatar %>" alt="">
+                            <b class="nomeComentario"><%= comentario.usuario_comentario.nome%></b>
+                            <p class="comentario"><%= comentario.comentario%></p>
+                            <hr>
+                        <% }) %> 
+                    </div>          
+                </div>
+                
+            </div>
+        </section>
         </div>
-    </section>
-
-    <!-- MODO DE PREPARO -->
-    <section>
-        <div class="title">
-            <h2> Modo de preparo </h2>
-
         </div>
-        <div class="prepare_mod">
-            <div class="imagem_destaque">
-                <img src="/images/destaque2.jpg" width="100%" height="100%">
-            </div>
-
-            <div class="prepare">
-                <p><%= receita && receita.modo_preparo %></p>
-            </div>
         </div>
-    </section>
-
-    <!-- CONFIRA TAMBÉM -->
-    <section>
-        <div class="confira_tmb">
-            <div>
-                <h2> Confira também</h2>
-            </div>
-            <div class="confira">
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-
-            </div>
-        </div>
-    </section>
-    </div>
-    </div>
-    </div>
 
 </body>
 
 <footer class="footer">
-    <%- include("./partials/footer")  %>
+    <%- include("./partials/footer") %>
 </footer>
 
 </html>
