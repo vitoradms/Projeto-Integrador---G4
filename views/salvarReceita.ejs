@@ -21,8 +21,11 @@
 
     <!-- BANNER -->
     <div class="banner">
+        <div class="container-img-background">
+            <img class="img-background" src="/images/banner4.jpg" alt="IMAGEM BACKGROUND">
+        </div>
         <div class="banner_text">
-            <h2> <mark> Compartilhe </mark> sua receita!</h2>
+            <h2>Compartilhe <br> sua receita!</h2>
         </div>
     </div>
 
@@ -38,7 +41,7 @@
     </div>
 
     <div class="nome_receita">
-        <h2> Digite o nome da <mark> sua receita </mark> </h2>
+        <h2>Digite o nome da sua receita</h2>
     </div>
 
     <form method="POST" action="<%= receita ? `/receita/salvar/${receita.id}?_method=PUT` : '/receita/salvar' %>"
@@ -53,16 +56,25 @@
         <div class="destaque">
             <% if(receita) {%>
             <div class="imagem_destaque">
-                <img width="100%" height="100%" src="/uploads/<%= receita ? receita.foto_receita : batata.jpg %>">
+                <img width="100%" height="100%" src="/uploads/<%=receita.foto_receita%>">
             </div>
 
             <div class="texto_destaque">
-                <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
+                <div>
+                    <p>Adicone a melhor</p>
+                    <p>foto do</div>p>
+                    <p>seu prato </p>
+                </div>
                 <input type="file" name="foto" class="adicionar_foto">
             </div>
             <% } else { %>
+                <div class="imagem_destaque">
+                    <img width="100%" height="100%" src="/images/image6.jpg">
+                </div>
             <div class="texto_destaque">
-                <p> Adicone a melhor<br><mark>foto</mark> do<br> seu prato </p>
+                <p><span class="frase-um">Adicone a melhor</span></p>
+                <p><span class="frase-dois">foto do</span></p>
+                <p><span class="frase-tres">seu prato</span></p>
                 <input type="file" name="foto" class="adicionar_foto">
             </div>
             <% } %>
