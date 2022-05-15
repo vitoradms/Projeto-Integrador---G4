@@ -32,14 +32,29 @@ const usuarioControllers = {
 
   },
 
-  deletar(req, res){
-    return res.send('deletando usuario')
+  async deletar(req, res){
+    const { id } = req.params;
+    const user = await Usuario.findOne({ where: { id } });
+    const usuario = req.session.usuario;
+
+    if (user.id !== usuario.id)
+      res.send("Você não tem permisão para deletar esse usuário!");
+
+    await Usuario.destroy({ where: { id } }).catch(console.log);
+
+    res.redirect("/home");
   },
 
   async exibeFormularioEdicao (req, res){
     const { id } = req.params
+    const user = req.session.usuario
 
     const usuario = await Usuario.findOne({ where: { id }})
+
+    if(usuario.id !== user.id) {
+      res.send("Você não tem permissão para editar este usuário!")
+    }
+
 
     return res.render('formularioEditarUsuario', { usuario })
   },
