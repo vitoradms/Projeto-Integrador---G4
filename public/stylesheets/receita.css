@@ -1,253 +1,260 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @font-face {
-    font-family: Abadi;
-    src: url(../fonts/abadi-mt-std-cond-light.otf);
-  }
-
-
-.content {
-    background-color: #f0f0f0;
+  font-family: Abadi;
+  src: url(../fonts/abadi-mt-std-cond-light.otf);
 }
 
-
+.content {
+  background-color: #f0f0f0;
+}
 
 /* informações da receita */
 
 .receita {
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
-.title {
-    text-align: left;
-    max-width: auto;
-    background-color: #E7C512;
-    font-family: 'Abadi';
-    font-size: 48px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 20px 0px 20px 50px; 
-    margin-top: 50px;  
+.receita img {
+  max-width: auto;
+  max-height: 250px;
+  width: auto;
+  height: auto;
 }
 
-.imagem_destaque {
-    width: 400px;
-    height: 300px;
-    margin: 6% 2% 2% 2%;
-    border: solid 1px #000000;
-    -webkit-box-shadow: 53px 53px 0px -30px rgb(0, 0, 0);
-    -moz-box-shadow:    53px 53px 0px -30px rgb(0, 0, 0);
-    box-shadow:         53px 53px 0px -30px rgb(0, 0, 0);
-    
+.title h2 {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  max-width: auto;
+  background-color: #e6c93d;
+  font-family: "Abadi";
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 50px;
 }
 
 .prepare_info {
-    text-align: left;
-    width: 30%;
-    height: 30vh;
-    margin-top: 170px;
-    margin-left: 50px;
-    font-size: 22px;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Abadi";
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .prepare_info h2 {
-    font-family: 'Abadi';
-    font-size: 30px;
-    margin-left: 50px;
-
+  font-family: "Abadi";
+  font-size: 30px;
+  margin-left: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .prepare_info p {
-    font-family: 'Montserrat';
-    padding: 5px; 
-    margin-left: 50px; 
-    margin-top: 10px;  
-    margin-bottom: 15px;
-    font-size: 22px;  
+  padding: 5px;
+  margin-left: 50px;
 }
-
 
 /* botões de interação */
 .clicaveis {
-    display: flex;
-    justify-content: flex-start;
-    margin: 15px 0px 50px 410px ;  
+  display: flex;
+  justify-content: flex-start;
+  margin: 15px 0px 50px 410px;
 }
 
-.interacao{
-    display: flex;
-    align-items: left;
-    font-size: 1.1rem;
-    font-family: 'Abadi';
-
+.interacao {
+  display: flex;
+  align-items: left;
+  font-size: 1.1rem;
+  font-family: "Abadi";
 }
 
 .interacao ul {
-    padding:0px;
-    margin:12px 30px;
-    background-color:#FFFFFF;
-    list-style:none;
-    
+  padding: 0px;
+  margin: 12px 30px;
+  background-color: #ffffff;
+  list-style: none;
 }
 
 .interacao ul li {
-    display: inline;    
+  display: inline;
 }
 
 .interacao ul li a:hover {
-    background-color:#E7C512;
-    border: 1px solid #000000;
+  background-color: #e6c93d;
+  border: 1px solid #000000;
 }
 
 .interacao ul a {
-    padding: 12px 12px;
-    display: inline-block;
-    
-    /* visual do link */
-    background-color:#E7C512;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-radius: 1px;
+  padding: 12px 12px;
+  display: inline-block;
+
+  /* visual do link */
+  background-color: #e6c93d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 1px;
 }
 
-.botao{
-    font-family: "Abadi";
-    text-shadow: 1px 1px 1px #A1A1A1;
-    color: #f0f0f0;
-    font-size: 22px;
-    padding: 8px 16px;
-    border-radius: 0px;
-    border: 1px solid ;
-    background: #E7C512;
-    text-decoration: none;
-    
+.botao {
+  font-family: "Abadi";
+  text-shadow: 1px 1px 1px #a1a1a1;
+  color: #f0f0f0;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 0px;
+  border: 1px solid;
+  background: #e6c93d;
+  text-decoration: none;
 }
 
 .botao:hover {
-    border: 1px solid #000000;
-    cursor: pointer;
+  border: 1px solid #000000;
+  cursor: pointer;
 }
 
-  /* ingredientes */
-.ingredientes{
-    display: flex;
-    justify-content: flex-start;
-    background-image: url(/images/destaque1.jpg);
-    background-size: cover;
-    height: 600px;
-    width: auto;  
-    margin: 35px;
+/* ingredientes */
+
+.ingredientes {
+  display: flex;
+  justify-content: center;
+  background-image: url(/images/banner6.jpg);
+  background-size: cover;
+  max-height: auto;
 }
 
 .ingredientes ul {
-    text-align: left;
-    padding: 60px;
-    margin: 8%;
-    font-family: 'Montserrat';
-    font-size: 22px;
-    color: #000000;
-    background-color: #FFFFFF;
-    width: 30%;
-    border: solid #000000 1px;
+  text-align: left;
+  padding: 50px;
+  font-family: "Abadi";
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  width: auto;
+  border: solid #000000 1px;
+  margin: 50px;
 }
 
 /* Modo de preparo */
 .prepare_mod {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px 200px 0px 200px;
 }
 
 .prepare {
-    text-align: left;
-    width: 30%;
-    height: 60vh;
-    margin: 100px 10px 10px 10px;
-    padding: 20px;
-    border-left: solid 1px #000000;
-    font-family: 'Montserrat';
-    font-size: 22px;
+  text-align: left;
+  margin: 50px 10px 10px 10px;
+  padding: 20px;
+  border-left: solid 1px #000000;
+  font-family: "Abadi";
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 /* Comentarios */
 
-
 .inputComentario {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .coment {
-    background-color: #dfdada;
+  background-color: #dfdada;
 }
 .imgComentario {
-    border-radius: 100%;
+  border-radius: 100%;
 }
 
 hr {
-    background-color: #000000;
+  background-color: #000000;
 }
 
-
-
-/* 
-.imgComentario {
-    align-items: flex-start;
-} */
-
-/* confira tmb */
-/* .confira_tmb h2 {
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 38px;
-    text-transform: uppercase;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+.imagem_destaque img {
+  max-width: auto;
+  max-height: 250px;
+  width: auto;
+  height: auto;
 }
 
-.confira ul {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-.confira ul li{
-    background-image: url(/images/image4.jpg);
-    background-size: cover;
-    border: solid 1px #000000;
-    width: 250px;
-    height: 250px;
-    margin: 50px;
-} */
-
-/* comentar */ 
+/* comentar */
 .comentar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.comentar textarea{
-    font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 18px;
-    padding: 20px;
-    margin: 20px;
+.comentar textarea {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 18px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .comentar input {
-    font-family: 'Abadi';
-    font-size: 1.1em;
-    padding: 12px 30px;
-    background-color:#000000;
-    color: #FFFFFF;
-    text-decoration: none;
-    border-radius: 1px;
-    margin-top: 60px;
-   }
-   
+  font-family: "Abadi";
+  font-size: 1.1em;
+  padding: 12px 30px;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 1px;
+  margin-top: 60px;
+}
+
 .footer.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.botao-comentar {
     display: flex;
     justify-content: center;
 }
+.w3-modal-content {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    max-height: auto;
+    flex-direction: column;
+}
 
+
+
+.w3-container ul {
+    display: flex;
+    justify-content: left;
+    max-width: 200px;
+    max-height: auto;
+}
+
+.w3-container h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Abadi';
+    font-size: 40px;
+    text-transform: uppercase;
+    width: auto;
+    background: #e6c93d;
+}
+
+.w3-container p {
+    display: flex;
+    justify-content: left;
+    font-family: 'Abadi';
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.w3-container li {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Abadi';
+    font-size: 20px;
+    text-transform: uppercase;
+}
