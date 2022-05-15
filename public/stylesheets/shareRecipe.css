@@ -1,307 +1,330 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @font-face {
-    font-family: Abadi;
-    src: url(../fonts/abadi-mt-std-cond-light.otf);
-  }
+  font-family: Abadi;
+  src: url(../fonts/abadi-mt-std-cond-light.otf);
+}
 
 # {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .content {
-    background-color: #f0f0f0;
-    
+  background-color: #f0f0f0;
 }
 
 /* Banner */
 .banner {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;   
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
 }
 
 .img-background {
-    width: 100%; 
-    filter: blur(4px);
+  width: 100%;
+  filter: blur(4px);
 }
 
 .banner_text {
-    justify-content: center;
+  justify-content: center;
 }
 
 .banner h2 {
-    font-family: "Abadi";
-    color: rgb(248, 247, 232);
-    text-align: center;
-    font-size: 80px;
-    position: absolute;
-    font-weight: bold;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: uppercase;
+  font-family: "Abadi";
+  color: rgb(248, 247, 232);
+  text-align: center;
+  font-size: 80px;
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
 }
 
 .banner h3 {
-    font-size: 80px;
-    font-family: 'Abadi';
-    color: #FFFFFF;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 60px;
+  font-size: 80px;
+  font-family: "Abadi";
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
 }
 
 /* Nome da receita */
 .nome_receita {
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-family: 'Abadi';
-    font-size: 40px;
-    text-transform: uppercase;
-    width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-family: "Abadi";
+  font-size: 40px;
+  text-transform: uppercase;
+  width: auto;
 }
 
 .nome_receita h2 {
-    font-family: "Abadi";
-    color: #212121;
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    
-    text-transform: uppercase;
+  font-family: "Abadi";
+  color: #212121;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+
+  text-transform: uppercase;
 }
 
 /* Formulário nome da receita */
 
 .digite_nome_aqui {
-    display: flex;
-    justify-content: center;
- }
+  display: flex;
+  justify-content: center;
+}
 
-.digite_nome_aqui input{
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 20px;
-    height: 5px;
-    width: 300px;
-    font-family: 'Abadi';
-    font-size: 24px;
-    border: 1px solid #000000;
-    border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0);
-    text-align: center;
+.digite_nome_aqui input {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 20px;
+  height: 5px;
+  width: 300px;
+  font-family: "Abadi";
+  font-size: 24px;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center;
 }
 
 /* Adicione Fotos ou vídeos */
 .destaque {
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    height: 400px;
-    margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 400px;
+  margin-top: 120px;
 }
 
 .texto_destaque {
-    text-transform: uppercase;
-    font-family: 'Abadi';
-    font-size: 40px;
-    font-weight: bold;
-    height: 600px;
-    width: 30%;
-    margin-top: 50px;
+  text-transform: uppercase;
+  font-family: "Abadi";
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.texto_destaque input {
+  display: none;
+}
+
+.texto_destaque label {
+  font-family: "Abadi";
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  font-size: 20px;
+  padding: 10px 25px;
+  background: #000000;
+}
+
+.texto_destaque label:hover {
+  cursor: pointer;
+  background: #212121;
+  border: 1px solid #e6c93d;
+}
+
+.file-button {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .texto_destaque p {
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
 .frase-um {
-    color: #f0f0f0;
-    background:  #e6c93d;
-    padding: 5px 20px 5px 20px;
-    margin-bottom: 5px;  
+  color: #f0f0f0;
+  background: #e6c93d;
+  padding: 5px 20px 5px 20px;
+  margin-bottom: 5px;
 }
 .frase-dois {
-    color: #f0f0f0;
-    background-color: #e6c93d;
-    padding: 5px 20px 5px 20px;
-    margin-bottom: 5px;  
+  color: #f0f0f0;
+  background-color: #e6c93d;
+  padding: 5px 20px 5px 20px;
+  margin-bottom: 5px;
 }
 
 .frase-tres {
-    color: #f0f0f0;
-    background-color: #e6c93d;  
-    padding: 5px 20px 5px 20px;
+  color: #f0f0f0;
+  background-color: #e6c93d;
+  padding: 5px 20px 5px 20px;
 }
 
 .imagem_destaque {
-   width: 300px;
-   height: 300px;
-   margin: 30px;
-   -webkit-box-shadow: -2px 8px 8px 2px rgba(0, 0, 0, 0.45);
-   
+  position: relative;
+  width: 30%;
+  height: 20rem;
+  overflow: hidden;
+  margin-right: 20px;
+  -webkit-box-shadow: -2px 4px 4px 2px rgba(0, 0, 0, 0.45);
+  background: cover;
 }
 
 .texto_destaque form {
-    display: flex;
-    justify-content: center;
-    font-family: "Abadi";
-    text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  font-family: "Abadi";
+  text-transform: uppercase;
 }
 
 /* ingridentes para preparo */
 .ingredientes h2 {
-    max-width: auto;
-    background-color: #e6c93d;
-    font-family: 'Abadi';
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 20px 0px 20px 50px;
-    text-align: center;
+  max-width: auto;
+  background-color: #e6c93d;
+  font-family: "Abadi";
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px 0px 20px 50px;
+  text-align: center;
 }
 
 .ingredientes input {
-    font-family: 'Montserrat';
-    font-size: 18px;
-    margin-top: 25px;
-    margin-left: 420px;
-    padding: 5px;
-    width: 500px;
-    border-bottom: solid #000000 1px;
-    border-top: hidden;
-    border-left: hidden;
-    border-right: hidden;
-    background: transparent;
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: 420px;
+  padding: 5px;
+  width: 500px;
+  border-bottom: solid #000000 1px;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  background: transparent;
 }
 
 .ingredientes input:focus-visible {
-    border: hidden;
+  border: hidden;
 }
 
 .modo_de_preparo h2 {
-    max-width: auto;
-    background-color: #e6c93d;
-    font-family: 'Abadi';
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 20px 0px 20px 50px;
-    margin-top: 20px;
-    text-align: center;
+  max-width: auto;
+  background-color: #e6c93d;
+  font-family: "Abadi";
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px 0px 20px 50px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .modo_de_preparo textarea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Abadi';
-    font-size: 18px;
-    margin:20px 100px 20px 350px;
-    padding: 30px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abadi";
+  font-size: 18px;
+  margin: 20px 100px 20px 350px;
+  padding: 30px;
 }
 
 .preparo_porcoes h2 {
-    max-width: auto;
-    background-color: #e6c93d;
-    font-family: 'Abadi';
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 20px 0px 20px 50px;
-    text-align: center;
-    margin-bottom: 30px;
+  max-width: auto;
+  background-color: #e6c93d;
+  font-family: "Abadi";
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 20px 0px 20px 50px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .preparo_porcoes label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Abadi';
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abadi";
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .preparo_porcoes input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Abadi';
-    font-size: 18px;
-    padding: 5px;
-    width: 400px;
-    border-bottom: solid #000000 1px;
-    border-top: hidden;
-    border-left: hidden;
-    border-right: hidden;
-    background: transparent;
-    margin-left: 470px;
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abadi";
+  font-size: 18px;
+  padding: 5px;
+  width: 400px;
+  border-bottom: solid #000000 1px;
+  border-top: hidden;
+  border-left: hidden;
+  border-right: hidden;
+  background: transparent;
+  margin-left: 470px;
 }
 
 .salvar_receita {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.botao_salvar{
-    font-family: "Abadi";
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px #A1A1A1;
-    color: #f0f0f0;
-    font-size: 30px;
-    padding: 10px 25px;
-    border-radius: 0px;
-    border: 1px solid ;
-    background: #e6c93d;
-    margin-top: 80px;
+.botao_salvar {
+  font-family: "Abadi";
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #a1a1a1;
+  color: #f0f0f0;
+  font-size: 30px;
+  padding: 10px 25px;
+  border-radius: 0px;
+  border: 1px solid;
+  background: #e6c93d;
+  margin-top: 80px;
 }
 
 .botao_salvar:hover {
-    border: 1px solid #000000;
-    cursor: pointer;
+  border: 1px solid #000000;
+  cursor: pointer;
 }
- 
 
 .footer.footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .erro {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    font-family: 'Montserrat';
-    font-size: 16px;
-    font-weight: bold;
-    color: #e20808;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: bold;
+  color: #e20808;
 }
 
 .add-remove-buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 .add-remove-buttons button {
-    margin: 5px;
-    background: #e6c93d;
-    border: 1px solid ;
-    color: #FFFFFF;
+  margin: 5px;
+  background: #e6c93d;
+  border: 1px solid;
+  color: #ffffff;
 }
 
 .add-remove-buttons button:hover {
-    border: 1px solid #000000;
-    cursor: pointer;
+  border: 1px solid #000000;
+  cursor: pointer;
 }

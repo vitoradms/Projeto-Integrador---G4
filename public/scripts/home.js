@@ -7,7 +7,7 @@ let removeInput = document.getElementById("removeInput");
 addInput.onclick = function () {
   let newInput = document.createElement("input");
   newInput.setAttribute("type", "text");
-  newInput.setAttribute("name", "buscaIngrediente[]");
+  newInput.setAttribute("name", "ingrediente");
   newInput.setAttribute("class", "input");
   newInput.setAttribute("placeholder", "ADICIONE UM INGREDIENTE");
 
