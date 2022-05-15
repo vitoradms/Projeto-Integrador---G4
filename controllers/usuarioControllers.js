@@ -14,6 +14,11 @@ const usuarioControllers = {
     const saltRounds = 10
     const hash = bcrypt.hashSync(senha, saltRounds)
 
+    const userExist = await Usuario.findOne({ where: { email }})
+
+    if(userExist) {
+      return res.send('Usuário já existe')
+    }
 
     Usuario.create({
       nome,
