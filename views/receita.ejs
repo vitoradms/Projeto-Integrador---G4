@@ -144,13 +144,13 @@
                 </div>
                 <br>
                 <div class="inputComentario">
-                    <form method="post" action="/receita/comentarReceita">
+                    <form method="post" id="formComentario" action="/receita/comentarReceita">
                         <div>
                             <input type="hidden" name="idReceita" id="idReceita" value="<%= receita && receita.id %>">
                             <textarea name="comentario" id="comentario" cols="100" rows="5"></textarea>
                         </div>
                         <div class="botao-comentar">
-                            <button class="botao" type="submit">Comentar</button>
+                            <button class="botao" id="botaoComentario" type="submit" disabled >Comentar</button>
                         </div>
                     </form>
                 </div>
@@ -175,10 +175,12 @@
         </div>
         </div>
 
+
+        <footer class="footer">
+            <%- include("./partials/footer") %>
+        </footer>
+        
+        <script src="/scripts/form-comentario.js"></script>
+        
 </body>
-
-<footer class="footer">
-    <%- include("./partials/footer") %>
-</footer>
-
 </html>
